@@ -1,0 +1,43 @@
+import { Oswald, Rozha_One, Playfair_Display} from 'next/font/google';
+import './globals.css';
+// https://fonts.google.com/specimen/Raleway?query=raleway
+
+const oswald = Oswald({
+  subsets: ['latin'],
+  weight: ['200', '300', '400', '500', '600', '700'],
+  variable: '--font-oswald',
+});
+
+const rozha = Rozha_One({
+  subsets: ['latin'],
+  weight: ['400'],
+  variable: '--font-rozha',
+});
+
+const playfair_display = Playfair_Display({
+  subsets: ['latin'],
+  weight: ['400'],
+  variable: '--font-playfair-display',
+});
+
+export const metadata = {
+  title: 'Naturopatia Mataro',
+  description: 'Estudio naturopatia en Mataro',
+  keywords: 'yoga, yoga classes, botanica, chisinau, moldova, studio',
+  author: '',
+  creator: 'v',
+  applicationName: 'Next.js',
+  date: '2024-06-17',
+  language: 'en-US',
+};
+export default  function RootLayout({
+   children,
+   } : {
+    children : React.ReactNode;
+   }) {
+  return (
+    <html lang='en'>
+      <body className={`${oswald.variable} ${rozha.variable} ${playfair_display.variable}`}>{children}</body>
+    </html>
+  );
+}
