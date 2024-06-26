@@ -2,15 +2,17 @@ import Link from 'next/link';
 import { links } from '@/lib/data';
 
 const NavLinks = () => {
+  console.log(links)
   return (
     <nav>
       <ul
         className='flex gap-x-[4
         8px] md:gap-x-[28px] md:p-5 text-sm'
       >
-        {links.map((item, index) => {
+        {links.map((item : Link , index) => {
           return (
             <li key={index}>
+             
               <Link
                 className='link hover:border-b hover:border-dark transition duration-300'
                 href={item.hash}

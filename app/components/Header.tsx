@@ -57,7 +57,7 @@ const Header = () => {
         <Link href='#home'>
           <Image
             // className='w-[188px] h-[90px]'
-             className='w-[100px] '
+             className='w-[200px] '
             
             src={logo}
             alt='logo'

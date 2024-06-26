@@ -12,7 +12,7 @@ const NavMobile = ({ closeMobileMenu }) => {
   return (
     <nav className='w-full h-full flex flex-col justify-evenly overflow-hidden'>
       <ul className='flex flex-col items-center justify-center gap-y-6 py-6 mb-8'>
-        {links.map((item, index) => {
+        {links.map((item : Link, index) => {
           return (
             <li key={index}>
               <Link

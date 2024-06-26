@@ -1,6 +1,7 @@
 import { Oswald, Rozha_One, Playfair_Display} from 'next/font/google';
 import './globals.css';
 // https://fonts.google.com/specimen/Raleway?query=raleway
+import { Header, Footer } from './components';
 
 const oswald = Oswald({
   subsets: ['latin'],
@@ -36,8 +37,14 @@ export default  function RootLayout({
     children : React.ReactNode;
    }) {
   return (
+
     <html lang='en'>
-      <body className={`${oswald.variable} ${rozha.variable} ${playfair_display.variable}`}>{children}</body>
+     
+      <body className={`${oswald.variable} ${rozha.variable} ${playfair_display.variable}`}>
+         <Header/>
+        {children}
+        <Footer />
+        </body>
     </html>
   );
 }
