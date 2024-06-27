@@ -27,6 +27,13 @@ html {
     @apply text-[40px] lg:text-[60px] xl:text-[70px] 2xl:text-[85px] text-dark uppercase font-oswald max-w-[236px] leading-none mb-[38px];
   }
 
+  .h3 {
+    @apply text-[30px] lg:text-[40px] tracking-[-2px] leading-none font-rozha mb-4;
+  }
+  .h4 {
+    @apply text-[20px] lg:text-[30px] xl:text-[40px] 2xl:text-[60px] text-dark  font-oswald max-w-[236px] leading-none mb-[38px];
+  }
+
   /* buttons */
   .btn {
     @apply font-oswald text-lg tracking-[0.08em] uppercase px-[40px] transition-all duration-500 flex items-center gap-x-[10px];

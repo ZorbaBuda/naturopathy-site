@@ -40,7 +40,7 @@ const GallerySection = () => {
 
   return (
     <section
-      id='gallery'
+      // id='gallery'
       className='bg-[#f9f9f9] section relative mt-[40px] lg:mt-0'
     >
       <div className='container mx-auto'>
