@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+import colors from "tailwindcss/colors"
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -6,14 +7,14 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    fontFamily: {
-      // primary: ['Oswald', 'sans-serif'],
-      secondary: ['Raleway', 'sans-serif'],
-      tertiary: ['Rozha One', 'sans-serif'],
-      oswald: ['var(--font-oswald)', 'sans-serif'],
-      rozha: ['var(--font-rozha)', 'sans-serif'],
-      playfair_display: ['var(--font-playfair-display)', 'sans-serif']
-    },
+    // fontFamily: {
+    //   // primary: ['Oswald', 'sans-serif'],
+    //   secondary: ['Raleway', 'sans-serif'],
+    //   tertiary: ['Rozha One', 'sans-serif'],
+    //   oswald: ['var(--font-oswald)', 'sans-serif'],
+    //   rozha: ['var(--font-rozha)', 'sans-serif'],
+    //   playfair_display: ['var(--font-playfair-display)', 'sans-serif']
+    // },
     container: {
       padding: {
         DEFAULT: '20px',
@@ -27,15 +28,40 @@ module.exports = {
       xl: '1200px',
       '2xl': '1536px',
     },
+    // colors: {
+    //   dark: '#111111',
+    //   grey: {
+    //     DEFAULT: '#555555',
+    //   },
+    //  botella: '#026670',
+    //  botella_claro: '#9FEDD7',
+    //  amarillo_claro: '#FEF9C7',
+    //  amarillo_medio: '#FCE181',
+    //  gris_claro: '#EDEAE5' 
+    // },
     extend: {
+      fontFamily: {
+        // primary: ['Oswald', 'sans-serif'],
+        secondary: ['MANROPE_REGULAR', 'sans-serif'],
+        tertiary: ['Rozha One', 'sans-serif'],
+        oswald: ['var(--font-oswald)', 'sans-serif'],
+        rozha: ['var(--font-rozha)', 'sans-serif'],
+        manrope_regular:["MANROPE_REGULAR"],
+      },
       colors: {
         dark: '#111111',
-        grey: {
-          DEFAULT: '#555555',
-        },
+        // grey: {
+        //   DEFAULT: '#555555',
+        // },
+       botella: '#026670',
+       botella_claro: '#9FEDD7',
+       amarillo_claro: '#FEF9C7',
+       amarillo_medio: '#FCE181',
+       gris_claro: '#EDEAE5' 
       },
       backgroundImage: {
-        hero_img: "url('/img/hero/newHero.jpg')",
+        // hero_img: "url('/img/hero/newHero.jpg')",
+        hero_img: "url('/img/home/img2.jpg')",
         // hero_img: "url('/img/hero/bg.jpg')",
         about_img: "url('/img/about/image.png')",
         interview: "url('/img/interview/bg.png')",

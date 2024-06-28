@@ -16,7 +16,7 @@ const NavMobile = ({ closeMobileMenu }) => {
           return (
             <li key={index}>
               <Link
-                className='text-2xl font-oswald uppercase'
+                className='text-2xl font-oswald '
                 href={item.hash}
                 onClick={closeMobileMenu}
               >

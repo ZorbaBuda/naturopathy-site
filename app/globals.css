@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@font-face {
+  font-family: "MANROPE-REGULAR";
+  src: url("../public/font/Manrope/Manrope-Regular.ttf");
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -20,11 +26,15 @@ html {
   .link {
     @apply font-oswald uppercase tracking-[0.08em];
   }
-  .h1 {
+  /* .h1 {
     @apply text-[60px] lg:text-[118px] tracking-[-2px] leading-none font-rozha mb-4;
+  } */
+  .h1 {
+    @apply text-[70px]  lg:text-[118px] tracking-[1px] leading-none 
+    font-normal  text-gris_claro;
   }
   .h2 {
-    @apply text-[40px] lg:text-[60px] xl:text-[70px] 2xl:text-[85px] text-dark uppercase font-oswald max-w-[236px] leading-none mb-[38px];
+    @apply text-[40px] lg:text-[60px] xl:text-[70px] 2xl:text-[85px] text-dark  font-oswald max-w-[236px] leading-none mb-[38px];
   }
 
   .h3 {
@@ -36,7 +46,11 @@ html {
 
   /* buttons */
   .btn {
-    @apply font-oswald text-lg tracking-[0.08em] uppercase px-[40px] transition-all duration-500 flex items-center gap-x-[10px];
+    @apply   border-2 text-lg tracking-[0.08em] uppercase px-[40px] 
+    transition-all duration-500 flex items-center gap-x-[10px]
+    text-amarillo_claro hover:bg-amarillo_claro hover:text-botella
+    rounded-md
+    ;
   }
   .btn-sm {
     @apply h-[55px];

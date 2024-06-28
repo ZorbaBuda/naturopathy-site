@@ -1,25 +1,25 @@
-import { Oswald, Rozha_One, Playfair_Display} from 'next/font/google';
+// import { Oswald, Rozha_One, Playfair_Display} from 'next/font/google';
 import './globals.css';
 // https://fonts.google.com/specimen/Raleway?query=raleway
 import { Header, Footer } from './components';
 
-const oswald = Oswald({
-  subsets: ['latin'],
-  weight: ['200', '300', '400', '500', '600', '700'],
-  variable: '--font-oswald',
-});
+// const oswald = Oswald({
+//   subsets: ['latin'],
+//   weight: ['200', '300', '400', '500', '600', '700'],
+//   variable: '--font-oswald',
+// });
 
-const rozha = Rozha_One({
-  subsets: ['latin'],
-  weight: ['400'],
-  variable: '--font-rozha',
-});
+// const rozha = Rozha_One({
+//   subsets: ['latin'],
+//   weight: ['400'],
+//   variable: '--font-rozha',
+// });
 
-const playfair_display = Playfair_Display({
-  subsets: ['latin'],
-  weight: ['400'],
-  variable: '--font-playfair-display',
-});
+// const playfair_display = Playfair_Display({
+//   subsets: ['latin'],
+//   weight: ['400'],
+//   variable: '--font-playfair-display',
+// });
 
 export const metadata = {
   title: 'Naturopatia Mataro',
@@ -38,9 +38,11 @@ export default  function RootLayout({
    }) {
   return (
 
-    <html lang='en'>
+    <html lang='en
+                font-manrope_regular
+                suppressHydrationWarning '>
      
-      <body className={`${oswald.variable} ${rozha.variable} ${playfair_display.variable}`}>
+      <body className=''>
          <Header/>
         {children}
         <Footer />

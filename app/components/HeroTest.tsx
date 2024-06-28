@@ -31,26 +31,39 @@ const HeroTest= () => {
     {/* hero section */}
     <section
      
-      className='bg-hero_img bg-cover bg-center min-h-[40vh] lg:h-[848px] xl:h-[948px] 2xl:h-[1048px] bg-no-repeat relative mt-[120px] lg:mt-[150px]'
-    >
+      // className='bg-hero_img bg-cover bg-center min-h-[40vh] lg:h-[848px] xl:h-[948px] 2xl:h-[1048px] bg-no-repeat relative mt-[120px] lg:mt-[150px]'
+      // className='bg-hero_img bg-cover bg-center min-h-[40vh] lg:h-[848px] xl:h-[948px] 2xl:h-[1048px] bg-no-repeat relative mt-[110px] '
+      className='bg-hero_img bg-cover bg-center h-screen bg-no-repeat relative   '
+
+   >
       <motion.div
         variants={container}
         initial='hidden'
         whileInView={'show'}
-        className='container mx-auto min-h-[40vh] lg:h-full flex items-center'
+        className='   min-h-[40vh] lg:h-full  h-full  items-center flex justify-between  '
       >
         {/* text & btn */}
-        <div className='text-white text-center   mx-auto'>
-          <motion.h1 variants={fadeIn('down')} className='h1'>
-            {title}
-          </motion.h1>
-          <motion.p
-            variants={fadeIn('left')}
-            className='font-thin mb-8 lg:mb-16 max-w-lg leading-relaxed'
+        <div className='text-white ml-14   flex flex-col space-y-9 mt-[110px]'>
+           <motion.p
+            // variants={fadeIn('left')}
+            className='text-xl  max-w-lg leading-relaxed'
           >
             {subtitle}
           </motion.p>
+          <motion.h1 variants={fadeIn('up')} className='h1 '>
+            {title}
+          </motion.h1>
+         
           {/* btn */}
+          <Link href='/serveis'>
+            <button
+              className='btn btn-lg  font-normal'
+             
+              aria-label='Reveal More Text'
+            >
+              {btnText} 
+            </button>
+         </Link>
           
         </div>
         {/* outline text */}

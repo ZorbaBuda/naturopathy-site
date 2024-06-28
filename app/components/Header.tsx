@@ -11,7 +11,8 @@ import NavLinks from './NavLinks';
 import NavMobile from './NavMobile';
 import Socials from './Socials';
 // import icons
-import { TiThMenuOutline } from 'react-icons/ti';
+// import { TiThMenuOutline } from 'react-icons/ti';
+import { HiMenuAlt2 } from "react-icons/hi";
 
 const Header = () => {
   // destructure header data
@@ -21,26 +22,66 @@ const Header = () => {
   // nav mobile state
   const [navMobile, setNavMobile] = useState(false);
 
-  // scroll event
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsActive(true);
-      } else {
-        setIsActive(false);
-      }
-    };
+   //nabvar visible on scroll up
+   const [prevScrollPos, setPrevScrollPos] = useState(0);
+   const [visible, setVisible] = useState(true);
+ 
+   const handleScroll = () => {
+     const currentScrollPos = window.scrollY;
+//  console.log(currentScrollPos)
+     if (currentScrollPos > prevScrollPos) {
+      // console.log(visible)
+       setVisible(false);
+     } else {
+       setVisible(true);
+     }
+ 
+     setPrevScrollPos(currentScrollPos);
+   };
+ 
+   useEffect(() => {
+     window.addEventListener("scroll", handleScroll);
+ 
+     return () => window.removeEventListener("scroll", handleScroll);
+   });
 
-    if (typeof window !== 'undefined') {
-      window.addEventListener('scroll', handleScroll);
+   //detecting scroll bottom / not working
+   useEffect(() => {
+    const onscroll = () => {
+      const scrolledTo = window.scrollY + window.innerHeight;
+      const isReachBottom = document.body.scrollHeight === scrolledTo;
+      if (isReachBottom) {
+        setVisible(true)
+        console.log(visible)
+      }
     }
-
+    window.addEventListener("scroll", onscroll);
     return () => {
-      if (typeof window !== 'undefined') {
-        window.removeEventListener('scroll', handleScroll);
-      }
+      window.removeEventListener("scroll", onscroll);
     };
   }, []);
+ 
+
+  // scroll event
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (window.scrollY > 50) {
+  //       setIsActive(true);
+  //     } else {
+  //       setIsActive(false);
+  //     }
+  //   };
+
+  //   if (typeof window !== 'undefined') {
+  //     window.addEventListener('scroll', handleScroll);
+  //   }
+
+  //   return () => {
+  //     if (typeof window !== 'undefined') {
+  //       window.removeEventListener('scroll', handleScroll);
+  //     }
+  //   };
+  // }, []);
 
   const closeMobileMenu = () => {
     setNavMobile(false); // Function to close the mobile menu
@@ -48,16 +89,28 @@ const Header = () => {
 
   return (
     <header
+    className={`${
+     !visible ? "hidden" : "visible"
+    } fixed bg-gris_claro left-0 right-0 z-20 min-w-max w-full mx-auto transition ease-linear duration-5000`}
+  >
+     {/* <header
       className={`${
-        isActive ? 'h-[100px] lg:h-[110px] shadow-lg' : 'h-[120px] lg:h-[150px]'
-      } fixed bg-white left-0 right-0 z-20 min-w-max w-full mx-auto transition-all duration-500`}
-    >
-      <div className='flex items-center justify-between h-full pl-[50px] pr-[60px] md:pr-[80px] md:pl-[80px] lg:pl-[90px] lg:pr-[90px] xl:pl-[100px] xl:pr-[100px] 2xl:pl-[180px] 2xl:pr-[180px]'>
+        isActive ? 'h-[100px] lg:h-[110px] shadow-lg' : 'h-[110px] lg:h-[110px]'
+      } fixed bg-gris_claro left-0 right-0 z-20 min-w-max w-full mx-auto transition-all duration-500`}
+    > */}
+
+    {/* <header
+    className={`${
+      !visible ? "hidden" : ""
+    } bg-transparent h-[100px] lg:h-[110px]  fixed bg-gris_claro left-0 right-0 z-50 min-w-max w-full 
+    mx-auto transition-all duration-500 text-amarillo_claro`}
+  > */}
+      <div className='flex items-center justify-between h-full pl-[70px] pr-[70px] md:pr-[80px] md:pl-[80px] lg:pl-[90px] lg:pr-[90px] xl:pl-[120px] xl:pr-[120px] 2xl:pl-[180px] 2xl:pr-[180px]'>
         {/* logo */}
         <Link href='#home'>
           <Image
             // className='w-[188px] h-[90px]'
-             className='w-[200px] '
+             className='w-[120px] '
             
             src={logo}
             alt='logo'
@@ -72,9 +125,9 @@ const Header = () => {
         {/* hamburger menu icon = showing by default, hidden on desktop mode */}
         <div
           onClick={() => setNavMobile(!navMobile)}
-          className='lg:hidden absolute right-[5%] bg-dark text-white p-2 rounded-md cursor-pointer'
+          className='lg:hidden absolute right-[5%]  text-black p-2  cursor-pointer'
         >
-          <TiThMenuOutline className='text-2xl' />
+          <HiMenuAlt2 className='text-4xl ' />
         </div>
         {/* nav mobile - showing by default, hidden on desktop */}
         <div
