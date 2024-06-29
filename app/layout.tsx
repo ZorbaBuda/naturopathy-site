@@ -47,8 +47,8 @@ export default  function RootLayout({
      
       <body className=''>
       <TwSizeIndicator />
-        {/* <AnimatedNavbar /> */}
-       <Header/>
+        <AnimatedNavbar />
+       {/* <Header/> */}
            <main> 
         {children}
         </main>

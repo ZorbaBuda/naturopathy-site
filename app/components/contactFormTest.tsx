@@ -10,7 +10,7 @@ import { TextareaField } from './form-fields/textarea-field';
 import { Spinner } from './spinner';
 import { CheckboxField } from './form-fields/checkbox-field';
 
-export default function contactFormTest() {
+export default function ContactFormTest() {
 
     const currentDate = new Date().toDateString();
 
@@ -19,7 +19,9 @@ export default function contactFormTest() {
         phone: "",
         email: "",
         message: "",
-        date: currentDate
+        date: currentDate,
+        privacyCheck: false,
+        newsletterCheck: false
        };
 
     const form = useForm<FormDataProps>({
@@ -35,7 +37,7 @@ export default function contactFormTest() {
       } = form;
 
       const onSubmit = async (values: FormDataProps) => {
-        // console.log("values", values);
+         console.log("values", values);
     
         // const result = await sendToNotion({ values });
         const result = "result"
@@ -55,7 +57,7 @@ export default function contactFormTest() {
     //     } else {
     //       toast.error("Error");
     //     }
-    //   };
+      };
     
 
   return (
@@ -67,7 +69,7 @@ export default function contactFormTest() {
           noValidate
         >
           <UsernameField placeholder="Username" name="name" />
-          {/* <PhoneField placeholder="Phone" name="phone" /> */} */}
+          {/* <PhoneField placeholder="Phone" name="phone" /> */} 
           <EmailField placeholder="Email" name="email" />
           <TextareaField
             name="message"

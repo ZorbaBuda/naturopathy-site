@@ -43,8 +43,8 @@ const Header = () => {
     //  } else {
     //   setTransparent(false)
     //  }
-     console.log (currentScrollPos == 0)
-     console.log("transparent ", transparent)
+    //  console.log (currentScrollPos == 0)
+    //  console.log("transparent ", transparent)
  
      setPrevScrollPos(currentScrollPos);
    };
@@ -62,7 +62,7 @@ const Header = () => {
       const isReachBottom = document.body.scrollHeight === scrolledTo;
       if (isReachBottom) {
         setVisible(true)
-        console.log(visible)
+        // console.log(visible)
       }
     }
     window.addEventListener("scroll", onscroll);

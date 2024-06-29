@@ -9,5 +9,7 @@ type FormDataProps = {
     phone: string,
     email: string,
     message: string,
-    date: string
+    date: string,
+    privacyCheck: boolean,
+    newsletterCheck: boolean
 }
