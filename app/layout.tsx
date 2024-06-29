@@ -3,6 +3,7 @@ import './globals.css';
 // https://fonts.google.com/specimen/Raleway?query=raleway
 import { Header, Footer } from './components';
 import TwSizeIndicator from './components/helpers/TwSizeIndicator';
+import AnimatedNavbar from './components/tutorials/framer/AnimatedNavbar';
 
 // const oswald = Oswald({
 //   subsets: ['latin'],
@@ -46,8 +47,11 @@ export default  function RootLayout({
      
       <body className=''>
       <TwSizeIndicator />
-         <Header/>
+        {/* <AnimatedNavbar /> */}
+       <Header/>
+           <main> 
         {children}
+        </main>
         <Footer />
         </body>
     </html>

@@ -26,7 +26,7 @@ const Header = () => {
    const [prevScrollPos, setPrevScrollPos] = useState(0);
    const [visible, setVisible] = useState(true);
 
-   const [transparent, setTransparent] = useState(true)
+   const [transparent, setTransparent] = useState(false)
  
    const handleScroll = () => {
      const currentScrollPos = window.scrollY;
@@ -101,7 +101,8 @@ const Header = () => {
     <header
     className={`${ !visible ? "hidden" : "visible"}
               {${ transparent ? "bg-transparent" : "bg-gris_claro"}
-    fixed  left-0 right-0 z-20 min-w-max w-full mx-auto transition ease-linear duration-5000
+    fixed  left-0 right-0 z-20 min-w-max w-full mx-auto   duration-5000
+    transform ease-in-out bg-gris_claro
      
     `}
   >
@@ -119,7 +120,7 @@ const Header = () => {
   > */}
       <div className='flex items-center justify-between h-full pl-[70px] pr-[70px]
        md:pr-[80px] md:pl-[80px] lg:pl-[90px] lg:pr-[90px] xl:pl-[120px] xl:pr-[120px]
-        2xl:pl-[180px] 2xl:pr-[180px] '>
+        2xl:pl-[180px] 2xl:pr-[180px]  '>
         {/* logo */}
       
         <Link href='/practice' className='p-5 border-2 border-black sm:relative sm:mx-auto relative mx-auto  '>
