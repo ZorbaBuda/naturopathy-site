@@ -1,3 +1,41 @@
+1) nabvar 
+  - nabvar básico tailwind
+  - correcta manera de trabajar con el logo sin alterar el resto
+  - sustitucion de socials por "demanar cita"
+  - mejor mobile nav, animado
+  - dinamismo nabvar 
+         - ocultar en scroll down
+         - al inicio, fondo transparente, despues no transparente
+         - detectar el scroll bottom y mostrar
+         - la transicion que sea animada 
+
+2) Hero de la home page:
+   - layout como el de la página web que usamos de referencia
+   - el title que sea animated como en la página web (staggered) 
+   - la animacion solo la primera vez, luego estático
+   - aprender a trabajar con las fonts
+
+3) Elementos varios
+   - crear sub componentes para cada tipo de seccion (dos parrafos texto, texto imagen, cabecera...)
+     se trata de ver la forma más eficiente de que sea realmente react style
+   - y la cuestion de partes animadas (AnimatedText como componente donde pasar el texto)
+
+4) Footer
+
+5) Formularios
+
+6) comunicacion con Notion: consumir textos, enviar Formularios
+
+7) Privacidad page (html parser)
+
+7) SEO 
+
+8) Subir a Vercel primero, pero enfocarse ya a VPS
+
+
+
+
+
 - fonts
 
 - colors
@@ -5,3 +43,8 @@
 - nabvar
 
 - home page
+
+
+- notion
+     - consumir informacion de notion a la app
+     - enviar informacion de la app a notion ( recibir respuesta)

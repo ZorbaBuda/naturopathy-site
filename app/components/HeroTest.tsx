@@ -9,6 +9,7 @@ import { fadeIn, scaleUp } from '@/lib/variants';
 import Logo from '@/public/img/about/newImage.jpg'
 import Img3 from '@/public/img/home/image3.png'
 import Image from 'next/image';
+import TextReveal from './tutorials/framer/TextReveal';
 
 const container = {
   hidden: { display: '' },
@@ -33,26 +34,33 @@ const HeroTest= () => {
      
       // className='bg-hero_img bg-cover bg-center min-h-[40vh] lg:h-[848px] xl:h-[948px] 2xl:h-[1048px] bg-no-repeat relative mt-[120px] lg:mt-[150px]'
       // className='bg-hero_img bg-cover bg-center min-h-[40vh] lg:h-[848px] xl:h-[948px] 2xl:h-[1048px] bg-no-repeat relative mt-[110px] '
-      className='bg-hero_img bg-cover bg-center h-screen bg-no-repeat relative   '
+      className=' bg-hero_img bg-cover bg-center h-screen bg-no-repeat relative   '
 
    >
-      <motion.div
-        variants={container}
-        initial='hidden'
-        whileInView={'show'}
+      <div
+        // variants={container}
+        // initial='hidden'
+        // whileInView={'show'}
         className='   min-h-[40vh] lg:h-full  h-full  items-center flex justify-between  '
       >
         {/* text & btn */}
         <div className='text-white ml-14   flex flex-col space-y-9 mt-[110px]'>
-           <motion.p
+           <p
             // variants={fadeIn('left')}
             className='text-xl  max-w-lg leading-relaxed'
           >
             {subtitle}
-          </motion.p>
-          <motion.h1 variants={fadeIn('up')} className='h1 '>
+          </p>
+
+          <TextReveal text={title} />
+          {/* <motion.div 
+            variants={fadeIn('up')}
+            initial='hidden'
+            whileInView={'show'}
+            viewport={{ once: true, amount: 0.3 }}
+            className='h1 '>
             {title}
-          </motion.h1>
+          </motion.div> */}
          
           {/* btn */}
           <Link href='/serveis'>
@@ -68,7 +76,7 @@ const HeroTest= () => {
         </div>
         {/* outline text */}
         
-      </motion.div>
+      </div>
     </section>
 
 
@@ -83,7 +91,7 @@ const HeroTest= () => {
       variants={fadeIn('up')}
       initial='hidden'
       whileInView={'show'}
-      viewport={{ once: false, amount: 0.1 }}
+      viewport={{ once: true, amount: 0.1 }}
       // className='flex-1 h-full xl:mt-48'
       className='flex-1 h-full '
     >
@@ -111,7 +119,7 @@ const HeroTest= () => {
       // initial='visible'
       initial='hidden'
       whileInView={'show'}
-      viewport={{ once: false, amount: 0.1 }}
+      viewport={{ once: true, amount: 0.1 }}
       className='flex flex-col lg:flex-row flex-1'
     >
         <Image

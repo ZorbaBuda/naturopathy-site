@@ -25,16 +25,26 @@ const Header = () => {
    //nabvar visible on scroll up
    const [prevScrollPos, setPrevScrollPos] = useState(0);
    const [visible, setVisible] = useState(true);
+
+   const [transparent, setTransparent] = useState(true)
  
    const handleScroll = () => {
      const currentScrollPos = window.scrollY;
-//  console.log(currentScrollPos)
+  console.log(currentScrollPos)
      if (currentScrollPos > prevScrollPos) {
       // console.log(visible)
        setVisible(false);
      } else {
        setVisible(true);
      }
+     setTransparent(currentScrollPos == 0)
+    //  if (currentScrollPos == 0){
+    //   setTransparent(true);
+    //  } else {
+    //   setTransparent(false)
+    //  }
+     console.log (currentScrollPos == 0)
+     console.log("transparent ", transparent)
  
      setPrevScrollPos(currentScrollPos);
    };
@@ -89,9 +99,11 @@ const Header = () => {
 
   return (
     <header
-    className={`${
-     !visible ? "hidden" : "visible"
-    } fixed bg-gris_claro left-0 right-0 z-20 min-w-max w-full mx-auto transition ease-linear duration-5000`}
+    className={`${ !visible ? "hidden" : "visible"}
+              {${ transparent ? "bg-transparent" : "bg-gris_claro"}
+    fixed  left-0 right-0 z-20 min-w-max w-full mx-auto transition ease-linear duration-5000
+     
+    `}
   >
      {/* <header
       className={`${
@@ -105,12 +117,15 @@ const Header = () => {
     } bg-transparent h-[100px] lg:h-[110px]  fixed bg-gris_claro left-0 right-0 z-50 min-w-max w-full 
     mx-auto transition-all duration-500 text-amarillo_claro`}
   > */}
-      <div className='flex items-center justify-between h-full pl-[70px] pr-[70px] md:pr-[80px] md:pl-[80px] lg:pl-[90px] lg:pr-[90px] xl:pl-[120px] xl:pr-[120px] 2xl:pl-[180px] 2xl:pr-[180px]'>
+      <div className='flex items-center justify-between h-full pl-[70px] pr-[70px]
+       md:pr-[80px] md:pl-[80px] lg:pl-[90px] lg:pr-[90px] xl:pl-[120px] xl:pr-[120px]
+        2xl:pl-[180px] 2xl:pr-[180px] '>
         {/* logo */}
-        <Link href='#home'>
+      
+        <Link href='/practice' className='p-5 border-2 border-black sm:relative sm:mx-auto relative mx-auto  '>
           <Image
             // className='w-[188px] h-[90px]'
-             className='w-[120px] '
+             className='h-[50px]  '
             
             src={logo}
             alt='logo'
@@ -118,8 +133,9 @@ const Header = () => {
             height={90}
           />
         </Link>
+       
         {/* nav - initially hidden, show on desktop */}
-        <div className='hidden lg:flex mx-auto'>
+        <div className='hidden lg:flex mx-auto  '>
           <NavLinks />
         </div>
         {/* hamburger menu icon = showing by default, hidden on desktop mode */}
@@ -140,7 +156,7 @@ const Header = () => {
           <NavMobile closeMobileMenu={closeMobileMenu} />
         </div>
         {/* social icons - initially hidden - show on desktop */}
-        <div className='hidden lg:flex'>
+        <div className='hidden lg:flex  '>
           <Socials />
         </div>
       </div>

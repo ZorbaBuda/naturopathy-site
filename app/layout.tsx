@@ -2,6 +2,7 @@
 import './globals.css';
 // https://fonts.google.com/specimen/Raleway?query=raleway
 import { Header, Footer } from './components';
+import TwSizeIndicator from './components/helpers/TwSizeIndicator';
 
 // const oswald = Oswald({
 //   subsets: ['latin'],
@@ -39,10 +40,12 @@ export default  function RootLayout({
   return (
 
     <html lang='en
+                !scroll-smooth
                 font-manrope_regular
                 suppressHydrationWarning '>
      
       <body className=''>
+      <TwSizeIndicator />
          <Header/>
         {children}
         <Footer />

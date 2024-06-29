@@ -1,3 +1,5 @@
+import ContactForm from './ContactForm';
+
 export { default as About } from './About';
 export { default as Contact } from './Contact';
 export { default as Copyright } from './Copyright';
@@ -12,4 +14,5 @@ export { default as Skills } from './Skills';
 export { default as Socials } from './Socials';
 export { default as Testimonial } from './Testimonial';
 export { default as Map } from './Map';
-export { default as HeroTest} from './HeroTest'
+export { default as HeroTest} from './HeroTest';
+// export { default as ContactForm} from './ContactForm'

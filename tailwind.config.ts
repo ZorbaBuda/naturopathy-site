@@ -54,14 +54,14 @@ module.exports = {
         //   DEFAULT: '#555555',
         // },
        botella: '#026670',
-       botella_claro: '#9FEDD7',
+       botella_claro: '#C9FFB3',
        amarillo_claro: '#FEF9C7',
        amarillo_medio: '#FCE181',
        gris_claro: '#EDEAE5' 
       },
       backgroundImage: {
         // hero_img: "url('/img/hero/newHero.jpg')",
-        hero_img: "url('/img/home/img2.jpg')",
+        hero_img: "url('/img/home/img4.jpg')",
         // hero_img: "url('/img/hero/bg.jpg')",
         about_img: "url('/img/about/image.png')",
         interview: "url('/img/interview/bg.png')",
