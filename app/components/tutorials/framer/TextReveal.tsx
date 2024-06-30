@@ -29,7 +29,7 @@ export default function TextReveal({text} :{ text : string}) {
      whileInView="reveal"
      transition={{staggerChildren : 0.02}}
      viewport={{ once: true, amount: 0.3 }}
-     className='h1'
+     className='h2'
      >
         {textChars.map((char, i) => (
             <motion.span

@@ -4,6 +4,7 @@ import './globals.css';
 import { Header, Footer } from './components';
 import TwSizeIndicator from './components/helpers/TwSizeIndicator';
 import AnimatedNavbar from './components/tutorials/framer/AnimatedNavbar';
+import HeaderTest from './components/HeaderTest';
 
 // const oswald = Oswald({
 //   subsets: ['latin'],
@@ -47,7 +48,8 @@ export default  function RootLayout({
      
       <body className=''>
       <TwSizeIndicator />
-        <AnimatedNavbar />
+      <HeaderTest />
+        {/* <AnimatedNavbar /> */}
        {/* <Header/> */}
            <main> 
         {children}

@@ -31,11 +31,16 @@ html {
   } */
   .h1 {
     @apply text-[70px]  lg:text-[118px] tracking-[1px] leading-none 
-    font-normal  text-white;
+    font-normal  text-botella_claro;
   }
+
   .h2 {
-    @apply text-[40px] lg:text-[60px] xl:text-[70px] 2xl:text-[85px] text-dark  font-oswald max-w-[236px] leading-none mb-[38px];
+    @apply text-[50px]  lg:text-[118px] tracking-[1px] leading-none 
+    font-normal  text-botella_claro;
   }
+  /* .h2 {
+    @apply text-[40px] lg:text-[60px] xl:text-[70px] 2xl:text-[85px] text-dark  font-oswald max-w-[236px] leading-none mb-[38px];
+  } */
 
   .h3 {
     @apply text-[30px] lg:text-[40px] tracking-[-2px] leading-none font-rozha mb-4;
@@ -46,9 +51,9 @@ html {
 
   /* buttons */
   .btn {
-    @apply   border-2 text-lg tracking-[0.08em] uppercase px-[40px] 
+    @apply   border-2 border-botella_claro text-lg tracking-[0.08em] uppercase px-[40px] 
     transition-all duration-500 flex items-center gap-x-[10px]
-    text-amarillo_claro hover:bg-amarillo_claro hover:text-botella
+    text-white hover:bg-botella_claro hover:text-botella
     rounded-md
     ;
   }
