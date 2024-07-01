@@ -55,7 +55,7 @@ export default function Homepage() {
             {subtitle}
           </p>
 
-          <div className="absolute h1 overflow-visible font-manrope_regular">{title}</div>
+          <div className="absolute h1 overflow-visible font-medium font-roboto_regular">{title}</div>
 
           <Link href="/serveis">
             <button
@@ -67,7 +67,7 @@ export default function Homepage() {
           </Link>
         </div>
         </div>
-        <div className="flex-1">
+        <div className="grow">
         <Image
                 src={HeroImage}
                 alt={"logo"}

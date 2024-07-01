@@ -19,6 +19,11 @@
   src: url("../public/font/Open_Sans/OpenSans-Regular.ttf");
 }
 
+@font-face {
+  font-family: "roboto-regular";
+  src: url("../public/font/roboto/Roboto-Regular.ttf");
+}
+
 html {
   scroll-behavior: smooth;
 }

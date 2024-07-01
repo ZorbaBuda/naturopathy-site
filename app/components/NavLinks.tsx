@@ -14,8 +14,8 @@ const NavLinks = () => {
             <li key={index}>
             
               <Link
-                className={` "text-white" : "text-black"}
-                link hover:border-b hover:border-dark transition duration-300 uppercase`}
+                className=  {`text-black hover:border-b hover:border-dark transition duration-300 uppercase 
+                font-open_sans font-medium`}
                 href={item.hash}
               >
                 {item.name}

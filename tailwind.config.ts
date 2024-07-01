@@ -48,7 +48,8 @@ module.exports = {
         rozha: ['var(--font-rozha)', 'sans-serif'],
         manrope_regular:["MANROPE_REGULAR",'sans-serif'],
         logo:["logo"],
-        open_sans:["open-sans"]
+        open_sans:["open-sans"],
+        roboto_regular:["roboto", 'sans-serif']
       },
       colors: {
         dark: '#111111',
