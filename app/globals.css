@@ -8,6 +8,12 @@
   src: url("../public/font/Manrope/Manrope-Regular.ttf");
 }
 
+
+@font-face {
+  font-family: "logo";
+  src: url("../public/font/Oval/Oval-Trial-Regular.ttf");
+}
+
 html {
   scroll-behavior: smooth;
 }

@@ -47,6 +47,7 @@ module.exports = {
         oswald: ['var(--font-oswald)', 'sans-serif'],
         rozha: ['var(--font-rozha)', 'sans-serif'],
         manrope_regular:["MANROPE_REGULAR"],
+        logo:["logo"]
       },
       colors: {
         dark: '#111111',
@@ -78,5 +79,7 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require("@tailwindcss/typography"),
+  ],
 };

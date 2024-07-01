@@ -154,7 +154,7 @@ const HeroTest = () => {
               <h3 className="h3">{section2Title}</h3>
               <div className="flex flex-col items-center">
                 <div className="font-light max-w-[530px] text-grey">
-                  <p className="mb-9">{section2Subtitle}</p>
+                  <p className="mb-9 prose">{section2Subtitle}</p>
                   <Link href="/serveis">
                     <button
                       className="btn btn-lg btn-link font-normal"

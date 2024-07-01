@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: "MANROPE-REGULAR";
+  src: url("../public/font/Manrope/Manrope-Regular.ttf");
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* apply some general styles */
+@layer base {
+  /* * {
+    @apply box-border;
+  } */
+  body {
+    @apply font-secondary text-lg text-dark bg-[#E5E5E5];
+  }
+  .section {
+    @apply py-[40px] lg:py-[160px];
+  }
+  .link {
+    @apply font-oswald uppercase tracking-[0.08em];
+  }
+  /* .h1 {
+    @apply text-[60px] lg:text-[118px] tracking-[-2px] leading-none font-rozha mb-4;
+  } */
+  .h1 {
+    @apply text-[70px]  lg:text-[118px] tracking-[1px] leading-none 
+    font-normal  text-botella_claro;
+  }
+
+  .h2 {
+    @apply text-[50px]  lg:text-[118px] tracking-[1px] leading-none 
+    font-normal  text-botella_claro;
+  }
+  /* .h2 {
+    @apply text-[40px] lg:text-[60px] xl:text-[70px] 2xl:text-[85px] text-dark  font-oswald max-w-[236px] leading-none mb-[38px];
+  } */
+
+  .h3 {
+    @apply text-[30px] lg:text-[40px] tracking-[-2px] leading-none font-rozha mb-4;
+  }
+  .h4 {
+    @apply text-[20px] lg:text-[30px] xl:text-[40px] 2xl:text-[60px] text-dark  font-oswald max-w-[236px] leading-none mb-[38px];
+  }
+
+  /* buttons */
+  .btn {
+    @apply   border-2 border-botella_claro text-lg tracking-[0.08em] uppercase px-[40px] 
+    transition-all duration-500 flex items-center gap-x-[10px]
+    text-white hover:bg-botella_claro hover:text-botella
+    rounded-md
+    ;
+  }
+  .btn-sm {
+    @apply h-[55px];
+  }
+  .btn-lg {
+    @apply h-[67px];
+  }
+  .btn-outline {
+    @apply border border-white/70 bg-none hover:bg-white hover:text-dark;
+  }
+  .btn-dark {
+    @apply bg-dark hover:bg-dark/90 transition-all text-white;
+  }
+  .btn-link {
+    @apply px-0 h-auto text-dark hover:text-dark/90 transition-all;
+  }
+}

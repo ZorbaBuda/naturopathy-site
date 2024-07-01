@@ -5,6 +5,8 @@ import { Header, Footer } from './components';
 import TwSizeIndicator from './components/helpers/TwSizeIndicator';
 import AnimatedNavbar from './components/tutorials/framer/AnimatedNavbar';
 import HeaderTest from './components/HeaderTest';
+import { Head, NextScript } from 'next/document';
+import Script from 'next/script';
 
 // const oswald = Oswald({
 //   subsets: ['latin'],
@@ -45,16 +47,16 @@ export default  function RootLayout({
                 !scroll-smooth
                 font-manrope_regular
                 suppressHydrationWarning '>
-     
+   
       <body className=''>
       <TwSizeIndicator />
-      <HeaderTest />
+      {/* <HeaderTest /> */}
         {/* <AnimatedNavbar /> */}
-       {/* <Header/> */}
+       <Header/>
            <main> 
         {children}
         </main>
-        <Footer />
+        {/* <Footer /> */}
         </body>
     </html>
   );
