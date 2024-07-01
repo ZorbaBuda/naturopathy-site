@@ -27,7 +27,7 @@ const Header = () => {
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious();
-    console.log(scrollYProgress.get())
+    // console.log(scrollYProgress.get())
     if (latest > previous) {
       setHidden(true);
     } else {
@@ -47,18 +47,18 @@ const Header = () => {
   const closeMobileMenu = () => {
     setNavMobile(false); // Function to close the mobile menu
   };
-
+  // backdrop-blur-xl
   return (
     <motion.nav
     variants={{ visible: { y: 0 }, hidden: { y: "-100%" } }}
     animate={hidden ? "hidden" : "visible"}
     transition={{ duration: 0.3, ease: "easeInOut" }}
-      className={`${transparent ? "backdrop-blur-xl   " : "bg-white"}
-       h-[90px] fixed top-0   z-20 min-w-max w-full mx-auto transition-all duration-700`}
+      className={`${transparent ? " bg-gradient-to-b from-white to-transparent   " : "bg-white"}
+       h-[120px] fixed top-0   z-20 min-w-max w-full mx-auto transition-all duration-700`}
     >
       <div className='flex items-center justify-between h-full pl-[50px] pr-[60px] md:pr-[80px] md:pl-[80px] lg:pl-[90px] lg:pr-[90px] xl:pl-[100px] xl:pr-[100px] 2xl:pl-[180px] 2xl:pr-[180px]'>
         {/* logo */}
-        <Link href="/practice" className="p-5    ">
+        <Link href="/" className="p-5    ">
           <div className="flex items-center">
             <Image
               // className='w-[188px] h-[90px]'
@@ -68,9 +68,10 @@ const Header = () => {
               width={88}
               height={90}
             />
-            <div className={`${transparent ? "text-black" : "text-black"} flex flex-col font-logo text-3xl `}>
+            <div className={`${transparent ? "text-black" : "text-black"} font-medium flex flex-col font-logo text-3xl `}>
               <div>CHRISTIAN</div> 
               <div>CONSTANSEU</div>
+              <div className='text-sm font-open_sans'>NATURÓPATA</div>
             </div>
           </div>
 

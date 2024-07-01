@@ -6,9 +6,10 @@ import ContactFormTest from '../components/ContactFormTest'
 export default function page() {
   return (
     <>
-    <ContactFormTest />
-    <ContactForm />
-    <Contact/>
+    
+    <ContactForm /> 
+     <ContactFormTest />
+    {/* <Contact/> */}
     </>
   )
 }

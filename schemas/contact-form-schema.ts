@@ -1,26 +1,41 @@
 import { z } from "zod";
 
+const phoneRegex = new RegExp(
+  /^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/
+);
+
 export const contactFormSchema = z
 .object({
     name: z
     .string()
-    .min(1, "Username is required")
+    .min(1, "Name is required")
     .min(3, "Username must be at least 3 characters")
     .max(30, "Username must be at most 30 characters")
     .regex(
       /^[a-zA-Z0-9_\s]+$/,
-      "Invalid username. Letters, numbers, spaces or underscores only"
+      "Invalid name. Letters, numbers, spaces or underscores only"
     )
-    .regex(/^[a-zA-Z][a-zA-Z0-9_\s]*$/, "Username must start with a letter"),
+    .regex(/^[a-zA-Z][a-zA-Z0-9_\s]*$/, "Name must start with a letter"),
+    surname: z
+    .string()
+    .min(1, "Surname is required")
+    .min(3, "Surname must be at least 3 characters")
+    .max(30, "Surname must be at most 30 characters")
+    .regex(
+      /^[a-zA-Z0-9_\s]+$/,
+      "Invalid surname. Letters, numbers, spaces or underscores only"
+    )
+    .regex(/^[a-zA-Z][a-zA-Z0-9_\s]*$/, "Surname must start with a letter"),
   phone: z
   .string()
-  .min(1, "Phone is required"),
+  .regex(phoneRegex, "Invalid number!"),
   email: z.string().min(1, "Email is required").email("Invalid email"),
-  body: z
+  message: z
   .string()
   .min(1, "Body is required")
   .max(30, "at most 30 characters"),
   
-  date: z.string().min(1, "CategorySlug is required"),
+  date: z.string(),
+  privacyCheck: z.literal<boolean>(true)
   
 })

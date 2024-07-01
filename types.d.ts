@@ -4,12 +4,13 @@ type Link = {
     hash : string
 }
 
-type FormDataProps = {
+type ContactFormProps = {
     name: string,
+    surname: string,
     phone: string,
     email: string,
     message: string,
     date: string,
     privacyCheck: boolean,
-    newsletterCheck: boolean
+    // newsletterCheck: boolean
 }

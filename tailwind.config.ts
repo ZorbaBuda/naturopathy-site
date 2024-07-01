@@ -46,8 +46,9 @@ module.exports = {
         tertiary: ['Rozha One', 'sans-serif'],
         oswald: ['var(--font-oswald)', 'sans-serif'],
         rozha: ['var(--font-rozha)', 'sans-serif'],
-        manrope_regular:["MANROPE_REGULAR"],
-        logo:["logo"]
+        manrope_regular:["MANROPE_REGULAR",'sans-serif'],
+        logo:["logo"],
+        open_sans:["open-sans"]
       },
       colors: {
         dark: '#111111',

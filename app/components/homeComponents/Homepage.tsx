@@ -43,9 +43,10 @@ export default function Homepage() {
         // className='bg-hero_img bg-cover bg-center min-h-[40vh] lg:h-[848px] xl:h-[948px] 2xl:h-[1048px] bg-no-repeat relative mt-[110px] '
         className=" bg-[#EAEDE6] bg-cover bg-center h-screen bg-no-repeat flex-col flex md:flex-row    "
       >
+        <div className="">
         <div
-          className="
-        text-black px-7   flex flex-col items-center space-y-9  "
+          className="static
+        text-black px-7   flex flex-col items-center space-y-9 border-2 border-black mt-[120px]  "
         >
           <p
             // variants={fadeIn('left')}
@@ -54,7 +55,7 @@ export default function Homepage() {
             {subtitle}
           </p>
 
-          <div className="h1">{title}</div>
+          <div className="absolute h1 overflow-visible font-manrope_regular">{title}</div>
 
           <Link href="/serveis">
             <button
@@ -65,45 +66,21 @@ export default function Homepage() {
             </button>
           </Link>
         </div>
+        </div>
+        <div className="flex-1">
         <Image
                 src={HeroImage}
                 alt={"logo"}
                 height="0"
                 width="0"
-                className=" h-screen mb-4  mx-auto"
+                className=" h-screen mb-4  mx-auto  w-[2/3] overflow-hidden"
                 unoptimized
               />
+              </div>
       </section>
 
 
-      <section
-        // className='bg-hero_img bg-cover bg-center min-h-[40vh] lg:h-[848px] xl:h-[948px] 2xl:h-[1048px] bg-no-repeat relative mt-[120px] lg:mt-[150px]'
-        // className='bg-hero_img bg-cover bg-center min-h-[40vh] lg:h-[848px] xl:h-[948px] 2xl:h-[1048px] bg-no-repeat relative mt-[110px] '
-        className=" bg-hero_img bg-cover bg-center h-screen bg-no-repeat flex items-center   "
-      >
-        <div
-          className="
-        text-white px-7   flex flex-col space-y-9  "
-        >
-          <p
-            // variants={fadeIn('left')}
-            className="text-xl  max-w-lg leading-relaxed"
-          >
-            {subtitle}
-          </p>
-
-          <TextReveal text={title} />
-
-          <Link href="/serveis">
-            <button
-              className="btn btn-lg  font-normal"
-              aria-label="Reveal More Text"
-            >
-              {btnText}
-            </button>
-          </Link>
-        </div>
-      </section>
+   
 
       {/* block 1 */}
       <section className="lg:py-4 mt-4 ">

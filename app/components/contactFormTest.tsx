@@ -1,14 +1,14 @@
+// https://www.youtube.com/watch?v=cc_xmawJ8Kg
 'use client'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { FormProvider, useForm } from 'react-hook-form'
 import { zodResolver } from "@hookform/resolvers/zod";
 import { contactFormSchema } from '@/schemas/contact-form-schema';
 import { toast} from 'sonner'
-import { UsernameField } from './form-fields/username-field';
-import { EmailField } from './form-fields/email-field';
 import { TextareaField } from './form-fields/textarea-field';
 import { Spinner } from './spinner';
-import { CheckboxField } from './form-fields/checkbox-field';
+import { CheckboxFieldBoolean } from './form-fields/checkbox-field';
+import { InputField } from './form-fields/input-field';
 
 export default function ContactFormTest() {
 
@@ -16,15 +16,17 @@ export default function ContactFormTest() {
 
     const defaultValues = {
         name: "",
+        surname: "",
         phone: "",
         email: "",
         message: "",
         date: currentDate,
         privacyCheck: false,
-        newsletterCheck: false
+        // newsletterCheck: false
        };
 
-    const form = useForm<FormDataProps>({
+
+    const form = useForm<ContactFormProps>({
         defaultValues,
         resolver: zodResolver(contactFormSchema)
     })
@@ -36,7 +38,17 @@ export default function ContactFormTest() {
         setValue,
       } = form;
 
-      const onSubmit = async (values: FormDataProps) => {
+      const privacyCheck = watch("privacyCheck")
+
+      useEffect(() => {
+       
+        if (privacyCheck) {
+           console.log(privacyCheck)
+        }
+      }), [privacyCheck, setValue]
+
+      const onSubmit = async (values: ContactFormProps) => {
+        console.log("what?")
          console.log("values", values);
     
         // const result = await sendToNotion({ values });
@@ -65,20 +77,38 @@ export default function ContactFormTest() {
     <FormProvider { ...form}>
     <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className="mt-[54px] space-y-9"
+          className="mt-[130px] flex flex-col gap-9"
           noValidate
         >
-          <UsernameField placeholder="Username" name="name" />
-          {/* <PhoneField placeholder="Phone" name="phone" /> */} 
-          <EmailField placeholder="Email" name="email" />
+           <InputField
+                label="Nom*:"
+                placeholder="Ej: Marcos"
+                name="name"
+              />
+                <InputField
+                label="Cognoms*:"
+                placeholder="Ej: Garcia"
+                name="surname"
+              />
+                <InputField
+                label="Telefon*:"
+                placeholder="XXXXXXXXX"
+                name="phone"
+              />
+                <InputField
+                label="Email*:"
+                placeholder="Ej: marcos.garcia@exemple.com"
+                name="email"
+              />
           <TextareaField
             name="message"
             label="Your message:"
             placeholder="Enter message"
           />
-           <CheckboxField
-                        label={"donde va label"}
-                        name="categories"
+           <CheckboxFieldBoolean
+                        label={"He llegit i accepto..."}
+                        name="privacyCheck"
+                       
                         // value={category.categoryName}
                       />
             {/* <CheckboxField
