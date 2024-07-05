@@ -41,21 +41,20 @@ export default function Homepage() {
       {/* <section className="bg-hero_img bg-cover bg-center min-h-[40vh] lg:h-[848px] xl:h-[948px] 2xl:h-[1048px] bg-no-repeat relative flex "> */}
       <section className="bg-hero_img bg-cover bg-center h-screen bg-no-repeat  ">
        <div className="bg-gray-900 bg-opacity-20 flex h-screen relative">
-        <div className="w-max h-max  mx-auto my-auto flex flex-col">
-          <div className="p-9">
-               <p className="text-white ">{heroSubtitle}</p>
-               <div className="h1">{heroTitle}</div>
+        {/* <div className="   "> */}
+          <div className="   my-auto flex flex-col gap-9 2xl:ml-[260px] xl:ml-[110px] ml-[38px]">
+               <p className="text-white text-xl ">{heroTitle}</p>
+               <div className="h1 max-w-[1080px]">{heroSubtitle}</div>
                <Link href="/serveis">
             <button
-              className="btn btn-lg  font-normal"
-              aria-label="Reveal More Text"
+              className="btn btn-sm  font-normal"
             >
               {btnText}
             </button>
           </Link>
         </div>
         </div>
-        </div>
+        {/* </div> */}
         
       </section>
       {/* <section

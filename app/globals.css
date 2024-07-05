@@ -50,8 +50,8 @@ html {
     @apply text-[60px] lg:text-[118px] tracking-[-2px] leading-none font-rozha mb-4;
   } */
   .h1 {
-    @apply text-[50px]  lg:text-[80px] tracking-[1px] leading-none font-manrope_semibold
-    font-normal  text-white;
+    @apply text-[70px]  xl:text-[110px] lg:text-[80px] tracking-[1px] leading-none font-manrope_semibold
+    font-normal  text-[#DEF9C4];
   }
 
   .h2 {
@@ -69,14 +69,30 @@ html {
     @apply text-[20px] lg:text-[30px] xl:text-[40px] 2xl:text-[60px] text-dark  font-oswald max-w-[236px] leading-none mb-[38px];
   }
 
+
   /* buttons */
+  /* tracking-[0.08em] */
   .btn {
+    @apply    text-lg  uppercase px-8
+    transition-all duration-500 flex items-center 
+    text-white hover:bg-[#DEF9C4] hover:text-botella
+    rounded-md border-2 border-[#DEF9C4]
+    ;
+  }
+  /* .btn {
+    @apply    text-base  uppercase px-3
+    transition-all duration-500 flex items-center 
+    text-white bg-[#508D4E] hover:text-botella
+    rounded-2xl
+    ;
+  } */
+  /* .btn {
     @apply   border-2 border-black text-lg tracking-[0.08em] uppercase px-[40px] 
     transition-all duration-500 flex items-center gap-x-[10px]
     text-black hover:bg-botella_claro hover:text-botella
     rounded-md
     ;
-  }
+  } */
   .btn-sm {
     @apply h-[55px];
   }

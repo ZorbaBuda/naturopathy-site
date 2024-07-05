@@ -13,7 +13,7 @@ const NavLinks = ({ transparent}: { transparent : boolean}) => {
           return (
             <li key={index}>
               <Link
-                className=  {` ${transparent ? "text-white" : "text-black"}
+                className=  {` ${transparent ? "text-black" : "text-black"}
                   text-black hover:border-b hover:border-dark transition duration-300 uppercase 
                 font-open_sans font-medium`}
                 href={item.hash}

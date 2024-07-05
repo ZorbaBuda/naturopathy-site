@@ -65,7 +65,7 @@ module.exports = {
       },
       backgroundImage: {
         // hero_img: "url('/img/hero/newHero.jpg')",
-        hero_img: "url('/img/home/img19.jpg')",
+        hero_img: "url('/img/home/img20.jpg')",
         // hero_img: "url('/img/hero/bg.jpg')",
         about_img: "url('/img/about/image.png')",
         interview: "url('/img/interview/bg.png')",

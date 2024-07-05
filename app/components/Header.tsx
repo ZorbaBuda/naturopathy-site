@@ -59,9 +59,11 @@ const Header = () => {
 
        h-[100px] fixed top-0   z-20 min-w-max w-full mx-auto transition-all duration-700`}
     >
-      <div className='flex items-center justify-between h-full pl-[50px] pr-[60px] md:pr-[80px] md:pl-[80px] lg:pl-[90px] lg:pr-[90px] xl:pl-[100px] xl:pr-[100px] 2xl:pl-[180px] 2xl:pr-[180px]'>
+      {/* <div className='flex items-center justify-between h-full pl-[50px] pr-[60px] md:pr-[80px] md:pl-[80px] lg:pl-[90px] lg:pr-[90px] xl:pl-[100px] xl:pr-[100px] 2xl:pl-[180px] 2xl:pr-[180px]'> */}
+      <div className='flex items-center justify-between h-full 2xl:px-[260px] xl:px-[110px] px-[38px]'>
+
         {/* logo */}
-        <Link href="/" className="p-5    ">
+        <Link href="/" className=" ">
           <div className="flex items-center">
             <Image
               // className='w-[188px] h-[90px]'
@@ -71,10 +73,10 @@ const Header = () => {
               width={88}
               height={90}
             />
-            <div className={`${transparent ? "text-white" : "text-black"} font-medium flex flex-col gap-0 font-logo text-3xl `}>
-              <div>CHRISTIAN CONSTANSEU</div> 
+            <div className={`${transparent ? "text-white" : "text-black"} font-medium flex flex-col gap-0 font-logo lg:text-3xl text-2xl `}>
+              <div className='text-[#40961D] '>Christian Constanseu</div> 
               {/* <div></div> */}
-              <div className='text-sm font-open_sans'>NATURÓPATA</div>
+              <div className='lg:text-sm text-sm font-open_sans'>NATURÓPATA</div>
             </div>
           </div>
 
@@ -99,7 +101,7 @@ const Header = () => {
           onClick={() => setNavMobile(!navMobile)}
           className='lg:hidden absolute right-[5%]  text-black p-2  cursor-pointer'
         >
-          <HiMenuAlt2 className='text-2xl' />
+          <HiMenuAlt2 className={` ${ transparent? "text-white" : "text-black" } text-3xl `} />
         </div>
         {/* nav mobile - showing by default, hidden on desktop */}
         <div
