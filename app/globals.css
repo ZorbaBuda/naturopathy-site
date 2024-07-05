@@ -4,10 +4,14 @@
 
 
 @font-face {
-  font-family: "MANROPE-REGULAR";
+  font-family: "manrope-regular";
   src: url("../public/font/Manrope/Manrope-Regular.ttf");
 }
 
+@font-face {
+  font-family: "manrope-semibold";
+  src: url("../public/font/Manrope/Manrope-SemiBold.ttf");
+}
 
 @font-face {
   font-family: "logo";
@@ -46,8 +50,8 @@ html {
     @apply text-[60px] lg:text-[118px] tracking-[-2px] leading-none font-rozha mb-4;
   } */
   .h1 {
-    @apply text-[70px]  lg:text-[118px] tracking-[1px] leading-none 
-    font-normal  text-black;
+    @apply text-[50px]  lg:text-[80px] tracking-[1px] leading-none font-manrope_semibold
+    font-normal  text-white;
   }
 
   .h2 {

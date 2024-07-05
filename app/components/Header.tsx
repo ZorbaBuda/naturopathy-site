@@ -48,13 +48,16 @@ const Header = () => {
     setNavMobile(false); // Function to close the mobile menu
   };
   // backdrop-blur-xl
+  // bg-gradient-to-b from-white to-transparent
   return (
     <motion.nav
     variants={{ visible: { y: 0 }, hidden: { y: "-100%" } }}
     animate={hidden ? "hidden" : "visible"}
     transition={{ duration: 0.3, ease: "easeInOut" }}
-      className={`${transparent ? " bg-gradient-to-b from-white to-transparent   " : "bg-white"}
-       h-[120px] fixed top-0   z-20 min-w-max w-full mx-auto transition-all duration-700`}
+      className={`${transparent ? " transparent  " : "bg-white"}
+      
+
+       h-[100px] fixed top-0   z-20 min-w-max w-full mx-auto transition-all duration-700`}
     >
       <div className='flex items-center justify-between h-full pl-[50px] pr-[60px] md:pr-[80px] md:pl-[80px] lg:pl-[90px] lg:pr-[90px] xl:pl-[100px] xl:pr-[100px] 2xl:pl-[180px] 2xl:pr-[180px]'>
         {/* logo */}
@@ -68,9 +71,9 @@ const Header = () => {
               width={88}
               height={90}
             />
-            <div className={`${transparent ? "text-black" : "text-black"} font-medium flex flex-col font-logo text-3xl `}>
-              <div>CHRISTIAN</div> 
-              <div>CONSTANSEU</div>
+            <div className={`${transparent ? "text-white" : "text-black"} font-medium flex flex-col gap-0 font-logo text-3xl `}>
+              <div>CHRISTIAN CONSTANSEU</div> 
+              {/* <div></div> */}
               <div className='text-sm font-open_sans'>NATURÓPATA</div>
             </div>
           </div>
@@ -88,7 +91,8 @@ const Header = () => {
 
         {/* nav - initially hidden, show on desktop */}
         <div className='hidden lg:flex mx-auto'>
-          <NavLinks />
+          {/* <NavLinks /> */}
+          <NavLinks transparent={transparent} />
         </div>
         {/* hamburger menu icon = showing by default, hidden on desktop mode */}
         <div

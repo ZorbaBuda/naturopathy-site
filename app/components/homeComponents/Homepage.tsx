@@ -25,8 +25,8 @@ const container = {
 export default function Homepage() {
   // destructure heroData
   const {
-    title,
-    subtitle,
+    heroTitle,
+    heroSubtitle,
     section1Subtitle,
     section1Title,
     btnText,
@@ -38,18 +38,38 @@ export default function Homepage() {
   return (
     <>
       {/* hero section */}
-      <section
+      {/* <section className="bg-hero_img bg-cover bg-center min-h-[40vh] lg:h-[848px] xl:h-[948px] 2xl:h-[1048px] bg-no-repeat relative flex "> */}
+      <section className="bg-hero_img bg-cover bg-center h-screen bg-no-repeat  ">
+       <div className="bg-gray-900 bg-opacity-20 flex h-screen relative">
+        <div className="w-max h-max  mx-auto my-auto flex flex-col">
+          <div className="p-9">
+               <p className="text-white ">{heroSubtitle}</p>
+               <div className="h1">{heroTitle}</div>
+               <Link href="/serveis">
+            <button
+              className="btn btn-lg  font-normal"
+              aria-label="Reveal More Text"
+            >
+              {btnText}
+            </button>
+          </Link>
+        </div>
+        </div>
+        </div>
+        
+      </section>
+      {/* <section
         // className='bg-hero_img bg-cover bg-center min-h-[40vh] lg:h-[848px] xl:h-[948px] 2xl:h-[1048px] bg-no-repeat relative mt-[120px] lg:mt-[150px]'
         // className='bg-hero_img bg-cover bg-center min-h-[40vh] lg:h-[848px] xl:h-[948px] 2xl:h-[1048px] bg-no-repeat relative mt-[110px] '
         className=" bg-[#EAEDE6] bg-cover bg-center h-screen bg-no-repeat flex-col flex md:flex-row    "
       >
-        <div className="">
+        <div className="basis-1/3">
         <div
           className="static
         text-black px-7   flex flex-col items-center space-y-9 border-2 border-black mt-[120px]  "
         >
           <p
-            // variants={fadeIn('left')}
+          
             className="text-xl  max-w-lg leading-relaxed"
           >
             {subtitle}
@@ -67,7 +87,7 @@ export default function Homepage() {
           </Link>
         </div>
         </div>
-        <div className="grow">
+        <div className="basis-2/3">
         <Image
                 src={HeroImage}
                 alt={"logo"}
@@ -77,16 +97,53 @@ export default function Homepage() {
                 unoptimized
               />
               </div>
-      </section>
+      </section> */}
+     
+      {/* <section */}
+         {/* className='bg-hero_img bg-cover bg-center min-h-[40vh] lg:h-[848px] xl:h-[948px] 2xl:h-[1048px] bg-no-repeat relative mt-[120px] lg:mt-[150px]' */}
+        {/* className='bg-hero_img bg-cover bg-center h-screen
+         bg-no-repeat flex mt-[100px]' */}
+         {/* className=" bg-[#EAEDE6] bg-cover bg-center h-screen bg-no-repeat flex-col flex md:flex-row    " */}
+      {/* > */}
+        {/* <div className="bg-black bg-opacity-30 h-screen w-screen">
 
+        <div className="  border-black  w-1/3 mt-[120px] mx-auto ">
+        <div
+          className="border-2 border-black 
+           
+        text-black pl-7   flex flex-col  space-y-4    "
+        >
+          <p
+           
+            className="text-xl  max-w-lg leading-relaxed"
+          >
+            {subtitle}
+          </p>
+
+          <div className=" h1  font-medium ">{title}</div>
+
+          <Link href="/serveis">
+            <button
+              className="btn btn-lg  font-normal"
+              aria-label="Reveal More Text"
+            >
+              {btnText}
+            </button>
+          </Link>
+        </div>
+     
+       </div>
+       </div>
+      </section>
+      */}
 
    
 
       {/* block 1 */}
-      <section className="lg:py-4 mt-4 ">
+      {/* <section className="lg:py-4 mt-4 ">
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row gap-x-[70px] items-center">
-            {/* text */}
+            
             <div className="flex-1 h-full ">
               <motion.h2
                 variants={fadeIn("up")}
@@ -113,7 +170,7 @@ export default function Homepage() {
               </div>
             </div>
 
-            {/* image */}
+           
             <div className="flex flex-col lg:flex-row flex-1">
               <Image
                 src={Logo}
@@ -124,19 +181,17 @@ export default function Homepage() {
                 unoptimized
               />
 
-              {/* <div className='text-[360px] xl:text-[620px] 2xl:text-[720px] leading-none font-rozha lg:-tracking-[0.055em] bg-about_img bg-no-repeat bg-right bg-clip-text text-transparent'>
-        01
-      </div> */}
+           
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* block 2 */}
-      <section className="lg:py-4 mt-4 ">
+      {/* <section className="lg:py-4 mt-4 ">
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row gap-x-[70px] items-center">
-            {/* image */}
+           
             <motion.div
               variants={fadeIn("up")}
               // initial='visible'
@@ -154,17 +209,15 @@ export default function Homepage() {
                 unoptimized
               />
 
-              {/* <div className='text-[360px] xl:text-[620px] 2xl:text-[720px] leading-none font-rozha lg:-tracking-[0.055em] bg-about_img bg-no-repeat bg-right bg-clip-text text-transparent'>
-        01
-      </div> */}
+           
             </motion.div>
-            {/* text */}
+       
             <motion.div
               variants={fadeIn("up")}
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.1 }}
-              // className='flex-1 h-full xl:mt-48'
+             
               className="flex-1 h-full "
             >
               <h3 className="h3">{section2Title}</h3>
@@ -184,7 +237,7 @@ export default function Homepage() {
             </motion.div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* block 3 contact */}
     </>

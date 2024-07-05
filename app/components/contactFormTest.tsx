@@ -7,8 +7,9 @@ import { contactFormSchema } from '@/schemas/contact-form-schema';
 import { toast} from 'sonner'
 import { TextareaField } from './form-fields/textarea-field';
 import { Spinner } from './spinner';
-import { CheckboxFieldBoolean } from './form-fields/checkbox-field';
 import { InputField } from './form-fields/input-field';
+import { CheckboxField } from './form-fields/checkbox-field';
+// https://www.youtube.com/watch?v=_XQ_9qaQsQU
 
 export default function ContactFormTest() {
 
@@ -43,9 +44,9 @@ export default function ContactFormTest() {
       useEffect(() => {
        
         if (privacyCheck) {
-           console.log(privacyCheck)
+           console.log("privacyCheck ", privacyCheck)
         }
-      }), [privacyCheck, setValue]
+      }), []
 
       const onSubmit = async (values: ContactFormProps) => {
         console.log("what?")
@@ -105,7 +106,7 @@ export default function ContactFormTest() {
             label="Your message:"
             placeholder="Enter message"
           />
-           <CheckboxFieldBoolean
+           <CheckboxField
                         label={"He llegit i accepto..."}
                         name="privacyCheck"
                        

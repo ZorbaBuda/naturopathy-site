@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { links } from '@/lib/data';
 
-const NavLinks = () => {
+const NavLinks = ({ transparent}: { transparent : boolean}) => {
   // console.log(links)
   return (
     <nav>
@@ -12,14 +12,21 @@ const NavLinks = () => {
         {links.map((item : Link , index) => {
           return (
             <li key={index}>
-            
               <Link
-                className=  {`text-black hover:border-b hover:border-dark transition duration-300 uppercase 
+                className=  {` ${transparent ? "text-white" : "text-black"}
+                  text-black hover:border-b hover:border-dark transition duration-300 uppercase 
                 font-open_sans font-medium`}
                 href={item.hash}
               >
                 {item.name}
               </Link>
+              {/* <Link
+                className=  {`text-black hover:border-b hover:border-dark transition duration-300 uppercase 
+                font-open_sans font-medium`}
+                href={item.hash}
+              >
+                {item.name}
+              </Link> */}
               {/* <Link
                 className='link hover:border-b hover:border-dark transition duration-300 capitalize'
                 href={item.hash}

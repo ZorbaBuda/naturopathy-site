@@ -46,7 +46,8 @@ module.exports = {
         tertiary: ['Rozha One', 'sans-serif'],
         oswald: ['var(--font-oswald)', 'sans-serif'],
         rozha: ['var(--font-rozha)', 'sans-serif'],
-        manrope_regular:["MANROPE_REGULAR",'sans-serif'],
+        manrope_regular:["manrope-regular",'sans-serif'],
+        manrope_semibold:["manrope-semibold",'sans-serif'],
         logo:["logo"],
         open_sans:["open-sans"],
         roboto_regular:["roboto", 'sans-serif']
@@ -64,7 +65,7 @@ module.exports = {
       },
       backgroundImage: {
         // hero_img: "url('/img/hero/newHero.jpg')",
-        hero_img: "url('/img/home/img4.jpg')",
+        hero_img: "url('/img/home/img19.jpg')",
         // hero_img: "url('/img/hero/bg.jpg')",
         about_img: "url('/img/about/image.png')",
         interview: "url('/img/interview/bg.png')",
