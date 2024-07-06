@@ -8,7 +8,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Logo from '@/public/img/about/newImage.jpg'
 
-const About = () => {
+export default function About() {
   const { title, subtitle1, subtitle2, subtitle3, btnText, btnIcon } =
     aboutData;
 
@@ -125,4 +125,3 @@ const About = () => {
   );
 };
 
-export default About;

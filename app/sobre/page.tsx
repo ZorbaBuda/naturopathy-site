@@ -1,11 +1,11 @@
 import React from 'react'
-import { About, GallerySection } from '@/components'
+import About from '@/components/About'
 
 export default function page() {
   return (
     <>
     <About/>
-    <GallerySection />
+   
     </>
   )
 }

@@ -1,16 +1,15 @@
 // import { Oswald, Rozha_One, Playfair_Display} from 'next/font/google';
-import '@/styles/globals.css';
+import "@/styles/globals.css";
 // https://fonts.google.com/specimen/Raleway?query=raleway
 
-import Footer from '@/components/Footer';
-import Header from '@/components/Header';
-import TwSizeIndicator from '@/components/helpers/TwSizeIndicator';
-import AnimatedNavbar from '@/components/tutorials/framer/AnimatedNavbar';
-import HeaderTest from '@/components/HeaderTest';
-import { Head, NextScript } from 'next/document';
-import Script from 'next/script';
-import Navbar from '@/components/navs/Navbar';
-
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+import TwSizeIndicator from "@/components/helpers/TwSizeIndicator";
+import AnimatedNavbar from "@/components/tutorials/framer/AnimatedNavbar";
+import HeaderTest from "@/components/HeaderTest";
+import { Head, NextScript } from "next/document";
+import Script from "next/script";
+import Navbar from "@/components/navs/Navbar";
 
 // const oswald = Oswald({
 //   subsets: ['latin'],
@@ -31,38 +30,31 @@ import Navbar from '@/components/navs/Navbar';
 // });
 
 export const metadata = {
-  title: 'Naturopatia Mataro',
-  description: 'Estudio naturopatia en Mataro',
-  keywords: 'yoga, yoga classes, botanica, chisinau, moldova, studio',
-  author: '',
-  creator: 'v',
-  applicationName: 'Next.js',
-  date: '2024-06-17',
-  language: 'en-US',
+  title: "Naturopatia Mataro",
+  description: "Estudio naturopatia en Mataro",
+  // keywords: 'yoga, yoga classes, botanica, chisinau, moldova, studio',
+  // author: '',
+  // creator: 'v',
+  // applicationName: 'Next.js',
+  // date: '2024-06-17',
+  // language: 'en-US',
 };
-export default  function RootLayout({
-   children,
-   } : {
-    children : React.ReactNode;
-   }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-
-    <html lang='en
-                !scroll-smooth
-                font-manrope_regular
-                suppressHydrationWarning '>
-   
-      <body className=''>
-      <TwSizeIndicator />
-      {/* <HeaderTest /> */}
+    <html lang="en" suppressHydrationWarning>
+      <body className="font-manrope_regular">
+        <TwSizeIndicator />
+        {/* <HeaderTest /> */}
         {/* <AnimatedNavbar /> */}
-        {/* <Navbar /> */}
-       <Header/>
-           <main> 
-        {children}
-        </main>
+        <Navbar />
+        {/* <Header/> */}
+        <main>{children}</main>
         <Footer />
-        </body>
+      </body>
     </html>
   );
 }

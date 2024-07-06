@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion, useScroll, useMotionValueEvent, AnimatePresence, MotionConfig } from "framer-motion"
 // import header data
-import { headerData } from '@/lib/data'
+import { headerData, links } from '@/lib/data'
 // import components
 import NavLinks from '../NavLinks';
 import NavMobile from '../NavMobile';
@@ -112,7 +112,7 @@ export default function Header() {
 					initial="hide"
 					animate={mobileNav ? "show" : "hide"}
 					onClick={toggleMobileNav}
-					className="flex flex-col space-y-1 relative z-10"
+					className="flex flex-col space-y-1 relative z-10 lg:hidden"
 				>
 					<motion.span
 						variants={{
@@ -147,7 +147,7 @@ export default function Header() {
 								y: -5,
 							},
 						}}
-						className={` ${transparent ? "bg-white" : "bg-black"}  h-px block w-6`}
+						className={` ${transparent ? "bg-white" : "bg-black"}  h-px  w-6`}
 					></motion.span>
 				</motion.button>
                 <AnimatePresence>
@@ -183,9 +183,9 @@ export default function Header() {
 								initial="hide"
 								animate="show"
 								exit="hide"
-								className="mt-[100px] fixed inset-0 bg-blue-600 p-6 flex flex-col justify-center space-y-10 lg:hidden"
+								className="  fixed inset-0 bg-[#26355D] p-6 h-screen flex flex-col justify-center space-y-10 lg:hidden"
 							>
-								{/* <motion.ul
+								<motion.ul
 									variants={{
 										hide: {
 											y: "25%",
@@ -196,60 +196,24 @@ export default function Header() {
 											opacity: 1,
 										},
 									}}
-									className="list-none space-y-6"
+									className="list-none space-y-10 mx-auto"
 								>
-									<li>
-										<a href="#" className="text-5xl font-semibold text-white">
-											Link #1
-										</a>
-									</li>
-									<li>
-										<a href="#" className="text-5xl font-semibold text-white">
-											Link #2
-										</a>
-									</li>
-									<li>
-										<a href="#" className="text-5xl font-semibold text-white">
-											Link #3
-										</a>
-									</li>
-								</motion.ul> */}
-								{/* <motion.div
-									variants={{
-										hide: {
-											y: "25%",
-											opacity: 0,
-										},
-										show: {
-											y: "0%",
-											opacity: 1,
-										},
-									}}
-									className="w-full h-px bg-white/30"
-								></motion.div> */}
-								{/* <motion.ul
-									variants={{
-										hide: {
-											y: "25%",
-											opacity: 0,
-										},
-										show: {
-											y: "0%",
-											opacity: 1,
-										},
-									}}
-									className="list-none flex justify-center gap-x-4"
-								>
-									<li>
-										<div className="bg-white rounded-lg w-8 h-8"></div>
-									</li>
-									<li>
-										<div className="bg-white rounded-lg w-8 h-8"></div>
-									</li>
-									<li>
-										<div className="bg-white rounded-lg w-8 h-8"></div>
-									</li>
-								</motion.ul> */}
+								 {links.map((item : Link , index) => {
+									return (
+										<li key={index}>
+										<Link
+											className=  {`text-5xl font-semibold text-white `}
+											href={item.hash}
+											onClick={toggleMobileNav}
+										>
+											{item.name}
+										</Link>
+										</li>
+									);
+									})}
+									
+								</motion.ul>
+								
 							</motion.div>
 						</MotionConfig>
 					)}

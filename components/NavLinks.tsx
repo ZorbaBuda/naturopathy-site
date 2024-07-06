@@ -20,19 +20,6 @@ const NavLinks = ({ transparent}: { transparent : boolean}) => {
               >
                 {item.name}
               </Link>
-              {/* <Link
-                className=  {`text-black hover:border-b hover:border-dark transition duration-300 uppercase 
-                font-open_sans font-medium`}
-                href={item.hash}
-              >
-                {item.name}
-              </Link> */}
-              {/* <Link
-                className='link hover:border-b hover:border-dark transition duration-300 capitalize'
-                href={item.hash}
-              >
-                {item.name}
-              </Link> */}
             </li>
           );
         })}
