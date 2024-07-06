@@ -1,45 +1,99 @@
-/** @type {import('tailwindcss').Config} */
+import type { Config } from "tailwindcss"
 import colors from "tailwindcss/colors"
-module.exports = {
+
+const config = {
+  darkMode: ["class"],
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
+	],
+  prefix: "",
   theme: {
-    // fontFamily: {
-    //   // primary: ['Oswald', 'sans-serif'],
-    //   secondary: ['Raleway', 'sans-serif'],
-    //   tertiary: ['Rozha One', 'sans-serif'],
-    //   oswald: ['var(--font-oswald)', 'sans-serif'],
-    //   rozha: ['var(--font-rozha)', 'sans-serif'],
-    //   playfair_display: ['var(--font-playfair-display)', 'sans-serif']
-    // },
     container: {
-      padding: {
-        DEFAULT: '20px',
-        lg: '20px',
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
       },
     },
-    screens: {
-      sm: '640px',
-      md: '768px',
-      lg: '960px',
-      xl: '1200px',
-      '2xl': '1536px',
-    },
-    // colors: {
-    //   dark: '#111111',
-    //   grey: {
-    //     DEFAULT: '#555555',
-    //   },
-    //  botella: '#026670',
-    //  botella_claro: '#9FEDD7',
-    //  amarillo_claro: '#FEF9C7',
-    //  amarillo_medio: '#FCE181',
-    //  gris_claro: '#EDEAE5' 
-    // },
     extend: {
+      colors: {
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+        dark: '#111111',
+        // grey: {
+        //   DEFAULT: '#555555',
+        // },
+       botella: '#026670',
+       botella_claro: '#C9FFB3',
+       amarillo_claro: '#FEF9C7',
+       amarillo_medio: '#FCE181',
+       gris_claro: '#EDEAE5' 
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
+      keyframes: {
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      backgroundImage: {
+        // hero_img: "url('/img/hero/newHero.jpg')",
+        hero_img: "url('/img/home/img20.jpg')",
+        // hero_img: "url('/img/hero/bg.jpg')",
+        about_img: "url('/img/about/image.png')",
+        interview: "url('/img/interview/bg.png')",
+      },
+      transitionDuration: {
+        2000: '2000ms',
+        3000: '3000ms',
+        5000: '5000ms',
+      },
       fontFamily: {
         // primary: ['Oswald', 'sans-serif'],
         secondary: ['MANROPE_REGULAR', 'sans-serif'],
@@ -52,37 +106,9 @@ module.exports = {
         open_sans:["open-sans"],
         roboto_regular:["roboto", 'sans-serif']
       },
-      colors: {
-        dark: '#111111',
-        // grey: {
-        //   DEFAULT: '#555555',
-        // },
-       botella: '#026670',
-       botella_claro: '#C9FFB3',
-       amarillo_claro: '#FEF9C7',
-       amarillo_medio: '#FCE181',
-       gris_claro: '#EDEAE5' 
-      },
-      backgroundImage: {
-        // hero_img: "url('/img/hero/newHero.jpg')",
-        hero_img: "url('/img/home/img20.jpg')",
-        // hero_img: "url('/img/hero/bg.jpg')",
-        about_img: "url('/img/about/image.png')",
-        interview: "url('/img/interview/bg.png')",
-      },
-      // svg elements
-      content: {
-        // outlineText: 'url("/src/img/hero/outline-text.svg")',
-        outlineText: 'url("/img/hero/UNLEASH.svg")',
-      },
-      transitionDuration: {
-        2000: '2000ms',
-        3000: '3000ms',
-        5000: '5000ms',
-      },
     },
   },
-  plugins: [
-    require("@tailwindcss/typography"),
-  ],
-};
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
+} satisfies Config
+
+export default config

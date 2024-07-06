@@ -1,66 +1,80 @@
-import { useFormContext } from "react-hook-form";
-import { Input, InputProps } from "../ui/input";
-// import { cn } from "@/lib/utils";
+import { Controller, useFormContext } from "react-hook-form";
+import { Checkbox } from "../ui/checkbox";
+import { CheckboxProps } from "@radix-ui/react-checkbox";
+import { cn } from "@/lib/utils";
 
-type InputFieldProps = {
+type CheckboxFieldProps = {
   name: string;
   label?: string;
-} & InputProps;
+} & CheckboxProps;
 
-export function CheckboxField({ name, className, ...props }: InputFieldProps) {
+export function CheckboxField({
+  name,
+  className,
+  ...props
+}: CheckboxFieldProps) {
   const {
+    control,
     register,
     formState: { errors },
   } = useFormContext();
 
   return (
-    <div className="w-full">
-      {props.label && (
-        <label htmlFor={name} className="font-medium inline-block">
-          {props.label}
-        </label>
-      )}
-      <div className="relative mt-1">
-        <Input
-          id={name}
-          type="checkbox"
-          className={(className)}
-          {...props}
-          {...register(name)}
-        />
-
-        {errors[name] && (
-          <p className="absolute mt-0.5 text-sm text-red-600">
-            {errors[name]?.message?.toString()}
-          </p>
+    <div className="flex items-center space-x-2">
+      <Controller
+        name={name}
+        control={control}
+        render={({ field }) => (
+          <Checkbox
+            id={name}
+            checked={field.value}
+            onCheckedChange={field.onChange}
+            {...props}
+            {...register(name)}
+            className={cn(className)}
+          />
         )}
-      </div>
+      />
+
+      {errors[name] && (
+        <p className="absolute mt-0.5 text-sm text-red-600">
+          {errors[name]?.message?.toString()}
+        </p>
+      )}
+
+      {/* <label
+        htmlFor={label}
+        className="cursor-pointer leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+      >
+        <span>{label}</span>
+      </label> */}
     </div>
   );
 }
 
-export function InputFieldLong({ name, ...props }: InputFieldProps) {
-  const {
-    register,
-    formState: { errors },
-  } = useFormContext();
+export function CheckboxFieldBoolean({ name, label }: CheckboxFieldProps) {
+  const { control } = useFormContext();
 
   return (
-    <div className="w-full">
-      <div className="relative">
-        <Input
-          id={name}
-          {...props}
-          {...register(name)}
-          className="pl-0.5 w-full border-0 text-2xl font-bold bg-transparent text-gray-600 dark:text-gray-200"
-        />
-
-        {errors[name] && (
-          <p className="absolute -mt-1 text-sm text-red-600">
-            {errors[name]?.message?.toString()}
-          </p>
+    <div className="flex items-center space-x-2">
+      <Controller
+        name={name}
+        control={control}
+        render={({ field }) => (
+          <Checkbox
+            id={name}
+            checked={field.value}
+            onCheckedChange={field.onChange}
+          />
         )}
-      </div>
+      />
+
+      <label
+        htmlFor={name}
+        className="cursor-pointer leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+      >
+        <span>{label}</span>
+      </label>
     </div>
   );
 }

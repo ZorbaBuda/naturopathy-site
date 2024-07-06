@@ -1,6 +1,6 @@
 import { useFormContext } from "react-hook-form";
 import { Input, InputProps } from "../ui/input";
-// import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils";
 
 type InputFieldProps = {
   name: string;
@@ -23,7 +23,9 @@ export function InputField({ name, className, ...props }: InputFieldProps) {
       <div className="relative mt-1">
         <Input
           id={name}
-          className={(className)}
+          // className={cn(className)}
+          className='text-3xl'
+
           {...props}
           {...register(name)}
         />
@@ -39,27 +41,28 @@ export function InputField({ name, className, ...props }: InputFieldProps) {
 }
 
 export function InputFieldLong({ name, ...props }: InputFieldProps) {
-  const {
-    register,
-    formState: { errors },
-  } = useFormContext();
-
-  return (
-    <div className="w-full">
-      <div className="relative">
-        <Input
-          id={name}
-          {...props}
-          {...register(name)}
-          className="pl-0.5 w-full border-0 text-2xl font-bold bg-transparent text-gray-600 dark:text-gray-200"
-        />
-
-        {errors[name] && (
-          <p className="absolute -mt-1 text-sm text-red-600">
-            {errors[name]?.message?.toString()}
-          </p>
-        )}
+    const {
+      register,
+      formState: { errors },
+    } = useFormContext();
+  
+    return (
+      <div className="w-full">
+        <div className="relative">
+          <Input
+            id={name}
+            {...props}
+            {...register(name)}
+            className="pl-0.5 w-full border-0 text-2xl font-bold bg-transparent text-gray-600 dark:text-gray-200"
+          />
+  
+          {errors[name] && (
+            <p className="absolute -mt-1 text-sm text-red-600">
+              {errors[name]?.message?.toString()}
+            </p>
+          )}
+        </div>
       </div>
-    </div>
-  );
-}
+    );
+  }
+  

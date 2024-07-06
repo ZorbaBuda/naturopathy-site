@@ -1,5 +1,5 @@
 import { useFormContext } from "react-hook-form";
-import { Textarea, TextareaProps } from "../ui/textarea"
+import { Textarea, TextareaProps } from "../ui/textarea";
 
 type TextareaFieldProps = {
   name: string;

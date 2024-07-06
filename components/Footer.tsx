@@ -20,7 +20,7 @@ const staggerContainer = {
   },
 };
 
-const Footer = () => {
+export default function Footer()  {
   // destructure footer data
   const { about, links, program, newsletter } = footerData;
 
@@ -128,4 +128,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+

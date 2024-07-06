@@ -1,10 +1,12 @@
 // import { Oswald, Rozha_One, Playfair_Display} from 'next/font/google';
-import './globals.css';
+import '@/styles/globals.css';
 // https://fonts.google.com/specimen/Raleway?query=raleway
-import { Header, Footer } from './components';
-import TwSizeIndicator from './components/helpers/TwSizeIndicator';
-import AnimatedNavbar from './components/tutorials/framer/AnimatedNavbar';
-import HeaderTest from './components/HeaderTest';
+
+import Footer from '@/components/Footer';
+import Header from '@/components/Header';
+import TwSizeIndicator from '@/components/helpers/TwSizeIndicator';
+import AnimatedNavbar from '@/components/tutorials/framer/AnimatedNavbar';
+import HeaderTest from '@/components/HeaderTest';
 import { Head, NextScript } from 'next/document';
 import Script from 'next/script';
 

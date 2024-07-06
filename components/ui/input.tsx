@@ -11,7 +11,10 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
       <input
         type={type}
         className=
-          "flex h-[50px] w-full rounded-md border border-input bg-background px-3 py-2 file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:border-primary disabled:cursor-not-allowed disabled:opacity-50"
+          {`mt-5 flex h-[50px] w-full  border-b border-black bg-background 
+          px-3 py-2 file:border-0 file:bg-transparent file:text-sm file:font-medium 
+          placeholder:text-muted-foreground focus-visible:outline-none 
+          focus-visible:border-primary disabled:cursor-not-allowed disabled:opacity-50`}
         ref={ref}
         {...props}
       />
@@ -21,3 +24,9 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
 Input.displayName = "Input";
 
 export { Input };
+
+// className=
+// {`flex h-[50px] w-full rounded-md border border-input bg-background 
+// px-3 py-2 file:border-0 file:bg-transparent file:text-sm file:font-medium 
+// placeholder:text-muted-foreground focus-visible:outline-none 
+// focus-visible:border-primary disabled:cursor-not-allowed disabled:opacity-50`}

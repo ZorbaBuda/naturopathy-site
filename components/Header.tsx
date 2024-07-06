@@ -13,7 +13,7 @@ import NavMobile from './NavMobile';
 // import icons
 import { HiMenuAlt2 } from "react-icons/hi"
 
-const Header = () => {
+export default function Header() {
  
   const { logo } = headerData;
   // header state
@@ -122,5 +122,4 @@ const Header = () => {
   );
 };
 
-export default Header;
 

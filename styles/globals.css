@@ -1,0 +1,185 @@
+@tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  @font-face {
+    font-family: "manrope-regular";
+    src: url("../public/font/Manrope/Manrope-Regular.ttf");
+  }
+  
+  @font-face {
+    font-family: "manrope-semibold";
+    src: url("../public/font/Manrope/Manrope-SemiBold.ttf");
+  }
+  
+  @font-face {
+    font-family: "logo";
+    src: url("../public/font/Oval/Oval-Trial-Regular.ttf");
+  }
+  
+  @font-face {
+    font-family: "open-sans";
+    src: url("../public/font/Open_Sans/OpenSans-Regular.ttf");
+  }
+  
+  @font-face {
+    font-family: "roboto-regular";
+    src: url("../public/font/roboto/Roboto-Regular.ttf");
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @layer base {
+    :root {
+      --background: 0 0% 100%;
+      --foreground: 0 0% 3.9%;
+
+      --card: 0 0% 100%;
+      --card-foreground: 0 0% 3.9%;
+
+      --popover: 0 0% 100%;
+      --popover-foreground: 0 0% 3.9%;
+
+      --primary: 0 0% 9%;
+      --primary-foreground: 0 0% 98%;
+
+      --secondary: 0 0% 96.1%;
+      --secondary-foreground: 0 0% 9%;
+
+      --muted: 0 0% 96.1%;
+      --muted-foreground: 0 0% 45.1%;
+
+      --accent: 0 0% 96.1%;
+      --accent-foreground: 0 0% 9%;
+
+      --destructive: 0 84.2% 60.2%;
+      --destructive-foreground: 0 0% 98%;
+
+      --border: 0 0% 89.8%;
+      --input: 0 0% 89.8%;
+      --ring: 0 0% 3.9%;
+
+      --radius: 0.5rem;
+    }
+
+    .dark {
+      --background: 0 0% 3.9%;
+      --foreground: 0 0% 98%;
+
+      --card: 0 0% 3.9%;
+      --card-foreground: 0 0% 98%;
+
+      --popover: 0 0% 3.9%;
+      --popover-foreground: 0 0% 98%;
+
+      --primary: 0 0% 98%;
+      --primary-foreground: 0 0% 9%;
+
+      --secondary: 0 0% 14.9%;
+      --secondary-foreground: 0 0% 98%;
+
+      --muted: 0 0% 14.9%;
+      --muted-foreground: 0 0% 63.9%;
+
+      --accent: 0 0% 14.9%;
+      --accent-foreground: 0 0% 98%;
+
+      --destructive: 0 62.8% 30.6%;
+      --destructive-foreground: 0 0% 98%;
+
+      --border: 0 0% 14.9%;
+      --input: 0 0% 14.9%;
+      --ring: 0 0% 83.1%;
+    }
+  }
+
+  /* @layer base {
+    * {
+      @apply border-border;
+    }
+    body {
+     
+      @apply bg-background text-foreground;
+    }
+  } */
+
+  /* apply some general styles */
+@layer base {
+  /* * {
+    @apply box-border;
+  } */
+  body {
+    @apply font-secondary text-lg text-dark bg-white;
+  }
+  .section {
+    @apply py-[40px] lg:py-[160px];
+  }
+  .link {
+    @apply font-oswald uppercase tracking-[0.08em];
+  }
+  /* .h1 {
+    @apply text-[60px] lg:text-[118px] tracking-[-2px] leading-none font-rozha mb-4;
+  } */
+  .h1 {
+    @apply text-[70px]  xl:text-[110px] lg:text-[80px] tracking-[1px] leading-none font-manrope_semibold
+    font-normal  text-[#DEF9C4];
+  }
+
+  .h2 {
+    @apply text-[50px]  lg:text-[118px] tracking-[1px] leading-none 
+    font-normal  text-botella_claro;
+  }
+  /* .h2 {
+    @apply text-[40px] lg:text-[60px] xl:text-[70px] 2xl:text-[85px] text-dark  font-oswald max-w-[236px] leading-none mb-[38px];
+  } */
+
+  .h3 {
+    @apply text-[30px] lg:text-[40px] tracking-[-2px] leading-none font-rozha mb-4;
+  }
+  .h4 {
+    @apply text-[20px] lg:text-[30px] xl:text-[40px] 2xl:text-[60px] text-dark  font-oswald max-w-[236px] leading-none mb-[38px];
+  }
+
+
+  /* buttons */
+  /* tracking-[0.08em] */
+  .btn {
+    @apply    text-lg  uppercase px-8
+    transition-all duration-500 flex items-center 
+    text-white hover:bg-[#DEF9C4] hover:text-botella
+    rounded-md border-2 border-[#DEF9C4]
+    ;
+  }
+  /* .btn {
+    @apply    text-base  uppercase px-3
+    transition-all duration-500 flex items-center 
+    text-white bg-[#508D4E] hover:text-botella
+    rounded-2xl
+    ;
+  } */
+  /* .btn {
+    @apply   border-2 border-black text-lg tracking-[0.08em] uppercase px-[40px] 
+    transition-all duration-500 flex items-center gap-x-[10px]
+    text-black hover:bg-botella_claro hover:text-botella
+    rounded-md
+    ;
+  } */
+  .btn-sm {
+    @apply h-[55px];
+  }
+  .btn-lg {
+    @apply h-[67px];
+  }
+  .btn-outline {
+    @apply border border-white/70 bg-none hover:bg-white hover:text-dark;
+  }
+  .btn-dark {
+    @apply bg-dark hover:bg-dark/90 transition-all text-white;
+  }
+  .btn-link {
+    @apply px-0 h-auto text-dark hover:text-dark/90 transition-all;
+  }
+}
+
