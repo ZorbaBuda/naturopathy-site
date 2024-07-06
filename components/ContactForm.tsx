@@ -94,8 +94,8 @@ export default function ContactForm() {
             {/* message */}
             <TextareaField placeholder="Message*" name="message" />
             {/* accept privacy terms */}
-            <CheckboxField name="privacyCheck" />
-            <div>I have readed and accept privacy terms</div>
+            <CheckboxField name="privacyCheck" label="He llegit i accepto la política de privacitat" />
+            {/* <div>I have readed and accept privacy terms</div> */}
             <div>
               You can read in{" "}
               <Link href="/privacy-terms" target="_blank">

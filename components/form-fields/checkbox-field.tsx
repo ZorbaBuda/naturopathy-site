@@ -10,6 +10,7 @@ type CheckboxFieldProps = {
 
 export function CheckboxField({
   name,
+  label,
   className,
   ...props
 }: CheckboxFieldProps) {
@@ -20,7 +21,7 @@ export function CheckboxField({
   } = useFormContext();
 
   return (
-    <div className="flex items-center space-x-2">
+    <div className="flex items-center space-x-2 ">
       <Controller
         name={name}
         control={control}
@@ -42,12 +43,12 @@ export function CheckboxField({
         </p>
       )}
 
-      {/* <label
-        htmlFor={label}
+       {/* <label
+        htmlFor={name}
         className="cursor-pointer leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
       >
         <span>{label}</span>
-      </label> */}
+      </label>  */}
     </div>
   );
 }
