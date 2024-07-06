@@ -1,5 +1,5 @@
 import Image from "next/image";
-import {  Contact, Hero, HeroTest} from "@/app/components"
+import {  Contact, Hero, HeroTest} from "@/components"
 
 export default function Home() {
   return (

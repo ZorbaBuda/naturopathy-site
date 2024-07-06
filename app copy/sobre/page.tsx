@@ -1,5 +1,5 @@
 import React from 'react'
-import { About, GallerySection } from '../components'
+import { About, GallerySection } from '@/components'
 
 export default function page() {
   return (

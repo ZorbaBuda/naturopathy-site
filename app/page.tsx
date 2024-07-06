@@ -1,6 +1,6 @@
 import Image from "next/image";
-import {  Contact, Hero, HeroTest} from "@/app/components"
-import Homepage from "./components/homeComponents/Homepage";
+import {  Contact, Hero, HeroTest} from "@/components"
+import Homepage from "@/components/homeComponents/Homepage";
 
 export default function Home() {
   return (
