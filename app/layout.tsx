@@ -9,6 +9,8 @@ import AnimatedNavbar from '@/components/tutorials/framer/AnimatedNavbar';
 import HeaderTest from '@/components/HeaderTest';
 import { Head, NextScript } from 'next/document';
 import Script from 'next/script';
+import Navbar from '@/components/navs/Navbar';
+
 
 // const oswald = Oswald({
 //   subsets: ['latin'],
@@ -54,6 +56,7 @@ export default  function RootLayout({
       <TwSizeIndicator />
       {/* <HeaderTest /> */}
         {/* <AnimatedNavbar /> */}
+        {/* <Navbar /> */}
        <Header/>
            <main> 
         {children}

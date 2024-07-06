@@ -43,12 +43,14 @@ export function CheckboxField({
         </p>
       )}
 
-       {/* <label
+       <label
         htmlFor={name}
-        className="cursor-pointer leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+        // className="cursor-pointer leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+        className=" leading-none "
+
       >
         <span>{label}</span>
-      </label>  */}
+      </label> 
     </div>
   );
 }

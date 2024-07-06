@@ -36,6 +36,9 @@ export const contactFormSchema = z
   .max(30, "at most 30 characters"),
   
   date: z.string(),
-  privacyCheck: z.literal<boolean>(true)
+  
+  privacyCheck: z.boolean().refine((val) => val === true, {
+    message: "Please read and accept the terms and conditions",
+  })
   
 })

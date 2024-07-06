@@ -54,10 +54,10 @@ export default function Header() {
     variants={{ visible: { y: 0 }, hidden: { y: "-100%" } }}
     animate={hidden ? "hidden" : "visible"}
     transition={{ duration: 0.3, ease: "easeInOut" }}
-      className={`${transparent ? " transparent  " : "bg-white"}
+      className={`${transparent ? " transparent  " : "bg-white shadow-lg"}
       
 
-       h-[100px] fixed top-0   z-20 min-w-max w-full mx-auto transition-all duration-700`}
+       h-[100px] fixed    z-20 min-w-max w-full mx-auto transition-all duration-700`}
     >
       {/* <div className='flex items-center justify-between h-full pl-[50px] pr-[60px] md:pr-[80px] md:pl-[80px] lg:pl-[90px] lg:pr-[90px] xl:pl-[100px] xl:pr-[100px] 2xl:pl-[180px] 2xl:pr-[180px]'> */}
       <div className='flex items-center justify-between h-full 2xl:px-[260px] xl:px-[110px] px-[38px]'>
