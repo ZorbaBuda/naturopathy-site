@@ -5,20 +5,7 @@ import Link from 'next/link';
 // import footer data
 import { footerData } from '@/lib/data';
 // import motion
-import { motion } from 'framer-motion';
-// import fadeIn
-import { fadeIn } from '@/lib/variants';
 
-// stagger container
-const staggerContainer = {
-  hidden: {},
-  show: {
-    transition: {
-      staggerChildren: 0.3,
-      delayChildren: 0.2,
-    },
-  },
-};
 
 export default function Footer()  {
   // destructure footer data
@@ -29,16 +16,12 @@ export default function Footer()  {
       <div className='container mx-auto'>
         {/* grid */}
 
-        <motion.div
-          variants={staggerContainer}
-          initial='hidden'
-          whileInView={'show'}
-          viewport={{ once: false, amount: 0.1 }}
+        <div
+        
           className='text-white flex flex-col lg:flex-row lg:justify-between gap-x-5 gap-y-14'
         >
           {/* About Void Tattoo */}
-          <motion.div
-            variants={fadeIn('up')}
+          <div
             className='flex-1 flex flex-col gap-y-6'
           >
             {/* title */}
@@ -67,10 +50,9 @@ export default function Footer()  {
                 <div>{about.email.address}</div>
               </div>
             </div>
-          </motion.div>
+          </div>
           {/* Useful Links */}
-          <motion.div
-            variants={fadeIn('up')}
+          <div
             className='flex-1 flex flex-col gap-y-6'
           >
             <div>
@@ -91,9 +73,9 @@ export default function Footer()  {
                 })}
               </ul>
             </div>
-          </motion.div>
+          </div>
           {/* Working Time */}
-          <motion.div variants={fadeIn('up')} className='flex-1'>
+          <div  className='flex-1'>
             <div className='font-oswald text-xl uppercase tracking-[0.08em] mb-6'>
               {program.title}
             </div>
@@ -102,9 +84,9 @@ export default function Footer()  {
                 return <li key={index}>{item.name}</li>;
               })}
             </ul>
-          </motion.div>
+          </div>
           {/* Newsletter */}
-          <motion.div variants={fadeIn('up')} className='flex-1'>
+          <div  className='flex-1'>
             <div className='font-oswald text-xl uppercase tracking-[0.08em] mb-6'>
               {newsletter.title}
             </div>
@@ -121,8 +103,8 @@ export default function Footer()  {
                 {newsletter.form.icon}
               </button>
             </form>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </div>
     </footer>
   );

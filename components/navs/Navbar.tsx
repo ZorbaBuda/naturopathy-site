@@ -59,7 +59,7 @@ export default function Header() {
     variants={{ visible: { y: 0 }, hidden: { y: "-100%" } }}
     animate={hidden ? "hidden" : "visible"}
     transition={{ duration: 0.3, ease: "easeInOut" }}
-      className={`${transparent ? " transparent  " : "bg-white"}
+      className={`${transparent ? " transparent  " : "bg-white shadow-lg"}
       
 
        h-[100px] fixed top-0   z-20 min-w-max w-full mx-auto transition-all duration-700`}
@@ -229,9 +229,10 @@ export default function Header() {
           <NavMobile closeMobileMenu={closeMobileMenu} />
         </div> */}
         {/* social icons - initially hidden - show on desktop */}
+		<Link href="/reserva">
         <div className='hidden lg:flex'>
           RESERVAR CITA
-        </div>
+        </div></Link>
       </div>
     </motion.nav>
   );
