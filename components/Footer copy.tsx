@@ -2,10 +2,8 @@
 
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
 // import footer data
-import { footerData, headerData } from "@/lib/data";
-
+import { footerData } from "@/lib/data";
 // import motion
 
 export default function Footer() {
@@ -13,8 +11,7 @@ export default function Footer() {
   const { services, contact, links, program } = footerData;
 
   return (
-    <footer className="section bg-[#2F3645]">
-      <Logo />
+    <footer className="section bg-dark">
       <div className="container mx-auto">
         {/* grid */}
 
@@ -25,7 +22,7 @@ export default function Footer() {
               <div className=" text-xl uppercase tracking-[0.08em] mb-6">
                 {services.title}
               </div>
-              <ul className="font-thin flex flex-col gap-y-3 text-[#dbdbdb]">
+              <ul className="font-thin flex flex-col gap-y-4 text-[#dbdbdb]">
                 {services.items.map((item, index) => {
                   // destructure item
                   const { name } = item;
@@ -37,9 +34,7 @@ export default function Footer() {
                 })}
               </ul>
             </div>
-            </div>
             {/* title */}
-            <div className="flex-1 flex flex-col gap-y-6">
             <div className="text-xl uppercase tracking-[0.08em]">
               {contact.title}
             </div>
@@ -84,33 +79,19 @@ export default function Footer() {
               </ul>
             </div>
           </div>
-        
+          {/* Working Time */}
+          <div className="flex-1">
+            <div className=" text-xl uppercase tracking-[0.08em] mb-6">
+              {program.title}
+            </div>
+            <ul className="font-thin flex flex-col gap-y-4 text-[#dbdbdb]">
+              {program.items.map((item, index) => {
+                return <li key={index}>{item.name}</li>;
+              })}
+            </ul>
+          </div>
         </div>
       </div>
     </footer>
   );
-}
-
-const Logo = () => {
-  const { logo } = headerData;
-  return (
-  <Link href="/" className=" ">
-          <div className="flex items-center">
-            <Image
-              // className='w-[188px] h-[90px]'
-              className="  "
-              src={logo}
-              alt="logo"
-              width={88}
-              height={90}
-            />
-            <div className={`text-white font-medium flex flex-col gap-0 font-logo lg:text-3xl text-2xl `}>
-              <div className='text-[#40961D] '>Christian Constanseu</div> 
-              {/* <div></div> */}
-              <div className='lg:text-sm text-sm font-open_sans'>NATURÓPATA</div>
-            </div>
-          </div>
-
-        </Link>
-  )
 }

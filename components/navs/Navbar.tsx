@@ -44,9 +44,9 @@ export default function Header() {
     } else {
       setTransparent(false);
     }
-    if (scrollYProgress.get() > 0.99) {
-      setHidden(false);
-    }
+    // if (scrollYProgress.get() > 0.99) {
+    //   setHidden(false);
+    // }
   });
 
 //   const closeMobileMenu = () => {
@@ -85,15 +85,6 @@ export default function Header() {
             </div>
           </div>
 
-          {/* <Image
-            // className='w-[188px] h-[90px]'
-             className='h-[50px]  '
-            
-            src={logo}
-            alt='logo'
-            width={188}
-            height={90}
-          /> */}
         </Link>
 
         {/* nav - initially hidden, show on desktop */}

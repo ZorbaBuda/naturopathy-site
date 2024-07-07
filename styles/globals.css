@@ -124,7 +124,7 @@
   } */
   .h1 {
     @apply text-[70px]  xl:text-[110px] lg:text-[80px] tracking-[1px] leading-none font-manrope_semibold
-    font-normal  text-[#DEF9C4];
+    font-normal  text-[#F6E6CB];
   }
 
   .h2 {

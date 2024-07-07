@@ -1,33 +1,28 @@
 import { NextResponse } from "next/server";
-// import { Client } from "@notionhq/client";
-import { GoogleSpreadsheet} from 'google-spreadsheet'
-import { JWT } from 'google-auth-library'
+import { GoogleSpreadsheet } from "google-spreadsheet";
+import { JWT } from "google-auth-library";
 
-const SCOPES = [
-  'https://www.googleapis.com/auth/spreadsheets'
-];
-
-
+const SCOPES = ["https://www.googleapis.com/auth/spreadsheets"];
 
 export async function POST(request: Request) {
-
-   const data : ContactFormProps = await request.json();
+  const data: ContactFormProps = await request.json();
 
   //  console.log(data)
 
-const serviceAccountAuth = new JWT({
-  email: process.env.GOOGLE_CLIENT_EMAIL,
-  key: process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, '\n'),
-  scopes: SCOPES,
-});
-
+  const serviceAccountAuth = new JWT({
+    email: process.env.GOOGLE_CLIENT_EMAIL,
+    key: process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, "\n"),
+    scopes: SCOPES,
+  });
 
   try {
-   
-    const doc = new GoogleSpreadsheet(process.env.GOOGLE_SHEET_ID, serviceAccountAuth);
-   
-    await doc.loadInfo()
-     const sheet = doc.sheetsByIndex[0]
+    const doc = new GoogleSpreadsheet(
+      process.env.GOOGLE_SHEET_ID,
+      serviceAccountAuth
+    );
+
+    await doc.loadInfo();
+    const sheet = doc.sheetsByIndex[0];
     //  console.log(sheet)
 
     const newRowData = {
@@ -39,11 +34,7 @@ const serviceAccountAuth = new JWT({
       Message: data.message,
     };
 
-    const newRow = await sheet.addRow(newRowData)
-
-
-   
-    
+    const newRow = await sheet.addRow(newRowData);
 
     return new NextResponse(
       JSON.stringify({
@@ -53,7 +44,7 @@ const serviceAccountAuth = new JWT({
       { status: 201 }
     );
   } catch (error) {
-    console.log(error)
+    console.log(error);
     return new NextResponse(
       JSON.stringify({
         message: "Error submitting form",
@@ -64,6 +55,7 @@ const serviceAccountAuth = new JWT({
   }
 }
 
+// import { Client } from "@notionhq/client";
 // https://dev.to/martinp/use-notion-as-a-database-for-your-nextjs-blog-195p
 // export async function POST(request: Request) {
 //   try {
