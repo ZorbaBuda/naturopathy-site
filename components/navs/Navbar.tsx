@@ -183,7 +183,7 @@ export default function Header() {
 								initial="hide"
 								animate="show"
 								exit="hide"
-								className="  fixed inset-0 bg-[#26355D] p-6 h-screen flex flex-col justify-center space-y-10 lg:hidden"
+								className="  fixed inset-0 bg-[#26355D] bg-opacity-95 p-6 h-screen flex flex-col justify-center space-y-10 lg:hidden"
 							>
 								<motion.ul
 									variants={{
@@ -229,8 +229,8 @@ export default function Header() {
           <NavMobile closeMobileMenu={closeMobileMenu} />
         </div> */}
         {/* social icons - initially hidden - show on desktop */}
-		<Link href="/reserva">
-        <div className='hidden lg:flex'>
+		<Link href="/reserva" className='hidden lg:flex'>
+        <div className=''>
           RESERVAR CITA
         </div></Link>
       </div>

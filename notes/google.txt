@@ -1,0 +1,27 @@
+https://www.youtube.com/watch?v=kOOs7h9YL_g
+
+https://console.cloud.google.com/
+
+Create new project
+On IAM & admin, create Service Account
+
+Create service account, give a name, and description
+
+Role Editor
+
+No need to add more
+
+Continue
+
+
+Click on service created, go to Keys, Add new Key , JSON
+
+
+Copiamos el id del service creado, vamos a google sheets, create a sheet, click on Share and paste
+the id of service account. Editor type. Finally send. 
+
+In project, npm i googleapis, and create env vars
+
+
+
+
