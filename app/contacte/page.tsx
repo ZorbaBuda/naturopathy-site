@@ -1,18 +1,26 @@
 import React from 'react'
 // import { Contact  } from '@/components'
 import ContactForm from '@/components/ContactForm'
+import Link from 'next/link';
 
 export default function page() {
   return (
     <>
-    <section className='w-full h-[500px] bg-[#EEEDEB] flex relative'>
-      <div className='flex my-auto mx-auto justify-between  '>
-        <div className='h1'>Contacte</div>
-        <div className='flex flex-col'>
+   
+    <section className='section  bg-[#EEEDEB] '>
+      <div className='container mx-auto   '>
+      <div className='flex flex-col xl:flex-row gap-y-16'>
+      <div
+            className='flex-1'
+          >
+        <div className='h2 max-w-[490px]'>Contacte</div>
+        <div className='flex flex-col xl:flex-row gap-x-5 gap-y-16 xl:gap-y-0'>
           <div>Ens trobem a </div>
           <div>Mataro cami de 33343</div>
           <div>Telefon...</div>
         </div>
+      </div>
+      </div>
       
       </div>
     </section>

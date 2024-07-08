@@ -114,7 +114,7 @@
     @apply font-secondary text-lg text-dark bg-white;
   }
   .section {
-    @apply py-[40px] lg:py-[160px];
+    @apply py-[30px] lg:py-[55px];
   }
   .link {
     @apply font-oswald uppercase tracking-[0.08em];
