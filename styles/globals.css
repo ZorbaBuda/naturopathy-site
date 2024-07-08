@@ -111,10 +111,14 @@
     @apply box-border;
   } */
   body {
-    @apply font-secondary text-lg text-dark bg-white;
+    @apply font-secondary  text-dark bg-white;
   }
   .section {
     @apply py-[55px] lg:py-[160px];
+  }
+
+  .section-light {
+    @apply py-[55px] lg:py-[70px];
   }
   .link {
     @apply font-oswald uppercase tracking-[0.08em];
@@ -180,6 +184,14 @@
   }
   .btn-link {
     @apply px-0 h-auto text-dark hover:text-dark/90 transition-all;
+  }
+
+   /* practica */
+  .btn-prac {
+    @apply    text-lg  uppercase px-8
+    transition-all duration-500 flex items-center 
+    text-white hover:bg-[#DEF9C4] hover:text-botella
+    rounded-md border-2 border-[#DEF9C4];
   }
 }
 
