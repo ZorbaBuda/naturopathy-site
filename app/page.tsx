@@ -1,13 +1,13 @@
 import Image from "next/image";
 import {  Contact, Hero, HeroTest} from "@/components"
-import Homepage from "@/components/homeComponents/Homepage";
 import ContactForm from "@/components/ContactForm";
+import HeroSection from "@/components/homeComponents/HeroSection";
 
 export default function Home() {
   return (
-    <main className="w-full max-w-full mx-auto overflow-hidden bg-white">
+    <main className="w-full  bg-white">
     
-     <Homepage />
+     <HeroSection />
      <ContactForm />
       
      

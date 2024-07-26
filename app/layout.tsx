@@ -45,14 +45,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className="font-manrope_regular">
+    <html lang="es">
+      <body className="font-manrope">
         <TwSizeIndicator />
         {/* <HeaderTest /> */}
         {/* <AnimatedNavbar /> */}
         <Navbar />
         {/* <Header/> */}
-        <main>{children}</main>
+        {children}
         <Footer />
       </body>
     </html>

@@ -61,7 +61,11 @@ const config = {
        botella_claro: '#C9FFB3',
        amarillo_claro: '#FEF9C7',
        amarillo_medio: '#FCE181',
-       gris_claro: '#EDEAE5' 
+       gris_claro: '#EDEAE5',
+       //new
+       dark1: '#262c2e',
+       dark2: '#262c2eb3',
+       green2: '#093F32'
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -104,7 +108,9 @@ const config = {
         manrope_semibold:["manrope-semibold",'sans-serif'],
         logo:["logo"],
         open_sans:["open-sans"],
-        roboto_regular:["roboto", 'sans-serif']
+        roboto_regular:["roboto", 'sans-serif'],
+        ibm_plex_sans:["ibm-plex-sans"],
+        alata:["alata"]
       },
     },
   },

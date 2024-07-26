@@ -26,74 +26,22 @@
     font-family: "roboto-regular";
     src: url("../public/font/roboto/Roboto-Regular.ttf");
   }
+
+  @font-face {
+    font-family: "ibm-plex-sans";
+    src: url("../public/font/IBM_Plex_Sans/IBMPlexSans-Regular.ttf");
+  }
+
+  @font-face {
+    font-family: "alata";
+    src: url("../public/font/Alata/Alata-Regular.ttf");
+  }
   
   html {
     scroll-behavior: smooth;
   }
 
-  @layer base {
-    :root {
-      --background: 0 0% 100%;
-      --foreground: 0 0% 3.9%;
-
-      --card: 0 0% 100%;
-      --card-foreground: 0 0% 3.9%;
-
-      --popover: 0 0% 100%;
-      --popover-foreground: 0 0% 3.9%;
-
-      --primary: 0 0% 9%;
-      --primary-foreground: 0 0% 98%;
-
-      --secondary: 0 0% 96.1%;
-      --secondary-foreground: 0 0% 9%;
-
-      --muted: 0 0% 96.1%;
-      --muted-foreground: 0 0% 45.1%;
-
-      --accent: 0 0% 96.1%;
-      --accent-foreground: 0 0% 9%;
-
-      --destructive: 0 84.2% 60.2%;
-      --destructive-foreground: 0 0% 98%;
-
-      --border: 0 0% 89.8%;
-      --input: 0 0% 89.8%;
-      --ring: 0 0% 3.9%;
-
-      --radius: 0.5rem;
-    }
-
-    .dark {
-      --background: 0 0% 3.9%;
-      --foreground: 0 0% 98%;
-
-      --card: 0 0% 3.9%;
-      --card-foreground: 0 0% 98%;
-
-      --popover: 0 0% 3.9%;
-      --popover-foreground: 0 0% 98%;
-
-      --primary: 0 0% 98%;
-      --primary-foreground: 0 0% 9%;
-
-      --secondary: 0 0% 14.9%;
-      --secondary-foreground: 0 0% 98%;
-
-      --muted: 0 0% 14.9%;
-      --muted-foreground: 0 0% 63.9%;
-
-      --accent: 0 0% 14.9%;
-      --accent-foreground: 0 0% 98%;
-
-      --destructive: 0 62.8% 30.6%;
-      --destructive-foreground: 0 0% 98%;
-
-      --border: 0 0% 14.9%;
-      --input: 0 0% 14.9%;
-      --ring: 0 0% 83.1%;
-    }
-  }
+  
 
   /* @layer base {
     * {
@@ -127,8 +75,8 @@
     @apply text-[60px] lg:text-[118px] tracking-[-2px] leading-none font-rozha mb-4;
   } */
   .h1 {
-    @apply text-[70px]  xl:text-[110px] lg:text-[80px] tracking-[1px] leading-none font-manrope_semibold
-    font-normal  text-[#F6E6CB];
+    @apply text-[42px] lg:text-[62px]  xl:text-[80px]  
+           tracking-tight xl:tracking-tighter leading-none font-alata;
   }
 
   .h2 {
@@ -140,10 +88,15 @@
   } */
 
   .h3 {
-    @apply text-[30px] lg:text-[40px] tracking-[-2px] leading-none font-rozha mb-4;
+    @apply text-[17px] lg:text-[17.5px]  xl:text-[20.6px]  
+           tracking-normal xl:tracking-tighter leading-relaxed;
   }
   .h4 {
     @apply text-[20px] lg:text-[30px] xl:text-[40px] 2xl:text-[60px] text-dark  font-oswald max-w-[236px] leading-none mb-[38px];
+  }
+
+  .subcontainer {
+    @apply flex  mx-auto  px-5 lg:px-14 xl:max-w-7xl;
   }
 
 

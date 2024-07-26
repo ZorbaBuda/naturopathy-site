@@ -11,7 +11,7 @@ export default function page() {
       <section className="section  lg:mt-0 mt-[100px]">
         <div className=" flex flex-col lg:flex-row basis-1/2 justify-around ">
           <div className="max-w-[456px]  px-5  flex flex-col justify-center mx-auto  text-blue-900 ">
-            <div className="mb-8 text-3xl md:text-4xl lg:text-5xl   ">
+            <div className="font-alata mb-8 text-3xl md:text-4xl lg:text-5xl   ">
               KPNI / Clinical PNI: The next step in clinical practice
             </div>
             <p className="prose md:prose-lg">

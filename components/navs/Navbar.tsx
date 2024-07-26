@@ -12,6 +12,7 @@ import NavMobile from '../NavMobile';
 // import Socials from './Socials';
 // import icons
 import { HiMenuAlt2 } from "react-icons/hi"
+import AnimatedButton from '../parts/AnimatedButton';
 // https://www.youtube.com/watch?v=9mgMJDlOn8M
 
 export default function Header() {
@@ -65,7 +66,7 @@ export default function Header() {
        h-[100px] fixed top-0   z-20 min-w-max w-full mx-auto transition-all duration-700`}
     >
       {/* <div className='flex items-center justify-between h-full pl-[50px] pr-[60px] md:pr-[80px] md:pl-[80px] lg:pl-[90px] lg:pr-[90px] xl:pl-[100px] xl:pr-[100px] 2xl:pl-[180px] 2xl:pr-[180px]'> */}
-      <div className='flex items-center justify-between h-full 2xl:px-[260px] xl:px-[110px] px-[38px]'>
+      <div className='flex items-center mx-auto justify-between px-5 lg:px-14 xl:max-w-7xl'>
 
         {/* logo */}
         <Link href="/" className=" ">
@@ -78,10 +79,10 @@ export default function Header() {
               width={88}
               height={90}
             />
-            <div className={`${transparent ? "text-white" : "text-black"} font-medium flex flex-col gap-0 font-logo lg:text-3xl text-2xl `}>
-              <div className='text-[#40961D] '>Christian Constanseu</div> 
+            <div className={`${transparent ? "text-black" : "text-black"} font-medium flex flex-col gap-0 lg:text-3xl text-2xl `}>
+              <div className='text-[#40961D] font-logo '>Christian Constanseu</div> 
               {/* <div></div> */}
-              <div className='lg:text-sm text-sm font-open_sans'>NATURÓPATA</div>
+              <div className='lg:text-sm text-sm '>NATUROPATA</div>
             </div>
           </div>
 
@@ -222,10 +223,8 @@ export default function Header() {
           <NavMobile closeMobileMenu={closeMobileMenu} />
         </div> */}
         {/* social icons - initially hidden - show on desktop */}
-		<Link href="/reserva" className='hidden lg:flex'>
-        <div className=''>
-          RESERVAR CITA
-        </div></Link>
+		<AnimatedButton text="Reservar cita" href="/reserva" />
+		
       </div>
     </motion.nav>
   );
