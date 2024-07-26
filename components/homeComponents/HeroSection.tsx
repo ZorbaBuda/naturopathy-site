@@ -23,8 +23,8 @@ export default function HeroSection() {
   const { heroTitle, heroSubtitle, linkText, linkHref } = homeData;
 
   return (
-    <section className=" min-h-screen  ">
-      <div className="mt-[150px] lg:mt-[175px]">
+    <section className="   ">
+      <div className="pt-[150px] lg:pt-[175px] flex flex-col h-screen lg:h-auto">
         <div className="flex flex-col lg:flex-row gap-y-9 gap-x-[150px] items-center subcontainerXl  ">
 
         <BlurMotion classname="basis-1/2">  <h1 className="h1 text-green2  ">{heroTitle}</h1></BlurMotion>

@@ -10,6 +10,7 @@ import HeaderTest from "@/components/HeaderTest";
 import { Head, NextScript } from "next/document";
 import Script from "next/script";
 import Navbar from "@/components/navs/Navbar";
+import ScrollTop from "@/components/ScrollTop";
 
 // const oswald = Oswald({
 //   subsets: ['latin'],
@@ -51,6 +52,7 @@ export default function RootLayout({
         {/* <HeaderTest /> */}
         {/* <AnimatedNavbar /> */}
         <Navbar />
+        <ScrollTop />
         {/* <Header/> */}
         {children}
         <Footer />

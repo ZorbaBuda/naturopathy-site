@@ -4,25 +4,28 @@ import {motion, useTransform, useScroll} from "framer-motion"
 import { useRef } from "react"
 
 export default function HorizontalScrollImage() {
-    const targetRef = useRef<HTMLImageElement | null>(null)
-    const { scrollYProgress} = useScroll({target: targetRef})
-
+    // const targetRef = useRef<HTMLImageElement | null>(null)
+    // const { scrollYProgress} = useScroll({target: targetRef})
+  const {scrollYProgress} = useScroll()
+  const x = useTransform(scrollYProgress, [0,1], [0,600])
     // const x = useTransform(scrollYProgress, [0,1], ["1%", "-95%"])
     // const x = useTransform(scrollYProgress, [0,1], ["40%", "-50%"])
   
 
   return (
     <motion.div 
-    className="w-full"
+    className=" flex grow    "
+  
     // style={{x}}
     >
     <Image
-         ref={targetRef}
+        //  ref={targetRef}
+       
          src="/assets/hero-crop.png"
          alt="hero-image"
          height={817}
          width={2000}
-         className=""
+         className="h-full  object-cover object-center  "
          /></motion.div>
   )
 }

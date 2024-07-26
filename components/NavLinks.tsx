@@ -1,8 +1,11 @@
 import Link from 'next/link';
 import { links } from '@/lib/data';
+import { usePathname } from "next/navigation";
 
 const NavLinks = ({ transparent}: { transparent : boolean}) => {
-  // console.log(links)
+  const pathname = usePathname();
+  console.log(pathname)
+  
   return (
     <nav>
       <ul
