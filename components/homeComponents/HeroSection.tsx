@@ -25,7 +25,7 @@ export default function HeroSection() {
   return (
     <section className=" min-h-screen  ">
       <div className="mt-[150px] lg:mt-[175px]">
-        <div className="flex flex-col lg:flex-row gap-y-9 gap-x-[150px] items-center subcontainer  ">
+        <div className="flex flex-col lg:flex-row gap-y-9 gap-x-[150px] items-center subcontainerXl  ">
 
         <BlurMotion classname="basis-1/2">  <h1 className="h1 text-green2  ">{heroTitle}</h1></BlurMotion>
           <div className="basis-1/2">

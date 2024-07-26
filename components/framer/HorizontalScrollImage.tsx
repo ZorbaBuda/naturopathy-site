@@ -7,11 +7,15 @@ export default function HorizontalScrollImage() {
     const targetRef = useRef<HTMLImageElement | null>(null)
     const { scrollYProgress} = useScroll({target: targetRef})
 
-    const x = useTransform(scrollYProgress, [0,1], ["1%", "-95%"])
-    console.log(x)
+    // const x = useTransform(scrollYProgress, [0,1], ["1%", "-95%"])
+    // const x = useTransform(scrollYProgress, [0,1], ["40%", "-50%"])
+  
 
   return (
-    <motion.div style={{x}}>
+    <motion.div 
+    className="w-full"
+    // style={{x}}
+    >
     <Image
          ref={targetRef}
          src="/assets/hero-crop.png"

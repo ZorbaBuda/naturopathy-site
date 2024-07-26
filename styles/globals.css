@@ -99,6 +99,24 @@
     @apply flex  mx-auto  px-5 lg:px-14 xl:max-w-7xl;
   }
 
+  .subcontainerXl {
+    @apply flex  mx-auto  px-5 lg:px-14 xl:max-w-[1400px];
+  }
+
+   /* clinique */
+   .h1c {
+    @apply text-[71.5px] lg:text-[82.5px] xl:text-[110px] tracking-tight leading-none 
+  }
+
+  .h2c {
+    @apply text-[52.5px] lg:text-[59.5px] xl:text-[70px] tracking-tight leading-none 
+  }
+
+  .h3c {
+    @apply text-[30.4px] lg:text-[32.3px] xl:text-[38px]
+  }
+
+
 
   /* buttons */
   /* tracking-[0.08em] */

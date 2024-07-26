@@ -1,14 +1,14 @@
-import type { Config } from "tailwindcss"
-import colors from "tailwindcss/colors"
+import type { Config } from "tailwindcss";
+import colors from "tailwindcss/colors";
 
 const config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -53,19 +53,25 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        dark: '#111111',
+        dark: "#111111",
         // grey: {
         //   DEFAULT: '#555555',
         // },
-       botella: '#026670',
-       botella_claro: '#C9FFB3',
-       amarillo_claro: '#FEF9C7',
-       amarillo_medio: '#FCE181',
-       gris_claro: '#EDEAE5',
-       //new
-       dark1: '#262c2e',
-       dark2: '#262c2eb3',
-       green2: '#093F32'
+        botella: "#026670",
+        botella_claro: "#C9FFB3",
+        amarillo_claro: "#FEF9C7",
+        amarillo_medio: "#FCE181",
+        gris_claro: "#EDEAE5",
+        //site 2
+        turquesa: "#0B4750",
+        verde: "#C9FFB3",
+        gris: "#E8E7E7",
+        verde_oscuro: "#153137",
+        verde_claro: "#EFFFE8",
+        //new
+        dark1: "#262c2e",
+        dark2: "#262c2eb3",
+        green2: "#093F32",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -92,29 +98,30 @@ const config = {
         // hero_img: "url('/img/hero/bg.jpg')",
         about_img: "url('/img/about/image.png')",
         interview: "url('/img/interview/bg.png')",
+        contact_bg: "url('/assets/contact-bg.jpg')",
       },
       transitionDuration: {
-        2000: '2000ms',
-        3000: '3000ms',
-        5000: '5000ms',
+        2000: "2000ms",
+        3000: "3000ms",
+        5000: "5000ms",
       },
       fontFamily: {
         // primary: ['Oswald', 'sans-serif'],
-        secondary: ['MANROPE_REGULAR', 'sans-serif'],
-        tertiary: ['Rozha One', 'sans-serif'],
-        oswald: ['var(--font-oswald)', 'sans-serif'],
-        rozha: ['var(--font-rozha)', 'sans-serif'],
-        manrope_regular:["manrope-regular",'sans-serif'],
-        manrope_semibold:["manrope-semibold",'sans-serif'],
-        logo:["logo"],
-        open_sans:["open-sans"],
-        roboto_regular:["roboto", 'sans-serif'],
-        ibm_plex_sans:["ibm-plex-sans"],
-        alata:["alata"]
+        secondary: ["MANROPE_REGULAR", "sans-serif"],
+        tertiary: ["Rozha One", "sans-serif"],
+        oswald: ["var(--font-oswald)", "sans-serif"],
+        rozha: ["var(--font-rozha)", "sans-serif"],
+        manrope_regular: ["manrope-regular", "sans-serif"],
+        manrope_semibold: ["manrope-semibold", "sans-serif"],
+        logo: ["logo"],
+        open_sans: ["open-sans"],
+        roboto_regular: ["roboto", "sans-serif"],
+        ibm_plex_sans: ["ibm-plex-sans"],
+        alata: ["alata"],
       },
     },
   },
   plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;
