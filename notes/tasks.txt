@@ -1,50 +1,41 @@
-1) nabvar 
-  - nabvar básico tailwind
-  - correcta manera de trabajar con el logo sin alterar el resto
-  - sustitucion de socials por "demanar cita"
-  - mejor mobile nav, animado
-  - dinamismo nabvar 
-         - ocultar en scroll down
-         - al inicio, fondo transparente, despues no transparente
-         - detectar el scroll bottom y mostrar
-         - la transicion que sea animada 
+Crear de una vez por todas todos los h (tamaños de fuente) que se utilizaran
+En globals css, tipo de directiva
 
-2) Hero de la home page:
-   - layout como el de la página web que usamos de referencia
-   - el title que sea animated como en la página web (staggered) 
-   - la animacion solo la primera vez, luego estático
-   - aprender a trabajar con las fonts
+1) header
+    -animacion on scroll
+    -elementos del nav
+    -mobileNav (open close)
+    -elementos del mobileNav
 
-3) Elementos varios
-   - crear sub componentes para cada tipo de seccion (dos parrafos texto, texto imagen, cabecera...)
-     se trata de ver la forma más eficiente de que sea realmente react style
-   - y la cuestion de partes animadas (AnimatedText como componente donde pasar el texto)
+    -idiomas
+    -darkmode
 
-4) Footer
+2) pages
+    -home
+      -presentacion básica (quien soy y que ofrezco) enlace a /serveis
+      -pequeño banner
+      -presentacion básica del "proceso" enlace a /serveis
+      -formulario de contacto
 
-5) Formularios
+    -sobre mi 
+       -Hero
+       -Presentacion de mi general
+       -Mi historia
+       -Formacion
 
-6) comunicacion con Notion: consumir textos, enviar Formularios
+    -serveis
+      -Hero
+      -Explicacion general, te ayudo a tratar... etc
+      -tipos de consulta
+      -funcionamiento de las visitas
+      -sientes que quieres probar? enlace a /reservar
 
-7) Privacidad page (html parser)
+    -contacte
+       -formulario de contacto
 
-7) SEO 
+    -reserva
+       -agenda tu cita (1ª visita/visita seguimiento)
+    -privacy policy
 
-8) Subir a Vercel primero, pero enfocarse ya a VPS
-
-
-
-
-
-- fonts
-
-- colors
-
-- nabvar
-
-- home page
-
-
-- notion
-     - consumir informacion de notion a la app
-     - enviar informacion de la app a notion ( recibir respuesta)
+3) footer
+    -elementos

@@ -1,10 +1,12 @@
-import Image from "next/image";
-import {  Contact, Hero, HeroTest} from "@/components"
+
+
 import HeroSection from "@/components/homeComponents/HeroSection";
 import ContactSection from "@/components/homeComponents/ContactSection";
 import BannerSection from "@/components/homeComponents/BannerSection";
 import { homeBanner } from "@/lib/data";
 import IntroSection from "@/components/homeComponents/IntroSection";
+import Intro2Section from "@/components/homeComponents/Intro2Section";
+import ImgListSection from "@/components/homeComponents/ImgListSection";
 
 export default function Home() {
   return (
@@ -13,6 +15,8 @@ export default function Home() {
      <HeroSection />
      <IntroSection />
      <BannerSection text={homeBanner} />
+     <Intro2Section />
+     <ImgListSection />
      <ContactSection />
       
      

@@ -62,7 +62,7 @@
     @apply font-secondary  text-dark bg-white;
   }
   .section {
-    @apply py-[55px] lg:py-[160px];
+    @apply py-[55px] lg:py-[100px];
   }
 
   .section-light {

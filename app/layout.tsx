@@ -6,11 +6,11 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import TwSizeIndicator from "@/components/helpers/TwSizeIndicator";
 import AnimatedNavbar from "@/components/tutorials/framer/AnimatedNavbar";
-import HeaderTest from "@/components/HeaderTest";
 import { Head, NextScript } from "next/document";
 import Script from "next/script";
 import Navbar from "@/components/navs/Navbar";
 import ScrollTop from "@/components/ScrollTop";
+import FooterCli from "@/components/FooterCli";
 
 // const oswald = Oswald({
 //   subsets: ['latin'],
@@ -47,15 +47,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body className="font-manrope">
+      <body className="font-manrope ">
         <TwSizeIndicator />
         {/* <HeaderTest /> */}
         {/* <AnimatedNavbar /> */}
         <Navbar />
         <ScrollTop />
         {/* <Header/> */}
-        {children}
+       <main className=" "> {children}</main>
         <Footer />
+        <FooterCli />
       </body>
     </html>
   );

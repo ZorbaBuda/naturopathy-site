@@ -1,6 +1,6 @@
 'use client';
 
-import { aboutData } from '@/lib/data';
+// import { aboutData } from '@/lib/data';
 import { motion } from 'framer-motion';
 // import variants
 import { fadeIn } from '@/lib/variants'
@@ -9,8 +9,7 @@ import Image from 'next/image';
 import Logo from '@/public/img/about/newImage.jpg'
 
 export default function About() {
-  const { title, subtitle1, subtitle2, subtitle3, btnText, btnIcon } =
-    aboutData;
+  // const { title, subtitle1, subtitle2, subtitle3, btnText, btnIcon } = aboutData;
 
   const [isButtonClicked, setIsButtonClicked] = useState(false);
 
@@ -34,7 +33,7 @@ export default function About() {
           </motion.div>
 
           {/* text */}
-          <motion.div
+          {/* <motion.div
             variants={fadeIn('left')}
             initial='hidden'
             whileInView={'show'}
@@ -59,7 +58,7 @@ export default function About() {
                 )}
               </div>
             </div>
-          </motion.div>
+          </motion.div> */}
         </div>
       </div>
     </section>
@@ -92,7 +91,7 @@ export default function About() {
     </motion.div>
 
     {/* text */}
-    <motion.div
+    {/* <motion.div
       variants={fadeIn('left')}
       initial='hidden'
       whileInView={'show'}
@@ -117,7 +116,7 @@ export default function About() {
           )}
         </div>
       </div>
-    </motion.div>
+    </motion.div> */}
   </div>
 </div>
 </section>
