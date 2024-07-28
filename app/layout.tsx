@@ -3,11 +3,7 @@ import "@/styles/globals.css";
 // https://fonts.google.com/specimen/Raleway?query=raleway
 
 import Footer from "@/components/Footer";
-import Header from "@/components/Header";
 import TwSizeIndicator from "@/components/helpers/TwSizeIndicator";
-import AnimatedNavbar from "@/components/tutorials/framer/AnimatedNavbar";
-import { Head, NextScript } from "next/document";
-import Script from "next/script";
 import Navbar from "@/components/navs/Navbar";
 import ScrollTop from "@/components/ScrollTop";
 import FooterCli from "@/components/FooterCli";
@@ -49,17 +45,16 @@ export default function RootLayout({
   return (
     <html lang="es" className="">
       <body className="font-manrope ">
-        {/* <SmoothScrolling> */}
+       
         <TwSizeIndicator />
-        {/* <HeaderTest /> */}
-        {/* <AnimatedNavbar /> */}
         <Navbar />
         <ScrollTop />
-        {/* <Header/> */}
-       <main className=" "> {children}</main>
+       {/* <SmoothScrolling>   */}
+      {children} 
+       {/* </SmoothScrolling>  */}
         <Footer />
         <FooterCli />
-        {/* </SmoothScrolling> */}
+      
       </body>
     </html>
   );

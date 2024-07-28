@@ -61,6 +61,10 @@
   body {
     @apply font-secondary  text-dark bg-white;
   }
+
+  .prose-custom{
+    @apply prose-lg lg:prose-lg xl:prose-xl text-dark2;
+  }
   .section {
     @apply py-[55px] lg:py-[100px];
   }
@@ -80,12 +84,14 @@
   }
 
   .h2 {
-    @apply text-[50px]  lg:text-[118px] tracking-[1px] leading-none 
-    font-normal  ;
+    @apply text-[42px]  lg:text-[55px] xl:text-[70px] leading-none font-alata text-green2
+    tracking-tight xl:tracking-tighter ;
   }
   /* .h2 {
     @apply text-[40px] lg:text-[60px] xl:text-[70px] 2xl:text-[85px] text-dark  font-oswald max-w-[236px] leading-none mb-[38px];
   } */
+
+  
 
   .h3 {
     @apply text-[16px] lg:text-[17.5px]  2xl:text-[20.6px]  

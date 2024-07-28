@@ -25,12 +25,13 @@ export default function HeroSection() {
   return (
     <section className="   ">
       <div className="pt-[150px] lg:pt-[175px] flex flex-col h-screen lg:h-auto">
-        <div className="flex flex-col lg:flex-row gap-y-9 gap-x-[150px] items-center subcontainerXl  ">
+        <div className="flex flex-col lg:flex-row gap-y-10 gap-x-[150px] mb-10  items-center subcontainerXl  ">
 
-        <BlurMotion classname="basis-1/2">  <h1 className="h2c text-green2 max-w-[17ch] ">{heroTitle}</h1></BlurMotion>
+       
+        <BlurMotion classname="basis-1/2">  <h1 className="h1 text-green2 ">{heroTitle}</h1></BlurMotion>
           <div className="basis-1/2">
           <FadeIn delay={0.2}   >
-          <h3 className="h3 text-dark2 mb-5 prose lg:prose-lg">{heroSubtitle}</h3></FadeIn>
+          <h3 className="  mb-10 prose-custom ">{heroSubtitle}</h3></FadeIn>
           <FadeIn delay={0.4}><AnimatedButton text={linkText} href={linkHref} /></FadeIn>
           </div>
         </div>

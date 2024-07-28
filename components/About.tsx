@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import { fadeIn } from '@/lib/variants'
 import { useState } from 'react';
 import Image from 'next/image';
-import Logo from '@/public/img/about/newImage.jpg'
+// import Logo from '@/public/img/about/newImage.jpg'
 
 export default function About() {
   // const { title, subtitle1, subtitle2, subtitle3, btnText, btnIcon } = aboutData;
@@ -76,14 +76,14 @@ export default function About() {
       viewport={{ once: false, amount: 0.7 }}
       className='flex flex-col lg:flex-row flex-1'
     >
-        <Image
+        {/* <Image
             src={Logo}
             alt={"logo"}
             height="0"
             width="0"
             className=" h-fit mb-4  mx-auto"
             unoptimized
-        />
+        /> */}
      
       {/* <div className='text-[360px] xl:text-[620px] 2xl:text-[720px] leading-none font-rozha lg:-tracking-[0.055em] bg-about_img bg-no-repeat bg-right bg-clip-text text-transparent'>
         01

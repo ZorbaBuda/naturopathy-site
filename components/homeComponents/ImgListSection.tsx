@@ -8,14 +8,13 @@ import AnimatedButton from "../parts/AnimatedButton";
 import { TbPointFilled } from "react-icons/tb";
 
 export default function ImgListSection() {
+  
   return (
     <section className="section-light flex flex-col px-5">
-      <div className="text-center md:text-xl flex mx-auto  mb-[30px] ">
-        {howCanHelp.heading.p}
-      </div>
+  
 
-      <div className="text-center mx-auto h1 mb-8 ">
-        {howCanHelp.heading.h2}
+      <div className="text-center mx-auto h2 mb-8 ">
+        {howCanHelp.title}
       </div>
       <div className=" flex flex-col items-center lg:flex-row lg:gap-x-10 gap-y-10 max-w-7xl mx-auto ">
         <Image
@@ -26,10 +25,10 @@ export default function ImgListSection() {
           height={809}
         />
 <div>
-        <ul className="  p-5  flex flex-col justify-around gap-y-10 ">
+        <ul className="h3  p-5  flex flex-col justify-around gap-y-5 ">
           {howCanHelp.items.map((item) => (
             <div key={item} className="flex flex-row items-center gap-x-3">
-             <TbPointFilled  className="text-green-600 text-2xl"/>
+             <TbPointFilled  className="text-green2 text-2xl"/>
               <div>{item}</div>
             </div>
           
