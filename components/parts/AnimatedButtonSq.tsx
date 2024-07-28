@@ -1,7 +1,9 @@
 import Link from "next/link";
 import React from "react";
 
-export default function AnimatedButton({
+// EA5C2B before
+// FF7F3F after
+export default function AnimatedButtonSq({
   text,
   href,
 }: {
@@ -15,12 +17,12 @@ export default function AnimatedButton({
     // text-white font-semibold hover:bg-white bg-green2 hover:text-green2 rounded-3xl border border-green2"
     // >{text}</Link>
     <Link
-    href={"#"}
-    className="text-dark1 hover:before:bg-redborder-red-500 relative h-[50px] rounded-3xl  overflow-hidden
-    border border-[#FF7F3F] bg-white px-7 py-3  transition-all before:absolute before:rounded-2xl
+    href={href}
+    className="text-white hover:before:bg-[#FF7F3F]  relative h-[50px]   overflow-hidden
+     bg-[#EA5C2B] px-7 py-3  transition-all before:absolute 
      before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-[#FF7F3F]
-      before:transition-all before:duration-300 hover:text-white  hover:before:left-0 max-w-fit no-underline
-       hover:before:w-full"
+      before:transition-all before:duration-700   hover:before:left-0 max-w-fit no-underline
+       hover:before:w-full h3"
   >
     <span className="relative z-10">{text}</span>
   </Link>

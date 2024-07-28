@@ -7,7 +7,7 @@ export default function HorizontalScrollImage() {
     // const targetRef = useRef<HTMLImageElement | null>(null)
     // const { scrollYProgress} = useScroll({target: targetRef})
   const {scrollYProgress} = useScroll()
-  const x = useTransform(scrollYProgress, [0,1], [0,600])
+  const y = useTransform(scrollYProgress, [0,1], [0,600])
     // const x = useTransform(scrollYProgress, [0,1], ["1%", "-95%"])
     // const x = useTransform(scrollYProgress, [0,1], ["40%", "-50%"])
   
@@ -16,7 +16,7 @@ export default function HorizontalScrollImage() {
     <motion.div 
     className=" flex grow    "
   
-    // style={{x}}
+     style={{top: y}}
     >
     <Image
         //  ref={targetRef}

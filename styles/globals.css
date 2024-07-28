@@ -81,15 +81,15 @@
 
   .h2 {
     @apply text-[50px]  lg:text-[118px] tracking-[1px] leading-none 
-    font-normal  text-botella_claro;
+    font-normal  ;
   }
   /* .h2 {
     @apply text-[40px] lg:text-[60px] xl:text-[70px] 2xl:text-[85px] text-dark  font-oswald max-w-[236px] leading-none mb-[38px];
   } */
 
   .h3 {
-    @apply text-[17px] lg:text-[17.5px]  xl:text-[20.6px]  
-           tracking-normal xl:tracking-tighter leading-relaxed;
+    @apply text-[16px] lg:text-[17.5px]  2xl:text-[20.6px]  
+           tracking-normal  leading-relaxed;
   }
   .h4 {
     @apply text-[20px] lg:text-[30px] xl:text-[40px] 2xl:text-[60px] text-dark  font-oswald max-w-[236px] leading-none mb-[38px];

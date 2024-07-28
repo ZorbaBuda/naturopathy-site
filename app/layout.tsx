@@ -11,6 +11,7 @@ import Script from "next/script";
 import Navbar from "@/components/navs/Navbar";
 import ScrollTop from "@/components/ScrollTop";
 import FooterCli from "@/components/FooterCli";
+import SmoothScrolling from "@/components/helpers/SmoothScrolling";
 
 // const oswald = Oswald({
 //   subsets: ['latin'],
@@ -46,8 +47,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es">
+    <html lang="es" className="">
       <body className="font-manrope ">
+        {/* <SmoothScrolling> */}
         <TwSizeIndicator />
         {/* <HeaderTest /> */}
         {/* <AnimatedNavbar /> */}
@@ -57,6 +59,7 @@ export default function RootLayout({
        <main className=" "> {children}</main>
         <Footer />
         <FooterCli />
+        {/* </SmoothScrolling> */}
       </body>
     </html>
   );

@@ -14,12 +14,12 @@ export default function Footer() {
 
   return (
     
-    <footer className=" bg-green2 text-lg text-white w-full">
-      <div className="section-light flex flex-col gap-y-10 mx-auto   max-w-[1400px] ">
+    <footer className=" bg-[#B5C0D0] text-lg text-dark1  w-full">
+      <div className="section-light flex flex-col gap-y-10 mx-auto   max-w-[1400px] px-10 2xl:px-0 ">
       <Logo />
       
 
-        <div className="text-white flex flex-col lg:flex-row justify-between  gap-y-14 ">
+        <div className=" flex flex-col lg:flex-row justify-around  gap-y-14 ">
       
           {/* Services  */}
           <div className=" flex flex-col gap-y-6">
@@ -48,7 +48,7 @@ export default function Footer() {
             </div>
 
            
-            <div className="flex flex-col gap-y-4 font-medium ">
+            <div className="flex flex-col gap-y-4  ">
              
               <div className="flex items-center gap-x-[10px]">
                 <div>{contact.address.icon}</div>
@@ -73,7 +73,7 @@ export default function Footer() {
               <div className=" text-xl uppercase  mb-6">
                 {links.title}
               </div>
-              <ul className="font-thin flex flex-col gap-y-4 ">
+              <ul className=" flex flex-col gap-y-4 ">
                 {links.items.map((item, index) => {
                   // destructure item
                   const { href, name } = item;

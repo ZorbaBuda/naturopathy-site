@@ -18,7 +18,7 @@ const NavLinks = ({ transparent}: { transparent : boolean}) => {
               <Link
                 className=  {` ${transparent ? "text-black" : "text-black"}
                   text-black hover:border-b hover:border-dark transition duration-300  
-                 font-medium`}
+                 h3`}
                 href={item.hash}
               >
                 {item.name}

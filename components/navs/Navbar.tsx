@@ -13,6 +13,7 @@ import NavMobile from '../NavMobile';
 // import icons
 import { HiMenuAlt2 } from "react-icons/hi"
 import AnimatedButton from '../parts/AnimatedButton';
+import AnimatedButtonSq from '../parts/AnimatedButtonSq';
 // https://www.youtube.com/watch?v=9mgMJDlOn8M
 
 export default function Header() {
@@ -65,14 +66,12 @@ export default function Header() {
 
        h-[100px] fixed top-0   z-20 min-w-max w-full  flex  mx-auto transition-all duration-500`}
     >
-      {/* <div className='flex items-center justify-between h-full pl-[50px] pr-[60px] md:pr-[80px] md:pl-[80px] lg:pl-[90px] lg:pr-[90px] xl:pl-[100px] xl:pr-[100px] 2xl:pl-[180px] 2xl:pr-[180px]'> */}
-      <div className='  flex w-full items-center mx-auto justify-between px-5  lg:px-14 xl:max-w-7xl'>
+      <div className='  flex w-full items-center mx-auto justify-between px-5  lg:px-14 '>
 
         {/* logo */}
-        <Link href="/" className=" ">
+        <Link href="/" className="z-20 ">
           <div className="flex items-center gap-x-3">
             <Image
-              // className='w-[188px] h-[90px]'
               className="  "
               src={logo}
               alt="logo"
@@ -81,25 +80,15 @@ export default function Header() {
             />
             <div className={`${transparent ? "text-black" : "text-black"} font-medium flex flex-col gap-0 lg:text-3xl text-2xl `}>
               <div className='text-[#40961D] font-logo '>Christian Constanseu</div> 
-              {/* <div></div> */}
+            
               <div className='lg:text-sm text-sm '>NATUROPATA</div>
             </div>
           </div>
 
         </Link>
 
-        {/* nav - initially hidden, show on desktop */}
-        <div className='hidden lg:flex mx-auto'>
-          {/* <NavLinks /> */}
-          <NavLinks transparent={transparent} />
-        </div>
-        {/* hamburger menu icon = showing by default, hidden on desktop mode */}
-        {/* <div
-          onClick={() => setNavMobile(!navMobile)}
-          className='lg:hidden absolute right-[5%]  text-black p-2  cursor-pointer'
-        >
-          <HiMenuAlt2 className={` ${ transparent? "text-white" : "text-black" } text-3xl `} />
-        </div> */}
+      
+    
 		    {mobileNav && (
           <div className="fixed inset-0 bg-[#274EA9] min-h-screen  flex flex-col    lg:hidden">
             {/* <Link href="/site3" className="pr-10 mt-[31px]">
@@ -110,7 +99,7 @@ export default function Header() {
               <ul className="flex flex-col text-white">
                 {links.map((link) => (
                   <Link
-                    className="font-satoshi_medium text-4xl border-b-[0.5px] border-c"
+                    className=" text-4xl border-b-[0.5px] border-c"
                     href={link.hash}
                     key={link.hash}
                   >
@@ -118,62 +107,11 @@ export default function Header() {
                   </Link>
                 ))}
               </ul>
-
-    
-
             </div>
-          
           </div>
        
         )}
-		   <motion.button
-          initial="hide"
-          animate={mobileNav ? "show" : "hide"}
-          onClick={toggleMobileNav}
-          className="flex flex-col space-y-[6px] relative z-10  lg:hidden"
-        >
-          <motion.span
-            variants={{
-              hide: {
-                rotate: 0,
-              },
-              show: {
-                rotate: 45,
-                y: 7.5,
-              },
-            }}
-            className={` ${
-              mobileNav ? "bg-black" : "bg-black"
-            }  h-[2px] block w-10 font-bold`}
-          ></motion.span>
-          <motion.span
-            variants={{
-              hide: {
-                opacity: 1,
-              },
-              show: {
-                opacity: 0,
-              },
-            }}
-            className={` ${
-              mobileNav ? "bg-black" : "bg-black"
-            }  h-[2px] block w-10`}
-          ></motion.span>
-          <motion.span
-            variants={{
-              hide: {
-                rotate: 0,
-              },
-              show: {
-                rotate: -45,
-                y: -7.5,
-              },
-            }}
-            className={` ${
-              mobileNav ? "bg-black" : "bg-black"
-            }  h-[2px]  w-10`}
-          ></motion.span>
-        </motion.button>
+		
         	{/* <motion.button
 					initial="hide"
 					animate={mobileNav ? "show" : "hide"}
@@ -297,9 +235,65 @@ export default function Header() {
           <NavMobile closeMobileMenu={closeMobileMenu} />
         </div> */}
         {/* social icons - initially hidden - show on desktop */}
-		<div className='hidden lg:block'>
-		<AnimatedButton text="Reservar cita" href="/reserva" /></div>
-		
+          {/* nav - initially hidden, show on desktop */}
+          <div className='flex flex-row items-center'>
+          <div className='hidden lg:flex'>
+          {/* <NavLinks /> */}
+          <NavLinks transparent={transparent} />
+        </div>
+
+		<div className=''>
+		<AnimatedButtonSq text="Reserva" href="/reserva" />
+    </div>
+    <motion.button
+          initial="hide"
+          animate={mobileNav ? "show" : "hide"}
+          onClick={toggleMobileNav}
+          className="flex flex-col space-y-[6px] relative z-10  lg:hidden"
+        >
+          <motion.span
+            variants={{
+              hide: {
+                rotate: 0,
+              },
+              show: {
+                rotate: 45,
+                y: 7.5,
+              },
+            }}
+            className={` ${
+              mobileNav ? "bg-black" : "bg-black"
+            }  h-[2px] block w-10 font-bold`}
+          ></motion.span>
+          <motion.span
+            variants={{
+              hide: {
+                opacity: 1,
+              },
+              show: {
+                opacity: 0,
+              },
+            }}
+            className={` ${
+              mobileNav ? "bg-black" : "bg-black"
+            }  h-[2px] block w-10`}
+          ></motion.span>
+          <motion.span
+            variants={{
+              hide: {
+                rotate: 0,
+              },
+              show: {
+                rotate: -45,
+                y: -7.5,
+              },
+            }}
+            className={` ${
+              mobileNav ? "bg-black" : "bg-black"
+            }  h-[2px]  w-10`}
+          ></motion.span>
+        </motion.button>
+		</div>
       </div>
     </motion.nav>
   );
