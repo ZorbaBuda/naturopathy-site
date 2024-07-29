@@ -6,7 +6,6 @@ import Footer from "@/components/Footer";
 import TwSizeIndicator from "@/components/helpers/TwSizeIndicator";
 import Navbar from "@/components/navs/Navbar";
 import ScrollTop from "@/components/ScrollTop";
-import FooterCli from "@/components/FooterCli";
 import SmoothScrolling from "@/components/helpers/SmoothScrolling";
 
 // const oswald = Oswald({
@@ -53,7 +52,6 @@ export default function RootLayout({
       {children} 
        {/* </SmoothScrolling>  */}
         <Footer />
-        <FooterCli />
       
       </body>
     </html>

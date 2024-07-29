@@ -18,32 +18,32 @@ import FadeIn from "../framer/FadeIn";
 import HorizontalScrollImage from "../framer/HorizontalScrollImage";
 
 
-
 export default function HeroSection() {
   const { heroTitle, heroSubtitle, linkText, linkHref } = homeData;
 
   return (
-    <section className="   ">
-      <div className="pt-[150px] lg:pt-[175px] flex flex-col h-screen lg:h-auto">
-        <div className="flex flex-col lg:flex-row gap-y-10 gap-x-[150px] mb-10  items-center subcontainerXl  ">
+    <section className="w-full h-screen bg-heroBg bg-cover bg-center       flex">
+      <div className=" pt-[100px] flex flex-col gap-y-10 lg:flex-row items-center subcontainerXl m-auto  ">
+      
+        <div className="flex flex-col  gap-y-10 basis-1/2    ">
 
        
-        <BlurMotion classname="basis-1/2">  <h1 className="h1 text-green2 ">{heroTitle}</h1></BlurMotion>
+        <BlurMotion classname="basis-1/2">  <h1 className="h1 text-white lg:text-dark1  ">{heroTitle}</h1></BlurMotion>
           <div className="basis-1/2">
           <FadeIn delay={0.2}   >
-          <h3 className="  mb-10 prose-custom ">{heroSubtitle}</h3></FadeIn>
+          <h3 className="  mb-10 prose-custom text-white lg:text-dark1 ">{heroSubtitle}</h3></FadeIn>
           <FadeIn delay={0.4}><AnimatedButton text={linkText} href={linkHref} /></FadeIn>
           </div>
         </div>
-        <Image
-        //  ref={targetRef}
-       
-         src="/assets/hero-crop.png"
-         alt="hero-image"
-         height={817}
-         width={2000}
-         className="h-full  object-cover object-center  "
+        <div className="lg:w-[383px] lg:h-[542px] basis-1/2">
+       <Image 
+         src="/assets/hero-pic.jpg"
+         width={383}
+         height={542}
+         alt="hero-img"
+         className="w-full h-full object-contain    "
          />
+         </div>
       </div>
     </section>
   );

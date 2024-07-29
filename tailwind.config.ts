@@ -20,6 +20,10 @@ const config = {
     },
     extend: {
       colors: {
+
+        grey_1: "#F9F9F9",
+        grey2: "#ECECEC",
+        footerText: "#5a5c5c",
         
         dark: "#111111",
         // grey: {
@@ -67,6 +71,8 @@ const config = {
         about_img: "url('/img/about/image.png')",
         interview: "url('/img/interview/bg.png')",
         contact_bg: "url('/assets/contact-bg.jpg')",
+        heroBg: "url('/assets/bg-hero2.jpg')",
+        heroMovBg: "url('/assets/heroMobile-bg.jpg')",
       },
       transitionDuration: {
         2000: "2000ms",

@@ -9,14 +9,13 @@ const NavLinks = ({ transparent}: { transparent : boolean}) => {
   return (
     <nav>
       <ul
-        className='flex gap-x-[4
-        8px] md:gap-x-[28px] md:p-5 text-lg  '
+        className='flex gap-x-[48px] md:gap-x-[48px] md:p-5 text-lg  '
       >
         {links.map((item : Link , index) => {
           return (
             <li key={index}>
               <Link
-                className=  {` ${transparent ? "text-black" : "text-black"}
+                className=  {` ${transparent ? "text-footerText" : "text-footerText"}
                   text-black hover:border-b hover:border-dark transition duration-300  
                  h3`}
                 href={item.hash}

@@ -1,32 +1,33 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { motion, useScroll, useMotionValueEvent, AnimatePresence, MotionConfig } from "framer-motion"
+import React, { useState, useEffect } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import {
+  motion,
+  useScroll,
+  useMotionValueEvent,
+  AnimatePresence,
+  MotionConfig,
+} from "framer-motion";
 // import header data
-import { headerData, links } from '@/lib/data'
+import { headerData, links } from "@/lib/data";
 // import components
-import NavLinks from '../NavLinks';
-import NavMobile from '../NavMobile';
+import NavLinks from "../NavLinks";
+import NavMobile from "../NavMobile";
 // import Socials from './Socials';
 // import icons
-import { HiMenuAlt2 } from "react-icons/hi"
-import AnimatedButton from '../parts/AnimatedButton';
-import AnimatedButtonSq from '../parts/AnimatedButtonSq';
+import { HiMenuAlt2 } from "react-icons/hi";
+import AnimatedButton from "../parts/AnimatedButton";
+import AnimatedButtonSq from "../parts/AnimatedButtonSq";
+import MobileNav from "./MobileNav";
 // https://www.youtube.com/watch?v=9mgMJDlOn8M
 
 export default function Header() {
- 
   const { logo } = headerData;
   // header state
   // const [isActive, setIsActive] = useState(false);
   // nav mobile state
-  const [mobileNav, setMobileNav] = useState(false);
-
-  const toggleMobileNav = () => {
-    setMobileNav(!mobileNav);
-};
 
   const { scrollY, scrollYProgress } = useScroll();
   const [hidden, setHidden] = useState(false);
@@ -42,7 +43,6 @@ export default function Header() {
     }
     if (latest < 150) {
       setTransparent(true);
-     
     } else {
       setTransparent(false);
     }
@@ -51,23 +51,22 @@ export default function Header() {
     // }
   });
 
-//   const closeMobileMenu = () => {
-//     setNavMobile(false); // Function to close the mobile menu
-//   };
+  //   const closeMobileMenu = () => {
+  //     setNavMobile(false); // Function to close the mobile menu
+  //   };
   // backdrop-blur-xl
   // bg-gradient-to-b from-white to-transparent
   return (
     <motion.nav
-    variants={{ visible: { y: 0 }, hidden: { y: "-100%" } }}
-    animate={hidden ? "hidden" : "visible"}
-    transition={{ duration: 0.3, ease: "easeInOut" }}
-      className={`${transparent ? " transparent  " : "bg-white shadow-lg"}
+      variants={{ visible: { y: 0 }, hidden: { y: "-100%" } }}
+      animate={hidden ? "hidden" : "visible"}
+      transition={{ duration: 0.3, ease: "easeInOut" }}
+      className={`${transparent ? " bg-grey_1  " : "bg-grey_1 shadow-lg"}
       
 
-       h-[100px] fixed top-0   z-20 min-w-max w-full  flex  mx-auto transition-all duration-500`}
+       lg:h-[100px] h-[80px]  fixed top-0   z-20 min-w-max w-full  flex  mx-auto transition-all duration-500`}
     >
-      <div className='  flex w-full items-center mx-auto justify-between px-5  lg:px-14 '>
-
+      <div className="  flex w-full items-center mx-auto justify-between subcontainerXl ">
         {/* logo */}
         <Link href="/" className="z-20 ">
           <div className="flex items-center gap-x-3">
@@ -78,249 +77,57 @@ export default function Header() {
               width={50}
               height={50}
             />
-            <div className={`${transparent ? "text-black" : "text-black"} font-medium flex flex-col gap-0 lg:text-3xl text-2xl `}>
-              <div className='text-[#40961D] font-logo '>Christian Constanseu</div> 
-            
-              <div className='lg:text-sm text-sm '>NATUROPATA</div>
+            <div
+              className={`${
+                transparent ? "text-black" : "text-black"
+              } font-medium flex flex-col gap-0 lg:text-3xl text-2xl `}
+            >
+              <div className="text-[#40961D] font-logo ">
+                Christian Constanseu
+              </div>
+
+              <div className="lg:text-sm text-sm ">NATUROPATA</div>
             </div>
           </div>
-
         </Link>
-
-      
-    
-		    {mobileNav && (
-          <div className="fixed inset-0 bg-[#274EA9] min-h-screen  flex flex-col    lg:hidden">
-            {/* <Link href="/site3" className="pr-10 mt-[31px]">
-              <Image src={LogoWhite} alt="logo" width={150} height={28} />
-            </Link> */}
-
-            <div className="flex flex-col justify-center space-y-16 ">
-              <ul className="flex flex-col text-white">
-                {links.map((link) => (
-                  <Link
-                    className=" text-4xl border-b-[0.5px] border-c"
-                    href={link.hash}
-                    key={link.hash}
-                  >
-                    {link.name}
-                  </Link>
-                ))}
-              </ul>
-            </div>
+ <div className="hidden lg:flex">
+            {/* <NavLinks /> */}
+            <NavLinks transparent={transparent} />
           </div>
-       
-        )}
-		
-        	{/* <motion.button
-					initial="hide"
-					animate={mobileNav ? "show" : "hide"}
-					onClick={toggleMobileNav}
-					className="flex flex-col space-y-1 relative z-10 lg:hidden"
-				>
-					<motion.span
-						variants={{
-							hide: {
-								rotate: 0,
-							},
-							show: {
-								rotate: 45,
-								y: 5,
-							},
-						}}
-						className={` ${transparent ? "bg-white" : "bg-black"}  h-px block w-6`}
-					></motion.span>
-					<motion.span
-						variants={{
-							hide: {
-								opacity: 1,
-							},
-							show: {
-								opacity: 0,
-							},
-						}}
-						className={` ${transparent ? "bg-white" : "bg-black"}  h-px block w-6`}
-					></motion.span>
-					<motion.span
-						variants={{
-							hide: {
-								rotate: 0,
-							},
-							show: {
-								rotate: -45,
-								y: -5,
-							},
-						}}
-						className={` ${transparent ? "bg-white" : "bg-black"}  h-px  w-6`}
-					></motion.span>
-				</motion.button>
-                <AnimatePresence>
-					{mobileNav && (
-						
-						<MotionConfig
-							transition={{
-								type: "spring",
-								bounce: 0.1,
-							}}
-						>
-							<motion.div
-								key="mobile-nav"
-								variants={{
-									hide: {
-										x: "100%",
-										transition: {
-											type: "spring",
-											bounce: 0.1,
-											when: "afterChildren",
-											staggerChildren: 0.25,
-										},
-									},
-									show: {
-										x: "0%",
-										transition: {
-											type: "spring",
-											bounce: 0.1,
-											when: "beforeChildren",
-											staggerChildren: 0.25,
-										},
-									},
-								}}
-								initial="hide"
-								animate="show"
-								exit="hide"
-								className="  fixed inset-0 bg-[#26355D] bg-opacity-95 p-6 h-screen flex flex-col justify-center space-y-10 lg:hidden"
-							>
-								<motion.ul
-									variants={{
-										hide: {
-											y: "25%",
-											opacity: 0,
-										},
-										show: {
-											y: "0%",
-											opacity: 1,
-										},
-									}}
-									className="list-none space-y-10 mx-auto"
-								>
-								 {links.map((item : Link , index) => {
-									return (
-										<li key={index}>
-										<Link
-											className=  {`text-5xl font-semibold text-white `}
-											href={item.hash}
-											onClick={toggleMobileNav}
-										>
-											{item.name}
-										</Link>
-										</li>
-									);
-									})}
-									
-								</motion.ul>
-								
-							</motion.div>
-						</MotionConfig>
-						
-					)}
-				</AnimatePresence> */}
-        {/* nav mobile - showing by default, hidden on desktop */}
-        {/* <div
-          className={`${navMobile ? 'max-h-full' : 'max-h-0'} ${
-           
-              'top-[90px] lg:top-[90px]'
-             
-          } fixed bg-white w-full h-full left-0 -z-10 transition-all duration-300`}
-        >
-          <NavMobile closeMobileMenu={closeMobileMenu} />
-        </div> */}
-        {/* social icons - initially hidden - show on desktop */}
-          {/* nav - initially hidden, show on desktop */}
-          <div className='flex flex-row items-center'>
-          <div className='hidden lg:flex'>
-          {/* <NavLinks /> */}
-          <NavLinks transparent={transparent} />
-        </div>
+        <div className="flex flex-row  items-center">
+         
 
-		<div className=''>
-		<AnimatedButtonSq text="Reserva" href="/reserva" />
-    </div>
-    <motion.button
-          initial="hide"
-          animate={mobileNav ? "show" : "hide"}
-          onClick={toggleMobileNav}
-          className="flex flex-col space-y-[6px] relative z-10  lg:hidden"
-        >
-          <motion.span
-            variants={{
-              hide: {
-                rotate: 0,
-              },
-              show: {
-                rotate: 45,
-                y: 7.5,
-              },
-            }}
-            className={` ${
-              mobileNav ? "bg-black" : "bg-black"
-            }  h-[2px] block w-10 font-bold`}
-          ></motion.span>
-          <motion.span
-            variants={{
-              hide: {
-                opacity: 1,
-              },
-              show: {
-                opacity: 0,
-              },
-            }}
-            className={` ${
-              mobileNav ? "bg-black" : "bg-black"
-            }  h-[2px] block w-10`}
-          ></motion.span>
-          <motion.span
-            variants={{
-              hide: {
-                rotate: 0,
-              },
-              show: {
-                rotate: -45,
-                y: -7.5,
-              },
-            }}
-            className={` ${
-              mobileNav ? "bg-black" : "bg-black"
-            }  h-[2px]  w-10`}
-          ></motion.span>
-        </motion.button>
-		</div>
+          <div className="">
+            <AnimatedButtonSq text="Reserva" href="/reserva" />
+          </div>
+          <MobileNav />
+        </div>
       </div>
     </motion.nav>
   );
-};
+}
 
 const Logo = () => {
-	const { logo } = headerData;
-	return (
-	<Link href="/" className=" ">
-			<div className="flex items-center">
-			  <Image
-				// className='w-[188px] h-[90px]'
-				className="  "
-				src={logo}
-				alt="logo"
-				width={88}
-				height={90}
-			  />
-			  <div className={`text-white font-medium flex flex-col gap-0 font-logo lg:text-3xl text-2xl `}>
-				<div className='text-[#40961D] '>Christian Constanseu</div> 
-				{/* <div></div> */}
-				<div className='lg:text-sm text-sm font-open_sans'>NATURÓPATA</div>
-			  </div>
-			</div>
-  
-		  </Link>
-	)
-  }
-
-
+  const { logo } = headerData;
+  return (
+    <Link href="/" className=" ">
+      <div className="flex items-center">
+        <Image
+          // className='w-[188px] h-[90px]'
+          className="  "
+          src={logo}
+          alt="logo"
+          width={88}
+          height={90}
+        />
+        <div
+          className={`text-white font-medium flex flex-col gap-0 font-logo lg:text-3xl text-2xl `}
+        >
+          <div className="text-[#40961D] ">Christian Constanseu</div>
+          {/* <div></div> */}
+          <div className="lg:text-sm text-sm font-open_sans">NATURÓPATA</div>
+        </div>
+      </div>
+    </Link>
+  );
+};
