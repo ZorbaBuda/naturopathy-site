@@ -6,13 +6,13 @@ export default function AboutHeroSection() {
     <section className=" w-full min-h-screen lg:h-screen flex">
       <div className="lg:m-auto subcontainerXl  m-0 flex flex-col lg:flex-row gap-x-20 items-center   pt-[80px] lg:pt-0">
 
-<div className="basis-1/2">
+<div className="basis-1/2 border-2 border-black">
         <Image 
           src="/assets/about-hero.jpg"
           alt="me"
           width={750}
           height={750}
-          className=""
+          className="object-cover"
          />
          </div>
          <div className=" basis-1/2">

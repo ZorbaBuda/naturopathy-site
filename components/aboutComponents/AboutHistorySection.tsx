@@ -14,7 +14,7 @@ export default function AboutHistorySection() {
             <p>{aboutHistory.text3}</p>
         </div>
      </div>
-     <div className="hidden lg:block basis-1/3">
+     <div className=" lg:block basis-1/3">
         <Image 
          src="/assets/about-history.jpg"
          alt="plant"
