@@ -73,6 +73,8 @@ const config = {
         contact_bg: "url('/assets/contact-bg.jpg')",
         heroBg: "url('/assets/bg-hero2.jpg')",
         heroMovBg: "url('/assets/heroMobile-bg.jpg')",
+        hero_bg: "url('/assets/homeHero.jpg')",
+        hero_bg_mob: "url('/assets/hero-mobile-bg.jpg')"
       },
       transitionDuration: {
         2000: "2000ms",

@@ -25,7 +25,7 @@ export default function ImgListSection() {
           height={809}
         />
 <div>
-        <ul className="h3  p-5  flex flex-col justify-around gap-y-5 ">
+        <ul className="h4  p-5  flex flex-col justify-around gap-y-5 ">
           {howCanHelp.items.map((item) => (
             <div key={item} className="flex flex-row items-center gap-x-3">
              <TbPointFilled  className="text-green2 text-2xl"/>

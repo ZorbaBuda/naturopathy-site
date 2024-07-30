@@ -1,32 +1,47 @@
-import React from 'react'
+import React from "react";
 // import { Contact  } from '@/components'
-import ContactForm from '@/components/ContactForm'
-import Link from 'next/link';
+import ContactForm from "@/components/ContactForm";
+import Link from "next/link";
 
 export default function page() {
   return (
     <>
-   
-    <section className='section  bg-[#EEEDEB] '>
-      <div className='container mx-auto   '>
-      <div className='flex flex-col xl:flex-row gap-y-16'>
-      <div
-            className='flex-1'
-          >
-        <div className='h2 max-w-[490px]'>Contacte</div>
-        <div className='flex flex-col xl:flex-row gap-x-5 gap-y-16 xl:gap-y-0'>
-          <div>Ens trobem a </div>
-          <div>Mataro cami de 33343</div>
-          <div>Telefon...</div>
+      <section className="section  bg-[#EEEDEB] ">
+        <div className="container mx-auto   ">
+          <div className="flex flex-col xl:flex-row gap-y-16">
+            <div className="flex-1">
+              <div className="h2 max-w-[490px]">Contacte</div>
+              <div className="flex flex-col xl:flex-row gap-x-5 gap-y-16 xl:gap-y-0">
+                <div>Ens trobem a </div>
+                <div>Mataro cami de 33343</div>
+                <div>Telefon...</div>
+              </div>
+            </div>
+          </div>
         </div>
+      </section>
+      <div className="flex items-center mx-auto w-max-[900px]">
+        <div className="flex flex-col items-center gap-4">
+          {/* <!-- Avatar with Gradient Shadow --> */}
+          <div className="relative my-4">
+            <div className="absolute -inset-2">
+              <div className="w-28 h-full max-w-sm mx-auto lg:mx-0 opacity-70 blur-lg bg-gradient-to-r from-yellow-400 via-pink-500 to-green-600"></div>
+            </div>
+            <img
+              src="https://lh3.googleusercontent.com/a/AGNmyxbSlMgTRzE3_SMIxpDAhpNad-_CN5_tmph1NQ1KhA=s96-c"
+              className="relative object-cover shrink-0 h-28 w-28 z-10 rounded-xl"
+            />
+          </div>
+
+          <p className="text-2xl font-bold">Prajwal Hallale</p>
+
+          <div className="text-gray-400">Member since 4 years</div>
+        </div>
+        
+
+        <ContactForm />
       </div>
-      </div>
-      
-      </div>
-    </section>
-      <div className='flex items-center mx-auto w-max-[900px]'>
-       <ContactForm/></div>
-    {/* <div className='mt-[200px]'>
+      {/* <div className='mt-[200px]'>
     <ContactForm /> 
     </div>
       <iframe
@@ -38,7 +53,6 @@ export default function page() {
         loading="lazy"
        
       ></iframe> */}
-  
     </>
-  )
+  );
 }

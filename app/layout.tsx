@@ -43,7 +43,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" className="">
-      <body className="font-jakarta ">
+      <body className="font-ibm_plex_sans">
        
         <TwSizeIndicator />
         <Navbar />

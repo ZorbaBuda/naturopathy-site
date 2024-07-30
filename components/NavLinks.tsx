@@ -2,22 +2,22 @@ import Link from 'next/link';
 import { links } from '@/lib/data';
 import { usePathname } from "next/navigation";
 
-const NavLinks = ({ transparent}: { transparent : boolean}) => {
+const NavLinks = () => {
   const pathname = usePathname();
   // console.log(pathname)
   
   return (
     <nav>
       <ul
-        className='flex gap-x-[48px] md:gap-x-[48px] md:p-5 text-lg  '
+        className='flex gap-x-[48px] md:gap-x-[48px] md:p-5 items-center   '
       >
         {links.map((item : Link , index) => {
           return (
             <li key={index}>
               <Link
-                className=  {` ${transparent ? "text-black font-medium" : "text-footerText"}
-                  text-black hover:border-b hover:border-dark transition duration-300  
-                 h4`}
+                className=  {`  text-sm
+                  text-black hover:border-b uppercase hover:border-dark transition duration-300  
+                 font-semibold tracking-wider`}
                 href={item.hash}
               >
                 {item.name}
@@ -25,6 +25,14 @@ const NavLinks = ({ transparent}: { transparent : boolean}) => {
             </li>
           );
         })}
+         <Link
+                className=  {`  text-sm
+                  text-black hover:border-b uppercase hover:border-dark transition duration-300  
+                 font-semibold tracking-wider`}
+                href="/reservation"
+              >
+                Reserva
+              </Link>
       </ul>
     </nav>
   );
