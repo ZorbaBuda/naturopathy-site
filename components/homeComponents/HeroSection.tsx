@@ -22,7 +22,7 @@ export default function HeroSection() {
   const { heroTitle, heroSubtitle, linkText, linkHref } = homeData;
 
   return (
-    <section className="w-full h-screen bg-heroBg bg-cover bg-center       flex">
+    <section className="w-full h-screen bg-heroBg bg-cover bg-right-top       flex">
       <div className=" pt-[100px] flex flex-col gap-y-10 lg:flex-row items-center subcontainerXl m-auto  ">
       
         <div className="flex flex-col  gap-y-10 basis-1/2    ">
@@ -41,7 +41,7 @@ export default function HeroSection() {
          width={383}
          height={542}
          alt="hero-img"
-         className="w-full h-full object-contain    "
+         className="w-full h-full object-contain max-h-fit   "
          />
          </div>
       </div>

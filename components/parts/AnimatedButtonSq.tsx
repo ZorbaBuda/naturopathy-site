@@ -22,7 +22,7 @@ export default function AnimatedButtonSq({
      bg-[#EA5C2B] px-7 py-3  transition-all before:absolute 
      before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-[#FF7F3F]
       before:transition-all before:duration-700   hover:before:left-0 max-w-fit no-underline
-       hover:before:w-full h3"
+       hover:before:w-full h4"
   >
     <span className="relative z-10">{text}</span>
   </Link>

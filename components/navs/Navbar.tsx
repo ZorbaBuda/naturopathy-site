@@ -61,8 +61,8 @@ export default function Header() {
       variants={{ visible: { y: 0 }, hidden: { y: "-100%" } }}
       animate={hidden ? "hidden" : "visible"}
       transition={{ duration: 0.3, ease: "easeInOut" }}
-      className={`${transparent ? " bg-grey_1  " : "bg-grey_1 shadow-lg"}
-      
+      className={`${transparent ? " bg-transparent " : "bg-grey_1 shadow-lg"}
+     
 
        lg:h-[100px] h-[80px]  fixed top-0   z-20 min-w-max w-full  flex  mx-auto transition-all duration-500`}
     >
@@ -107,27 +107,3 @@ export default function Header() {
   );
 }
 
-const Logo = () => {
-  const { logo } = headerData;
-  return (
-    <Link href="/" className=" ">
-      <div className="flex items-center">
-        <Image
-          // className='w-[188px] h-[90px]'
-          className="  "
-          src={logo}
-          alt="logo"
-          width={88}
-          height={90}
-        />
-        <div
-          className={`text-white font-medium flex flex-col gap-0 font-logo lg:text-3xl text-2xl `}
-        >
-          <div className="text-[#40961D] ">Christian Constanseu</div>
-          {/* <div></div> */}
-          <div className="lg:text-sm text-sm font-open_sans">NATURÓPATA</div>
-        </div>
-      </div>
-    </Link>
-  );
-};

@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 
 const NavLinks = ({ transparent}: { transparent : boolean}) => {
   const pathname = usePathname();
-  console.log(pathname)
+  // console.log(pathname)
   
   return (
     <nav>
@@ -15,9 +15,9 @@ const NavLinks = ({ transparent}: { transparent : boolean}) => {
           return (
             <li key={index}>
               <Link
-                className=  {` ${transparent ? "text-footerText" : "text-footerText"}
+                className=  {` ${transparent ? "text-black font-medium" : "text-footerText"}
                   text-black hover:border-b hover:border-dark transition duration-300  
-                 h3`}
+                 h4`}
                 href={item.hash}
               >
                 {item.name}

@@ -92,6 +92,8 @@ const config = {
         roboto_regular: ["roboto", "sans-serif"],
         ibm_plex_sans: ["ibm-plex-sans"],
         alata: ["alata"],
+        manrope: ["manrope", 'sans-serif'],
+        jakarta: ["jakarta"],
       },
     },
   },

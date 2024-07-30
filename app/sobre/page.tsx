@@ -1,21 +1,15 @@
-import React from "react";
-import About from "@/components/About";
+
+import AboutHistorySection from "@/components/aboutComponents/AboutHistorySection"
+import AboutHeroSection from "@/components/aboutComponents/AboutHeroSection";
+
+// https://github.com/codebucks27/Next.js-Developer-Portfolio-Starter-Code
+
 
 export default function page() {
   return (
-    <>
-      <About />
-
-
-      {/* <iframe
-      className="border-none mt-10"
-        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11946.280575635323!2d2.441932!3d41.535251!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4b5714a20b33b%3A0x43d960681ead0590!2sdale%20steakhouse!5e0!3m2!1ses!2sus!4v1720305632406!5m2!1ses!2sus"
-        width="600"
-        height="450"
-        
-        loading="lazy"
-       
-      ></iframe> */}
-    </>
+    <main>
+     <AboutHeroSection />
+     <AboutHistorySection />
+    </main>
   );
 }
