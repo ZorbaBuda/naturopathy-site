@@ -1,11 +1,11 @@
-import React from 'react'
+import ServHeroSection from "@/components/servicesComponents/ServHeroSection";
+
 
 
 export default function page() {
   return (
-    <>
- 
-    {/* <About/> */}
-    </>
+    <main>
+      <ServHeroSection />
+    </main>
   )
 }
