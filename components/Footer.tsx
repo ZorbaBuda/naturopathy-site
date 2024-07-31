@@ -39,6 +39,7 @@ export default function Footer() {
                     </li>
                   );
                 })}
+              
               </ul>
             </div>
             </div>
@@ -89,6 +90,7 @@ export default function Footer() {
                     </li>
                   );
                 })}
+                  <Link href="/privacy">Privacitat</Link>
               </ul>
             </div>
           </div>

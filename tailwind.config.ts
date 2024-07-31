@@ -93,9 +93,10 @@ const config = {
         open_sans: ["open-sans"],
         roboto_regular: ["roboto", "sans-serif"],
         ibm_plex_sans: ["ibm-plex-sans"],
-        alata: ["alata"],
+        port_lligat: ["port-lligat"],
         manrope: ["manrope", 'sans-serif'],
         jakarta: ["jakarta"],
+        marcellus: ["marcellus"]
       },
     },
   },

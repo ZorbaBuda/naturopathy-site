@@ -5,10 +5,41 @@ import { usePathname } from "next/navigation";
 const NavLinks = () => {
   const pathname = usePathname();
   // console.log(pathname)
+
+     {/* <a href="#" className="group text-sky-600 transition duration-300">
+              Link
+              <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-sky-600"></span>
+            </a> */}
   
   return (
     <nav>
       <ul
+        className='flex gap-x-[48px] md:gap-x-[48px] md:p-5 items-center   '
+      >
+        {links.map((item : Link , index) => {
+          return (
+            <li key={index}>
+              <Link
+                className=  {`  text-sm group uppercase  text-black font-semibold tracking-wider `}
+                href={item.hash}
+              >
+                {item.name}
+                <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-green2"></span>
+              </Link>
+            </li>
+          );
+        })}
+         <Link
+                className=  {`  text-sm
+                  text-black hover:border-b uppercase hover:border-dark transition duration-200  
+                 font-semibold tracking-wider`}
+                href="/reservation"
+              >
+                Reserva
+              </Link>
+      </ul>
+
+      {/* <ul
         className='flex gap-x-[48px] md:gap-x-[48px] md:p-5 items-center   '
       >
         {links.map((item : Link , index) => {
@@ -33,7 +64,7 @@ const NavLinks = () => {
               >
                 Reserva
               </Link>
-      </ul>
+      </ul> */}
     </nav>
   );
 };

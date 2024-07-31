@@ -61,7 +61,7 @@ export default function Header() {
                 transparent ? "text-black" : "text-black"
               } font-medium flex flex-col gap-0 lg:text-3xl text-2xl `}
             >
-              <div className="text-[#40961D] font-logo font-semibold ">
+              <div className="text-[#40961D] font-logo  ">
                 Christian Constanseu
               </div>
 

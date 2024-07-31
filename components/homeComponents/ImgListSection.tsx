@@ -19,7 +19,7 @@ export default function ImgListSection() {
       <div className=" flex flex-col items-center lg:flex-row lg:gap-x-10 gap-y-10 max-w-7xl mx-auto ">
         <Image
           className=" mx-auto h-[570px] w-full object-cover object-top md:p-10    "
-          src={howCanHelp.image}
+          src="/assets/hero-pic.jpg"
           alt="logo"
           width={510}
           height={809}

@@ -15,9 +15,10 @@ export default function Home() {
     <main className="w-full  bg-white">
     
      <HeroSection />
+     
      <IntroSection />
-     <BannerSection text={homeBanner} />
-     <Intro2Section />
+       <Intro2Section />
+   
      <ImgListSection />
      <ContactSection />
       

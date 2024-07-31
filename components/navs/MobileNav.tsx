@@ -1,5 +1,14 @@
 'use client'
 
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet"
+
 import { links } from "@/lib/data";
 import { AnimatePresence, motion, MotionConfig } from "framer-motion";
 import Link from "next/link";
@@ -9,6 +18,7 @@ import { useEffect, useState } from "react";
 export default function MobileNav() {
     const [mobileNav, setMobileNav] = useState(false);
     const pathname = usePathname()
+    const [open, setOpen] = useState(false)
 
     useEffect(() => {
      setMobileNav(false)
@@ -19,12 +29,16 @@ export default function MobileNav() {
         setMobileNav(!mobileNav);
     };
 
+    const toggleSheetNav = () => {
+      setOpen(!open);
+  };
+
   return (
     <>
       <motion.button
           initial="hide"
           animate={mobileNav ? "show" : "hide"}
-          onClick={toggleMobileNav}
+          onClick={toggleSheetNav}
           className="flex flex-col space-y-[6px] relative z-10  lg:hidden"
         >
           <motion.span
@@ -69,7 +83,23 @@ export default function MobileNav() {
             }  h-[2px]  w-10`}
           ></motion.span>
         </motion.button>
-        <AnimatePresence>
+
+
+        <Sheet open={open} onOpenChange={() => setOpen(!open)} >
+  {/* <SheetTrigger>Open</SheetTrigger> */}
+  <SheetContent className="bg-white w-[260px]">
+    <SheetHeader>
+      <SheetTitle>Are you absolutely sure?</SheetTitle>
+      <SheetDescription>
+        This action cannot be undone. This will permanently delete your account
+        and remove your data from our servers.
+      </SheetDescription>
+    </SheetHeader>
+  </SheetContent>
+</Sheet>
+
+
+        {/* <AnimatePresence>
           {mobileNav && (
             <MotionConfig
               transition={{
@@ -134,7 +164,7 @@ export default function MobileNav() {
               </motion.div>
             </MotionConfig>
           )}
-        </AnimatePresence>
+        </AnimatePresence> */}
 
     {/* {mobileNav && (
         <div className="fixed inset-0 bg-[#274EA9] min-h-screen  flex flex-col    lg:hidden"> */}

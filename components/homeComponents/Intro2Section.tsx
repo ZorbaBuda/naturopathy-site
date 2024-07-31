@@ -5,7 +5,7 @@ import Image from "next/image"
 
 export default function Intro2Section() {
   return (
-    <div className="section-light">
+    <div className="section-light bg-[#F5EFE6]">
       <div className="subcontainerXl flex-col-reverse lg:flex-row">
         {/* <Image
          src={homeIntro2.image}
@@ -15,8 +15,8 @@ export default function Intro2Section() {
          className=""
         /> */}
         <div className=" flex flex-col subcontainerXl ">
-            <h1 className="h2">{homeIntro2.title}</h1>
-            <div className="prose-custom">
+            <h1 className="h2 text-[#292929]">{homeIntro2.title}</h1>
+            <div className="prose-custom text-[#292929]">
             {homeIntro2.p.map((p, index) => (
                 <p key={index}>{p}</p>
             ) )}
