@@ -4,7 +4,7 @@ const phoneRegex = new RegExp(
   /^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/
 );
 
-export const contactFormSchema = z
+export const ContactFormSchema = z
 .object({
     name: z
     .string()
@@ -16,16 +16,7 @@ export const contactFormSchema = z
       "Invalid name. Letters, numbers, spaces or underscores only"
     )
     .regex(/^[a-zA-Z][a-zA-Z0-9_\s]*$/, "Name must start with a letter"),
-    surname: z
-    .string()
-    .min(1, "Surname is required")
-    .min(3, "Surname must be at least 3 characters")
-    .max(30, "Surname must be at most 30 characters")
-    .regex(
-      /^[a-zA-Z0-9_\s]+$/,
-      "Invalid surname. Letters, numbers, spaces or underscores only"
-    )
-    .regex(/^[a-zA-Z][a-zA-Z0-9_\s]*$/, "Surname must start with a letter"),
+    
   phone: z
   .string()
   .regex(phoneRegex, "Invalid number!"),
@@ -37,7 +28,7 @@ export const contactFormSchema = z
   
   date: z.string(),
   
-  privacyCheck: z.boolean().refine((val) => val === true, {
+  privacyConsent: z.boolean().refine((val) => val === true, {
     message: "Please read and accept the terms and conditions",
   })
   

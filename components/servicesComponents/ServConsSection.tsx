@@ -1,21 +1,19 @@
-
-
 import  Image  from "next/image";
 import Link from "next/link";
-import { homeIntro } from "@/lib/data";
+import { servicesCons } from "@/lib/data";
 import GreenButton from "../parts/GreenButton";
 
 
 
 
 
-export default function IntroSection() {
+export default function ServConsSection() {
  
   return (
     <section id="intro" className="section bg-white  ">
       <div className="flex-flex-col mx-auto ">
        
-        <div className="flex flex-col-reverse items-center lg:flex-row gap-y-10 ">
+        <div className="flex flex-col items-center lg:flex-row-reverse gap-y-10 ">
           <div className="basis-1/2  ">
       {/* <motion.div style={{y}} className="relative"> */}
        <Image
@@ -29,13 +27,11 @@ export default function IntroSection() {
         {/* </motion.div> */}
         </div>
         <div className=" flex flex-col basis-1/2 subcontainer ">
-           <h1 className="h2 mb-8">{homeIntro.title} </h1>
+           <h1 className="h2 mb-8">{servicesCons.title1} </h1>
+           <h3 className="h4 mb-8">{servicesCons.title2} </h3>
            <div className="flex flex-col  prose-custom">
-            <div className="mb-6">{homeIntro.label}</div>
-            <div className=" mb-6">{homeIntro.text1}</div>
-            <div className=" mb-6">{homeIntro.text2}</div>
+            <div className="mb-6">{servicesCons.text}</div>
             </div>
-           <GreenButton  text={homeIntro.linkText} href={homeIntro.link} />
         </div>
       
         </div>

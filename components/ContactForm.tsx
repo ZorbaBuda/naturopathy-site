@@ -1,9 +1,10 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 
-import { FormProvider, useForm } from "react-hook-form";
+import {  useForm } from "react-hook-form";
+import { Form } from "./ui/form";
 import { z } from "zod";
-import { contactFormSchema } from "@/schemas/contact-form-schema";
+import { ContactFormSchema } from "@/schemas/contact-form-schema";
 // import { useToast } from "../ui/use-toast";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Textarea } from "./ui/textarea";
@@ -15,58 +16,63 @@ import { TextareaField } from "./form-fields/textarea-field";
 import { CheckboxField } from "./form-fields/checkbox-field";
 import { toast} from "sonner"
 import { Spinner } from "./spinner";
-//  const Input = z.infer<typeof contactFormSchema>
+import { FormFieldType } from "@/constants";
+import CustomFormField from "./form-fields/CustomFormField";
+import SubmitButton from "./ui/SubmitButton";
+
 
 export default function ContactForm() {
   // const { toast } = useToast();
-
+  const [isLoading, setIsLoading] = useState(false)
+  
   const currentDate = new Date().toISOString();
 
-  const form = useForm<ContactFormProps>({
-    resolver: zodResolver(contactFormSchema),
+  const form = useForm<z.infer<typeof ContactFormSchema>>({
+    resolver: zodResolver(ContactFormSchema),
     defaultValues: {
       name: "",
-      surname: "",
       phone: "",
       email: "",
       message: "",
       date: currentDate,
-      privacyCheck: false,
+      privacyConsent: false,
     },
   });
 
-  const {
-    formState: { isSubmitting}
-  } = form
-
-  // function onSubmit(data: z.infer<typeof contactFormSchema>) {
-  //   console.log(data)
-  //   toast({
-  //     title: "You submitted the following values:",
-  //     description: (
-  //       <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-  //         <code className="text-white">{JSON.stringify(data, null, 2)}</code>
-  //       </pre>
-  //     ),
-  //   });
-  // }
-  // async function onSubmit(data: z.infer<typeof contactFormSchema>) {
-     async function onSubmit(data: ContactFormProps) {
-
+  async function onSubmit(values: z.infer<typeof ContactFormSchema>) {
+    setIsLoading(true)
+ 
     try {
-      const result = await fetch("/api/contact", {
-        method: "POST",
-        body: JSON.stringify(data),
-      });
-      if(result.status == 201){
-        console.log("message was submitted")
-        toast.success("Message was submitted")
-      }
-    } catch (error) {
-      console.log(error);
-      toast.error("Error")
+ 
+      console.log(values)
+    //  const result = await sendMessage(values)
+ 
+    //  if(user) console.log(user)
+    //  if(user) router.push(`/patients/${user.$id}/register`)
+ 
+    } catch(error) {
+     console.log(error)
     }
-  }
+     
+   }
+
+ 
+  //    async function onSubmit(data: ContactFormProps) {
+
+  //   try {
+  //     const result = await fetch("/api/contact", {
+  //       method: "POST",
+  //       body: JSON.stringify(data),
+  //     });
+  //     if(result.status == 201){
+  //       console.log("message was submitted")
+  //       toast.success("Message was submitted")
+  //     }
+  //   } catch (error) {
+  //     console.log(error);
+  //     toast.error("Error")
+  //   }
+  // }
 
   // function onSubmit(data: ContactFormProps) {
   //   alert(JSON.stringify(data, null, 4));
@@ -74,52 +80,73 @@ export default function ContactForm() {
   // }
 
   return (
-    <>
-    
-      <div className="px-11 mx-auto text-xl border-none">
-        <FormProvider {...form}>
+ 
+        <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
             className="relative space-y-3 overflow-x-hidden"
-            noValidate
           >
-            {/* name */}
-            <InputField placeholder="Name*" name="name"  />
-            {/* surname */}
-            <InputField placeholder="Surname*" name="surname" />
-            {/* phone */}
-            <InputField placeholder="Phone*" name="phone" />
-            {/* email */}
-            <InputField placeholder="Email*" name="email" />
-            {/* message */}
-            <TextareaField placeholder="Message*" name="message" />
-            {/* accept privacy terms */}
-            <CheckboxField name="privacyCheck" label="He llegit i accepto la política de privacitat" />
-            {/* <div>I have readed and accept privacy terms</div> */}
+
+         <CustomFormField
+          fieldType={FormFieldType.INPUT}
+          control={form.control}
+          name="name"
+          placeholder="Name*"
+        />
+          <CustomFormField
+          fieldType={FormFieldType.INPUT}
+          control={form.control}
+          name="phone"
+          placeholder="Phone*"
+        />
+            <CustomFormField
+          fieldType={FormFieldType.INPUT}
+          control={form.control}
+          name="email"
+          placeholder="Email*"
+        />
+
+          <CustomFormField
+            fieldType={FormFieldType.TEXTAREA}
+            control={form.control}
+            name="message"
+            placeholder="Message*"
+          />
+
+        <CustomFormField
+          fieldType={FormFieldType.CHECKBOX}
+          control={form.control}
+          name="privacyConsent"
+          label="He llegit i accepto la política de privacitat"
+        />
+        
+          
+            {/* <CheckboxField name="privacyCheck" label="He llegit i accepto la política de privacitat" />
+          
             <div>
               You can read in{" "}
               <Link href="/privacy-terms" target="_blank">
                 privacy terms
               </Link>{" "}
               page.
-            </div>
+            </div> */}
 
-            <Button 
+           <SubmitButton isLoading={isLoading}>Get Started</SubmitButton>
+
+            {/* <Button 
               type="submit" 
-              disabled={isSubmitting}
+              disabled={isLoading}
               className={cn({})}
               >
                 <span className="size-5">
-                  {isSubmitting ? (
+                  {isLoading ? (
                       <Spinner className="size-5" />
                     ) : (<p></p>)}
                 </span>
               Submit
-            </Button>
+            </Button> */}
           </form>
-        </FormProvider>
-      </div>
-      {/* <Checkbox className="mx-auto" id="terms1" /> */}
-    </>
+        </Form>
+ 
   );
 }
