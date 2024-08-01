@@ -65,36 +65,18 @@ const config = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       backgroundImage: {
-        // hero_img: "url('/img/hero/newHero.jpg')",
-        hero_img: "url('/img/home/img20.jpg')",
-        // hero_img: "url('/img/hero/bg.jpg')",
-        about_img: "url('/img/about/image.png')",
-        interview: "url('/img/interview/bg.png')",
-        contact_bg: "url('/assets/contact-bg.jpg')",
-        heroBg: "url('/assets/bg-hero2.jpg')",
-        heroMovBg: "url('/assets/heroMobile-bg.jpg')",
-        hero_bg: "url('/assets/homeHero.jpg')",
-        hero_bg_mob: "url('/assets/hero-mobile-bg.jpg')"
+      
+        // heroBg: "url('/assets/bg-hero2.jpg')",
+     
       },
-      transitionDuration: {
-        2000: "2000ms",
-        3000: "3000ms",
-        5000: "5000ms",
-      },
+    
       fontFamily: {
         // primary: ['Oswald', 'sans-serif'],
-        secondary: ["MANROPE_REGULAR", "sans-serif"],
-        tertiary: ["Rozha One", "sans-serif"],
-        oswald: ["var(--font-oswald)", "sans-serif"],
-        rozha: ["var(--font-rozha)", "sans-serif"],
-        manrope_regular: ["manrope-regular", "serif"],
-        manrope_semibold: ["manrope-semibold", "sans-serif"],
+        // secondary: ["MANROPE_REGULAR", "sans-serif"],
+        // tertiary: ["Rozha One", "sans-serif"],
         logo: ["logo"],
-        open_sans: ["open-sans"],
         roboto_regular: ["roboto", "sans-serif"],
         ibm_plex_sans: ["ibm-plex-sans"],
-        port_lligat: ["port-lligat"],
-        manrope: ["manrope", 'sans-serif'],
         jakarta: ["jakarta"],
         marcellus: ["marcellus"]
       },

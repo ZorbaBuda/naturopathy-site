@@ -1,6 +1,6 @@
 import { homeIntro2 } from "@/lib/data"
-import AnimatedButton from "../parts/AnimatedButton"
 import Image from "next/image"
+import GreenButton from "../parts/GreenButton"
 
 
 export default function Intro2Section() {
@@ -21,7 +21,7 @@ export default function Intro2Section() {
                 <p key={index}>{p}</p>
             ) )}
             </div>
-            <AnimatedButton text={homeIntro2.linkText} href={homeIntro2.link} />
+            <GreenButton text={homeIntro2.linkText} href={homeIntro2.link} />
         </div>
         </div>
     </div>

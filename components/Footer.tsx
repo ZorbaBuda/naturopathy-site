@@ -6,12 +6,14 @@ import Image from "next/image";
 // import footer data
 import { footerData } from "@/lib/data";
 import { FaWhatsappSquare } from "react-icons/fa";
+import { SeparatorVertical } from "lucide-react";
+import { Separator } from "./ui/separator";
 
 // import motion
 
 export default function Footer() {
   // destructure footer data
-  const { services, contact, links, program } = footerData;
+  const { services, contact, links,  termes} = footerData;
   const currentYear = new Date().getFullYear();
 
   return (
@@ -90,7 +92,7 @@ export default function Footer() {
                     </li>
                   );
                 })}
-                  <Link href="/privacy">Privacitat</Link>
+                 
               </ul>
             </div>
           </div>
@@ -99,11 +101,14 @@ export default function Footer() {
       </div>
       </div>
    
-    <section className="flex">
-        <p className="items-center mx-auto py-5">
+    <section className="flex space-x-3 justify-center mx-auto py-5">
+        <p className="">
         &copy; {currentYear}<span> Naturopatia Mataro</span>
         </p>
-      </section> </footer>
+        <Separator orientation="vertical" className="text-red-600"/>
+        <Link href={termes.privacy.href} className="hover:underline">{termes.privacy.name}</Link>
+      </section>
+       </footer>
     
   );
 }

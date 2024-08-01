@@ -3,17 +3,16 @@
 import  Image  from "next/image";
 import Link from "next/link";
 import { homeIntro } from "@/lib/data";
-import AnimatedButton from "../parts/AnimatedButton";
-import { useScroll, useTransform } from "framer-motion";
-import { motion } from "framer-motion";
+import GreenButton from "../parts/GreenButton";
+
+
 
 
 
 export default function IntroSection() {
-  let {scrollYProgress} = useScroll()
-  let y = useTransform(scrollYProgress, [0,1], ["0%","90%"])
+ 
   return (
-    <section className="section bg-white  ">
+    <section id="intro" className="section bg-white  ">
       <div className="flex-flex-col mx-auto ">
        
         <div className="flex flex-col-reverse items-center lg:flex-row gap-y-10 ">
@@ -36,7 +35,7 @@ export default function IntroSection() {
             <div className=" mb-6">{homeIntro.text1}</div>
             <div className=" mb-6">{homeIntro.text2}</div>
             </div>
-           <AnimatedButton  text={homeIntro.linkText} href={homeIntro.link} />
+           <GreenButton  text={homeIntro.linkText} href={homeIntro.link} />
         </div>
       
         </div>

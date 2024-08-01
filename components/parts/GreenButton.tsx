@@ -18,11 +18,11 @@ export default function GreenButton({
     // text-white font-semibold hover:bg-white bg-green2 hover:text-green2 rounded-3xl border border-green2"
     // >{text}</Link>
     <Link
-    href={"#"}
-    className="text-white border border-dark1 hover:bg-[#FF7F3F] rounded-br-3xl  overflow-hidden
-     bg-green2 px-7 py-3  transition-all 
-     before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-[#FF7F3F] 
-      before:transition-all before:duration-300 hover:text-white hover:before:left-0 max-w-fit no-underline
+    href={href}
+    className="text-white border border-dark1 hover:bg-white rounded-3xl  
+     bg-green2 px-7 py-3  transition-all  duration-500
+     
+        hover:text-dark1  max-w-fit no-underline
       "
   >
   {text}

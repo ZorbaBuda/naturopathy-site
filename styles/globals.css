@@ -2,24 +2,10 @@
   @tailwind components;
   @tailwind utilities;
 
-  @font-face {
-    font-family: "manrope-regular";
-    src: url("../public/font/Manrope/Manrope-Regular.ttf");
-  }
-  
-  @font-face {
-    font-family: "manrope-semibold";
-    src: url("../public/font/Manrope/Manrope-SemiBold.ttf");
-  }
   
   @font-face {
     font-family: "logo";
     src: url("../public/font/Oval/Oval-Trial-Regular.ttf");
-  }
-  
-  @font-face {
-    font-family: "open-sans";
-    src: url("../public/font/Open_Sans/OpenSans-Regular.ttf");
   }
   
   @font-face {
@@ -32,25 +18,12 @@
     src: url("../public/font/IBM_Plex_Sans/IBMPlexSans-Regular.ttf");
   }
 
-  @font-face {
-    font-family: "alata";
-    src: url("../public/font/Alata/Alata-Regular.ttf");
-  }
-
-  @font-face {
-    font-family: "manrope";
-    src: url("../public/font/Manrope/Manrope-SemiBold.ttf");
-  }
   
   @font-face {
     font-family: "jakarta";
     src: url("../public/font/Plus_Jakarta_Sans/PlusJakartaSans-Regular.ttf");
   }
 
-  @font-face {
-    font-family: "port-lligat";
-    src: url("../public/font/Port_Lligat_Sans/PortLligatSans-Regular.ttf");
-  }
 
   @font-face {
     font-family: "marcellus";
@@ -62,24 +35,10 @@
   }
 
   
-
-  /* @layer base {
-    * {
-      @apply border-border;
-    }
-    body {
-     
-      @apply bg-background text-foreground;
-    }
-  } */
-
-  /* apply some general styles */
 @layer base {
-  /* * {
-    @apply box-border;
-  } */
+ 
   body {
-    @apply font-secondary  text-dark bg-white;
+    @apply   text-dark bg-white;
   }
 }
 
@@ -95,12 +54,7 @@
   .section-light {
     @apply py-[55px] lg:py-[70px];
   }
-  .link {
-    @apply font-oswald uppercase tracking-[0.08em];
-  }
-  /* .h1 {
-    @apply text-[60px] lg:text-[118px] tracking-[-2px] leading-none font-rozha mb-4;
-  } */
+  
   .h1 {
     @apply text-[42px] lg:text-[62px]  xl:text-[80px]  
            tracking-tighter xl:tracking-tighter leading-none font-marcellus font-medium;
@@ -110,9 +64,7 @@
     @apply text-[42px]  lg:text-[55px] xl:text-[70px] leading-none font-marcellus font-medium text-dark1
     tracking-tighter xl:tracking-tighter ;
   }
-  /* .h2 {
-    @apply text-[40px] lg:text-[60px] xl:text-[70px] 2xl:text-[85px] text-dark  font-oswald max-w-[236px] leading-none mb-[38px];
-  } */
+ 
 
   .h3 {
     @apply text-[20px] lg:text-[30px] xl:text-[40px] 2xl:text-[60px] text-dark1  font-marcellus ;
@@ -132,30 +84,6 @@
     @apply flex  mx-auto  px-5 lg:px-14 xl:max-w-[1400px];
   }
 
-   /* clinique */
-   .h1c {
-    @apply text-[71.5px] lg:text-[82.5px] xl:text-[110px] tracking-tight leading-none 
-  }
-
-  .h2c {
-    @apply text-[52.5px] lg:text-[59.5px] xl:text-[70px] tracking-tight leading-none 
-  }
-
-  .h3c {
-    @apply text-[30.4px] lg:text-[32.3px] xl:text-[38px]
-  }
-
-
-
-  /* buttons */
-  /* tracking-[0.08em] */
-  .btn {
-    @apply    text-lg  uppercase px-8
-    transition-all duration-500 flex items-center 
-    text-white hover:bg-[#DEF9C4] hover:text-botella
-    rounded-md border-2 border-[#DEF9C4]
-    ;
-  }
   /* .btn {
     @apply    text-base  uppercase px-3
     transition-all duration-500 flex items-center 
@@ -170,28 +98,6 @@
     rounded-md
     ;
   } */
-  .btn-sm {
-    @apply h-[55px];
-  }
-  .btn-lg {
-    @apply h-[67px];
-  }
-  .btn-outline {
-    @apply border border-white/70 bg-none hover:bg-white hover:text-dark;
-  }
-  .btn-dark {
-    @apply bg-dark hover:bg-dark/90 transition-all text-white;
-  }
-  .btn-link {
-    @apply px-0 h-auto text-dark hover:text-dark/90 transition-all;
-  }
-
-   /* practica */
-  .btn-prac {
-    @apply    text-lg  uppercase px-8
-    transition-all duration-500 flex items-center 
-    text-white hover:bg-[#DEF9C4] hover:text-botella
-    rounded-md border-2 border-[#DEF9C4];
-  }
+  
 }
 

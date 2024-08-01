@@ -29,14 +29,7 @@ const NavLinks = () => {
             </li>
           );
         })}
-         <Link
-                className=  {`  text-sm
-                  text-black hover:border-b uppercase hover:border-dark transition duration-200  
-                 font-semibold tracking-wider`}
-                href="/reservation"
-              >
-                Reserva
-              </Link>
+      
       </ul>
 
       {/* <ul

@@ -1,11 +1,9 @@
-import Link from "next/link";
-import NumTextCard from "../NumTextCard";
-import PH2Heading from "../PH2Heading";
+
 import FadeIn from "../framer/FadeIn";
 import Image from "next/image";
 import { howCanHelp } from "@/lib/data";
-import AnimatedButton from "../parts/AnimatedButton";
 import { TbPointFilled } from "react-icons/tb";
+import GreenButton from "../parts/GreenButton";
 
 export default function ImgListSection() {
   
@@ -34,7 +32,7 @@ export default function ImgListSection() {
           
           ))}
         </ul>
-       <AnimatedButton text={howCanHelp.linkText} href={howCanHelp.link} />
+       <GreenButton text={howCanHelp.linkText} href={howCanHelp.link} />
         </div>
       </div>
     </section>
