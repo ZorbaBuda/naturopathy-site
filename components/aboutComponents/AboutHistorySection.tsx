@@ -5,8 +5,8 @@ import Image from "next/image"
 export default function AboutHistorySection() {
   return (
     <section className="bg-[#F6F6F6]">
-   <div className="flex flex-col lg:flex-row items-center ">
-     <div className="basis-2/3 px-5 lg:px-20 py-10 lg:py-0">
+   <div className="section-light flex flex-col gap-y-10 lg:flex-row items-center ">
+     <div className="basis-2/3 px-5 lg:px-20 ">
         <h3 className="h3">{aboutHistory.title}</h3>
         <div className="prose-custom">
             <p>{aboutHistory.text1}</p>

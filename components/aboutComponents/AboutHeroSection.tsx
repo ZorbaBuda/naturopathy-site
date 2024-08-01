@@ -1,14 +1,17 @@
 import { aboutHero } from "@/lib/data"
 import Image from "next/image"
+import HeroBanner from "../HeroBanner"
 
 export default function AboutHeroSection() {
   return (
-    <section className=" w-full min-h-screen lg:h-screen flex">
-      <div className="lg:m-auto subcontainerXl  m-0 flex flex-col lg:flex-row gap-x-20 items-center   pt-[80px] lg:pt-0">
+    <section className=" w-full  flex flex-col  ">
+       <HeroBanner title="La meva història" image="/assets/about-hero.jpg" />
 
-<div className="basis-1/2 border-2 border-black">
+      <div className=" subcontainerXl section-light  flex flex-col-reverse lg:flex-row gap-y-10 gap-x-20 items-center  ">
+
+<div className="basis-1/2 ">
         <Image 
-          src="/assets/about-hero.jpg"
+          src="/assets/about-hero-2.jpg"
           alt="me"
           width={750}
           height={750}
