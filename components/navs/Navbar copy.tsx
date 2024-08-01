@@ -13,7 +13,7 @@ import {
 // import header data
 import { headerData, links } from "@/lib/data";
 // import components
-import NavLinks from "../NavLinks";
+import NavLinks from "./NavLinks";
 import NavMobile from "../NavMobile";
 // import Socials from './Socials';
 // import icons

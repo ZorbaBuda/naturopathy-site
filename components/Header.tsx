@@ -7,7 +7,7 @@ import { motion, useScroll, useMotionValueEvent } from "framer-motion"
 // import header data
 import { headerData } from '@/lib/data'
 // import components
-import NavLinks from './NavLinks';
+import NavLinks from './navs/NavLinks';
 import NavMobile from './NavMobile';
 // import Socials from './Socials';
 // import icons

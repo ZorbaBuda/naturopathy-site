@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 // import footer data
-import { footerData, headerData } from "@/lib/data";
+import { footerData } from "@/lib/data";
 import { FaWhatsappSquare } from "react-icons/fa";
 
 // import motion

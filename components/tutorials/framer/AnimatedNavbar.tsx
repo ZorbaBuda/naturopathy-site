@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import Socials from "../../Socials";
-import NavLinks from "../../NavLinks";
+import NavLinks from "../../navs/NavLinks";
 
 export default function AnimatedNavbar() {
 

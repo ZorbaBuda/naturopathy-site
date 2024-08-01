@@ -8,6 +8,7 @@ import AnimatedButton from "../parts/AnimatedButton";
 import { BlurMotion } from "../framer/BlurMotion";
 import FadeUp from "../framer/FadeUp";
 import FadeIn from "../framer/FadeIn";
+import GreenButton from "../parts/GreenButton";
 
 
 export default function HeroSection() {
@@ -31,7 +32,7 @@ export default function HeroSection() {
               </h3>
             </FadeIn>
             <FadeIn delay={0.4}>
-              <AnimatedButton text={linkText} href={linkHref} />
+              <GreenButton text={linkText} href={linkHref} />
             </FadeIn>
 
             {/* <a href="#" className="group text-sky-600 transition duration-300">
