@@ -7,6 +7,7 @@ import TwSizeIndicator from "@/components/helpers/TwSizeIndicator";
 import Navbar from "@/components/navs/Navbar";
 import ScrollTop from "@/components/ScrollTop";
 import SmoothScrolling from "@/components/helpers/SmoothScrolling";
+import { Toaster } from "@/components/ui/sonner";
 
 // const oswald = Oswald({
 //   subsets: ['latin'],
@@ -43,7 +44,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" className="">
-      <body className="font-ibm_plex_sans">
+      <body className="font-satoshi">
        
         <TwSizeIndicator />
         <Navbar />
@@ -52,7 +53,7 @@ export default function RootLayout({
       {children} 
        {/* </SmoothScrolling>  */}
         <Footer />
-      
+        <Toaster />
       </body>
     </html>
   );

@@ -78,7 +78,10 @@ const config = {
         roboto_regular: ["roboto", "sans-serif"],
         ibm_plex_sans: ["ibm-plex-sans"],
         jakarta: ["jakarta"],
-        marcellus: ["marcellus"]
+        marcellus: ["marcellus"],
+        dm_serif: ["dm serif"],
+        satoshi: ["satoshi"],
+        satoshi_medium: ["satoshi-medium"]
       },
     },
   },

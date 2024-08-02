@@ -8,14 +8,14 @@ import ImgListSection from "@/components/homeComponents/ImgListSection";
 export default function Home() {
  
   return (
-    <main className="w-full  bg-white">
+    <main className="  bg-white">
     
      <HeroSection />
      
      <IntroSection />
        <Intro2Section />
    
-     <ImgListSection />
+     {/* <ImgListSection /> */}
      <ContactSection />
       
      

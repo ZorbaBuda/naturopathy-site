@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 
-import {  useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { Form } from "./ui/form";
 import { z } from "zod";
 import { ContactFormSchema } from "@/schemas/contact-form-schema";
@@ -14,49 +14,56 @@ import Link from "next/link";
 import { InputField } from "./form-fields/input-field";
 import { TextareaField } from "./form-fields/textarea-field";
 import { CheckboxField } from "./form-fields/checkbox-field";
-import { toast} from "sonner"
+import { toast } from "sonner";
 import { Spinner } from "./spinner";
 import { FormFieldType } from "@/constants";
 import CustomFormField from "./form-fields/CustomFormField";
 import SubmitButton from "./ui/SubmitButton";
-
+import { sendMessage } from "@/lib/actions/contactForm.actions";
+import { useRouter } from "next/navigation";
 
 export default function ContactForm() {
   // const { toast } = useToast();
-  const [isLoading, setIsLoading] = useState(false)
-  
+  const router = useRouter()
+  const [isLoading, setIsLoading] = useState(false);
+
   const currentDate = new Date().toISOString();
 
   const form = useForm<z.infer<typeof ContactFormSchema>>({
     resolver: zodResolver(ContactFormSchema),
     defaultValues: {
       name: "",
+      surname: "",
       phone: "",
       email: "",
       message: "",
-      date: currentDate,
+      // date: new Date().toISOString(),
       privacyConsent: false,
     },
   });
 
+  // async function onSubmit(values: z.infer<typeof ContactFormSchema>) {
   async function onSubmit(values: z.infer<typeof ContactFormSchema>) {
-    setIsLoading(true)
- 
-    try {
- 
-      console.log(values)
-    //  const result = await sendMessage(values)
- 
-    //  if(user) console.log(user)
-    //  if(user) router.push(`/patients/${user.$id}/register`)
- 
-    } catch(error) {
-     console.log(error)
-    }
-     
-   }
+    setIsLoading(true);
 
- 
+    try {
+      const message = {
+        ...values,
+        date: new Date().toISOString(),
+      };
+
+      // @ts-ignore
+      const result = await sendMessage(message);
+      if (result === "ok") {
+        toast("Missatge enviat.")
+        router.push("/")
+      }
+       setIsLoading(false);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   //    async function onSubmit(data: ContactFormProps) {
 
   //   try {
@@ -80,38 +87,42 @@ export default function ContactForm() {
   // }
 
   return (
- 
-        <Form {...form}>
-          <form
-            onSubmit={form.handleSubmit(onSubmit)}
-            className="relative space-y-3 overflow-x-hidden"
-          >
-
-         <CustomFormField
+    <Form {...form}>
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="relative space-y-3 overflow-x-hidden"
+      >
+        <CustomFormField
           fieldType={FormFieldType.INPUT}
           control={form.control}
           name="name"
           placeholder="Name*"
         />
-          <CustomFormField
+        <CustomFormField
+          fieldType={FormFieldType.INPUT}
+          control={form.control}
+          name="surname"
+          placeholder="Surname*"
+        />
+        <CustomFormField
           fieldType={FormFieldType.INPUT}
           control={form.control}
           name="phone"
           placeholder="Phone*"
         />
-            <CustomFormField
+        <CustomFormField
           fieldType={FormFieldType.INPUT}
           control={form.control}
           name="email"
           placeholder="Email*"
         />
 
-          <CustomFormField
-            fieldType={FormFieldType.TEXTAREA}
-            control={form.control}
-            name="message"
-            placeholder="Message*"
-          />
+        <CustomFormField
+          fieldType={FormFieldType.TEXTAREA}
+          control={form.control}
+          name="message"
+          placeholder="Message*"
+        />
 
         <CustomFormField
           fieldType={FormFieldType.CHECKBOX}
@@ -119,9 +130,8 @@ export default function ContactForm() {
           name="privacyConsent"
           label="He llegit i accepto la política de privacitat"
         />
-        
-          
-            {/* <CheckboxField name="privacyCheck" label="He llegit i accepto la política de privacitat" />
+
+        {/* <CheckboxField name="privacyCheck" label="He llegit i accepto la política de privacitat" />
           
             <div>
               You can read in{" "}
@@ -131,9 +141,9 @@ export default function ContactForm() {
               page.
             </div> */}
 
-           <SubmitButton isLoading={isLoading}>Get Started</SubmitButton>
+        <SubmitButton isLoading={isLoading}>Get Started</SubmitButton>
 
-            {/* <Button 
+        {/* <Button 
               type="submit" 
               disabled={isLoading}
               className={cn({})}
@@ -145,8 +155,7 @@ export default function ContactForm() {
                 </span>
               Submit
             </Button> */}
-          </form>
-        </Form>
- 
+      </form>
+    </Form>
   );
 }

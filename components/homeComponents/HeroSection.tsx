@@ -43,8 +43,8 @@ export default function HeroSection() {
        {/* <div className="h-full w-full border-2 border-red-500  "> */}
       <Image 
        src="/assets/home-hero-desktop.jpg"
-       width={2560}
-       height={1600}
+       width={1280}
+       height={800}
        alt="hero"
        className="  h-full w-full object-cover   "
        />

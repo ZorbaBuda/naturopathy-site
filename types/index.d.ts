@@ -1,16 +1,12 @@
+/* eslint-disable no-unused-vars */
 
-type Link = {
-    name : string,
-    hash : string
-}
-
-type ContactFormProps = {
+declare type ContactFormParams = {
     name: string,
     surname: string,
     phone: string,
     email: string,
     message: string,
     date: string,
-    privacyCheck: boolean,
+    privacyConsent: boolean,
     // newsletterCheck: boolean
 }

@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 
 const NavLinks = () => {
   const pathname = usePathname();
+  
   // console.log(pathname)
 
      {/* <a href="#" className="group text-sky-600 transition duration-300">
@@ -16,7 +17,7 @@ const NavLinks = () => {
       <ul
         className='flex gap-x-[48px] md:gap-x-[48px] md:p-5 items-center   '
       >
-        {links.map((item : Link , index) => {
+        {links.map((item, index) => {
           return (
             <li key={index}>
               <Link
@@ -24,7 +25,7 @@ const NavLinks = () => {
                 href={item.hash}
               >
                 {item.name}
-                <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-green2"></span>
+                <span className={` ${item.hash === pathname ? "max-w-full" : "max-w-0"} block  group-hover:max-w-full transition-all duration-300 h-0.5 bg-green2`}></span>
               </Link>
             </li>
           );
