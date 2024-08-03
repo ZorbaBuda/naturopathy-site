@@ -20,7 +20,7 @@ const config = {
     },
     extend: {
       colors: {
-
+        primary: "#40961D",
         grey_1: "#F9F9F9",
         grey2: "#ECECEC",
         footerText: "#5a5c5c",
@@ -45,7 +45,7 @@ const config = {
         dark2: "#262c2eb3",
         green2: "#093F32",
         //another
-        green: "#40961D"
+       
       },
       borderRadius: {
         lg: "var(--radius)",

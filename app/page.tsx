@@ -15,7 +15,7 @@ export default function Home() {
      <IntroSection />
       
    
-     {/* <ImgListSection /> */}
+     <ImgListSection />
      <ContactSection />
       
      

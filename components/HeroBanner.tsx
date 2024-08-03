@@ -2,16 +2,16 @@ import Image from "next/image"
 
 const HeroBanner = ({image, title}: {image: string, title: string}) => {
   return (
-    <div className="relative mt-[100px] lg:mt-[140px]">
-        <div className="bg-black">
+    <div className="mt-[125px] lg:mt-[145px]">
+        
     <Image 
       src={image}
-      height={2800}
-      width={1200}
-      alt="services"
-      className="  lg:h-[350px] w-full object-cover object-left opacity-70"
-      /></div>
-      <div className="h1 2xl:left-[15%] absolute top-[25%] 2xl:px-0 subcontainer text-white">{title}</div>
+      height={1400}
+      width={600}
+      alt={title}
+      className="  lg:h-[500px] h-[297px] w-full object-cover object-right"
+      />
+      <div className="h1  subcontainer text-dark1">{title}</div>
     </div>
   )
 }

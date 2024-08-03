@@ -2,10 +2,12 @@
 
 // https://support.google.com/calendar/answer/41207?hl=en
 
+import HeroBanner from "@/components/HeroBanner";
+
 export default function page() {
   return (
     <div className="h-full min-h-screen">
-
+    <HeroBanner title="Reserva" image="/assets/calendar-appointment.jpg" />
         <h1 className='h1'>reserva</h1> 
        {/* Google Calendar Appointment Scheduling begin  */}
             <iframe 
