@@ -13,19 +13,21 @@ export default function HeroSection() {
   const { heroTitle, heroSubtitle, linkText, linkHref } = homeData;
 
   return (
-    <section className="w-full h-screen  relative ">
+    <section className="w-full      ">
+
+      <div className="pt-[100px] h-[565px] sm:h-[686px] lg:h-[700px] lg: bg-homeHeroD bg-cover flex">
 
    
 
-      <div className="lg:max-w-[40%] absolute 2xl:left-[15%] lg:top-[25%] mt-48 lg:mt-0  flex flex-col   px-5 lg:px-14 2xl:px-0    ">
+      <div className=" my-auto px-5 lg:px-10 2xl:px-20 text-white flex flex-col  ">
         
           <BlurMotion classname="">
-            <h1 className="h1 mb-7  text-dark1  ">{heroTitle}</h1>
+            <h1 className="h1 mb-7    ">{heroTitle}</h1>
           </BlurMotion>
 
           <div className="">
             <FadeIn delay={0.2}>
-              <h3 className="  mb-10 prose-custom  lg:text-dark1 ">
+              <h3 className="  mb-10  text-xl lg:text-2xl ">
                 {heroSubtitle}
               </h3>
             </FadeIn>
@@ -39,23 +41,8 @@ export default function HeroSection() {
             </a> */}
         </div>
       </div>
-
-       {/* <div className="h-full w-full border-2 border-red-500  "> */}
-      <Image 
-       src="/assets/home-hero-desktop.jpg"
-       width={1280}
-       height={800}
-       alt="hero"
-       className="  h-full w-full object-cover   "
-       />
-       {/* </div> */}
-      
-        {/* <div className="relative">
-              <div className="mt-10 absolute -inset-2 rounded-lg bg-gradient-to-r from-yellow-600 via-orange-600 to-red-600 opacity-75 blur"></div>
-              <div className="relative flex h-64 w-64 items-center justify-center rounded-lg bg-slate-900 text-slate-300">
-                Gradient shadow
-              </div>
-            </div> */}
+</div>
+    
     </section>
   );
 }

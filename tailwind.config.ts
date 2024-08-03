@@ -44,6 +44,8 @@ const config = {
         dark1: "#262c2e",
         dark2: "#262c2eb3",
         green2: "#093F32",
+        //another
+        green: "#40961D"
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -67,6 +69,8 @@ const config = {
       backgroundImage: {
       
         // heroBg: "url('/assets/bg-hero2.jpg')",
+        homeHeroD: "url('/assets/home/home-hero-desktop-night.jpg')",
+         homeHeroM: "url('/assets/home/home-hero-mobile-night.jpg')"
      
       },
     

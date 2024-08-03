@@ -1,6 +1,8 @@
 'use client'
 
+import Link from 'next/link'
 import { useEffect, useState } from 'react'
+import { contactInfo } from '@/lib/data'
 
 const ScrollTop = () => {
   const [show, setShow] = useState(false)
@@ -20,10 +22,20 @@ const ScrollTop = () => {
   }
   
   return (
+    <>
+    <div className={` fixed bottom-32 right-5   gap-10 ${show ? 'md:flex' : 'md:hidden'}`}>
+      <div className='flex flex-col gap-3 md:gap-5 text-lg md:text-2xl text-white'>
+        <Link href="/" className='bg-red-500 rounded-full p-2 md:p-3 border-2 border-slate-600'>{contactInfo.emailIcon}</Link>
+        <Link href="/" className='bg-blue-500 rounded-full p-2 md:p-3 border-2 border-slate-600'>{contactInfo.phoneIcon}</Link>
+        <Link href="/" className='bg-[#25D366] rounded-full p-2 md:p-3 border-2 border-slate-600'>{contactInfo.whatsappIcon}</Link>
+      </div>
+    </div>
+
+
+  {/* scroll button */}
     <div
       className={`fixed bottom-8 right-8   gap-10 ${show ? 'md:flex' : 'md:hidden'}`}
     >
-      
       <button
         aria-label="Scroll To Top"
         onClick={handleScrollTop}
@@ -38,6 +50,7 @@ const ScrollTop = () => {
         </svg>
       </button>
     </div>
+    </>
   )
 }
 

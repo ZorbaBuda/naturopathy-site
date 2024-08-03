@@ -21,7 +21,7 @@ const NavLinks = () => {
           return (
             <li key={index}>
               <Link
-                className=  {`  text-sm group uppercase  text-black font-semibold tracking-wider `}
+                className=  {`  text-base text-green group capitalize   font-semibold tracking-widest `}
                 href={item.hash}
               >
                 {item.name}

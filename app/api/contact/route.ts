@@ -5,7 +5,7 @@ import { JWT } from "google-auth-library";
 const SCOPES = ["https://www.googleapis.com/auth/spreadsheets"];
 
 export async function POST(request: Request) {
-  const data: ContactFormProps = await request.json();
+  const data: ContactFormParams = await request.json();
 
   //  console.log(data)
 

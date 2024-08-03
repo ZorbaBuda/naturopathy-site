@@ -11,9 +11,9 @@ export default function Home() {
     <main className="  bg-white">
     
      <HeroSection />
-     
+      <Intro2Section />
      <IntroSection />
-       <Intro2Section />
+      
    
      {/* <ImgListSection /> */}
      <ContactSection />
