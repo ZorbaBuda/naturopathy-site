@@ -3,14 +3,15 @@ import AboutHistorySection from "@/components/aboutComponents/AboutHistorySectio
 import AboutHeroSection from "@/components/aboutComponents/AboutHeroSection";
 import AboutCurriculumSection from "@/components/aboutComponents/AboutCurriculumSection";
 import HeroBanner from "@/components/HeroBanner";
+import picture from "@/public/assets/about-hero.jpg"
 
 // https://github.com/codebucks27/Next.js-Developer-Portfolio-Starter-Code
 
 
 export default function page() {
   return (
-    <main>
-    <HeroBanner title="La meva història" image="/assets/about-hero.jpg" /> 
+    <main className="">
+    <HeroBanner title="La meva història" image={picture} /> 
      <AboutHeroSection />
      <AboutHistorySection />
      <AboutCurriculumSection />

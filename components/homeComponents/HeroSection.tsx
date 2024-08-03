@@ -19,7 +19,7 @@ export default function HeroSection() {
 
    
 
-      <div className=" my-auto px-5 lg:px-10 2xl:px-20 text-white flex flex-col  ">
+      <div className=" my-auto px-5 lg:px-10 2xl:px-20 text-white flex flex-col lg:max-w-[60%]  ">
         
           <BlurMotion classname="">
             <h1 className="h1 mb-7    ">{heroTitle}</h1>

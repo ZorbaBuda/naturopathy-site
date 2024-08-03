@@ -5,10 +5,7 @@ import HeroBanner from "../HeroBanner";
 export default function ServHeroSection() {
   return (
     <section className=" w-full   flex flex-col">
-      <HeroBanner
-        title={servicesHero.title}
-        image="/assets/services-hero.jpg"
-      />
+    
 
       <div className="mx-auto max-w-4xl prose-custom px-5 lg:px-0">
         <p>{servicesHero.text1}</p>

@@ -49,9 +49,9 @@ export default function RootLayout({
         <TwSizeIndicator />
         <Navbar />
         <ScrollTop />
-       {/* <SmoothScrolling>   */}
+       <SmoothScrolling>  
       {children} 
-       {/* </SmoothScrolling>  */}
+       </SmoothScrolling> 
         <Footer />
         <Toaster />
       </body>

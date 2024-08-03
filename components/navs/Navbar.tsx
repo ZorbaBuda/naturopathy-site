@@ -41,18 +41,23 @@ export default function Header() {
 
   return (
     <>
-    <motion.nav
-       variants={{ visible: { y: 0 }, hidden: { y: "-10" } }}
+    <motion.div
+        variants={{ visible: { y: 0 }, hidden: { y: "-33%" } }}
        animate={isActive ? "hidden" : "visible"}
-       transition={{ duration: 0.1, ease: "easeInOut" }}
-     className={`  h-[45px] bg-primary text-white lg:flex justify-end items-center transition-all duration-500`}>
-      <Link href="/">{contactInfo.phone}</Link>
-      <Link href="/">{contactInfo.email}</Link>
-    </motion.nav>
-    <motion.nav
+       transition={{ duration: 0.01, ease: "easeInOut" }}
+       className="fixed bg-white left-0 top-0 right-0 z-20 min-w-max w-full mx-auto transition-all duration-500 flex flex-col " >
+        <nav
+    //  className={` ${isActive ? "hidden" : "lg:flex "}  h-[45px] bg-primary text-white justify-end items-center transition-all duration-500`}>
+    className={` hidden lg:flex  h-[45px] bg-primary text-white   `}>
+          <div className="subcontainerXl justify-end w-full items-center flex mx-auto gap-10 ">
+          <Link href="/" className=" ">{contactInfo.phone}</Link>
+          <Link href="/" className=" ">{contactInfo.email}</Link>
+          </div>
+    </nav>
+    <nav
     className={`${
-      isActive ? 'h-[80px] lg:h-[100px] shadow-lg top-0' : 'h-[80px] lg:h-[100px]'
-    } fixed bg-white left-0 right-0 z-20 min-w-max w-full mx-auto transition-all duration-500 flex items-center`}
+      isActive ? 'h-[80px] lg:h-[100px] top-0' : 'h-[80px] lg:h-[100px]'
+    }  bg-white left-0 right-0 z-20 min-w-max w-full mx-auto transition-all duration-500 flex items-center`}
   >
       <div className="  flex w-full items-center mx-auto justify-between subcontainerXl ">
         {/* logo */}
@@ -66,8 +71,37 @@ export default function Header() {
         <MobileNav />
       </div>
         </div>
-    </motion.nav>
+        </nav>
+    </motion.div>
     </>
+  //   <>
+  //   <motion.nav
+  //      variants={{ visible: { y: 0 }, hidden: { y: "-100%" } }}
+  //      animate={isActive ? "hidden" : "visible"}
+  //      transition={{ duration: 0.1, ease: "easeInOut" }}
+  //    className={`  h-[45px] bg-primary text-white lg:flex justify-end items-center transition-all duration-500`}>
+  //     <Link href="/">{contactInfo.phone}</Link>
+  //     <Link href="/">{contactInfo.email}</Link>
+  //   </motion.nav>
+  //   <motion.nav
+  //   className={`${
+  //     isActive ? 'h-[80px] lg:h-[100px] shadow-lg top-0' : 'h-[80px] lg:h-[100px]'
+  //   } fixed bg-white left-0 right-0 z-20 min-w-max w-full mx-auto transition-all duration-500 flex items-center`}
+  // >
+  //     <div className="  flex w-full items-center mx-auto justify-between subcontainerXl ">
+  //       {/* logo */}
+  //     <LogoCustom />
+    
+
+  //     <div className="flex flex-row ">
+  //       <div className="hidden lg:flex">
+  //         <NavLinks />
+  //       </div>
+  //       <MobileNav />
+  //     </div>
+  //       </div>
+  //   </motion.nav>
+  //   </>
   //   <>
   //   <nav className={` ${isActive ? "hidden" : "block" }  h-[45px] bg-primary text-white lg:flex justify-end items-center transition-all duration-500`}>
   //     <Link href="/">{contactInfo.phone}</Link>

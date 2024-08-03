@@ -15,7 +15,7 @@ const NavLinks = () => {
   return (
     <nav>
       <ul
-        className='flex gap-x-[48px] md:gap-x-[48px] md:p-5 items-center   '
+        className='flex gap-x-[48px] md:gap-x-[48px] items-center   '
       >
         {links.map((item, index) => {
           return (

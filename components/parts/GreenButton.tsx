@@ -19,8 +19,8 @@ export default function GreenButton({
     // >{text}</Link>
     <Link
     href={href}
-    className="text-white border border-dark1 hover:bg-white rounded-3xl  
-     bg-green2 px-7 py-3  transition-all  duration-500
+    className="text-slate-600 border border-white hover:bg-white rounded-2xl 
+     bg-[#FF9A00] px-7 py-3  transition-all  duration-500 text-lg font-semibold
      
         hover:text-dark1  max-w-fit no-underline
       "
