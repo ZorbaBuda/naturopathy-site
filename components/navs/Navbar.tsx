@@ -12,6 +12,7 @@ import { motion } from "framer-motion";
 export default function Header() {
   // header state
    const [isActive, setIsActive] = useState(false);
+   const [logoVisible, setLogoVisible] = useState(true)
   // nav mobile state
 
   
@@ -61,14 +62,15 @@ export default function Header() {
   >
       <div className="  flex w-full items-center mx-auto justify-between subcontainerXl ">
         {/* logo */}
+        <div className={` ${logoVisible ? "visible" : "invisible"}`}>
       <LogoCustom />
-    
+       </div>
 
       <div className="flex flex-row ">
         <div className="hidden lg:flex">
           <NavLinks />
         </div>
-        <MobileNav />
+        <MobileNav   />
       </div>
         </div>
         </nav>

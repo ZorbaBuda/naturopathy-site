@@ -20,7 +20,7 @@ export default function HorizontalScrollImage() {
     >
     <Image
         //  ref={targetRef}
-       
+      
          src="/assets/hero-crop.png"
          alt="hero-image"
          height={817}

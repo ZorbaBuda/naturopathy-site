@@ -90,6 +90,21 @@
     @apply text-[20px] lg:text-[23px]  2xl:text-[26px]  
            tracking-normal  leading-relaxed;
   }
+
+  
+  /* clinique */
+  .h1c {
+    @apply text-[71.5px] lg:text-[82.5px] xl:text-[110px] tracking-tight leading-none font-satoshi_medium
+  }
+
+  .h2c {
+    @apply text-[52.5px] lg:text-[59.5px] xl:text-[70px] tracking-tight leading-none font-satoshi_medium
+  }
+
+  .h3c {
+    @apply text-[30.4px] lg:text-[32.3px] xl:text-[38px] font-satoshi_medium
+  }
+
   
 
   .subcontainer {
@@ -97,7 +112,7 @@
   }
 
   .subcontainerXl {
-    @apply flex  mx-auto  px-5 lg:px-14 xl:px-0 xl:max-w-[1400px];
+    @apply flex  mx-auto  px-5 lg:px-14 xl:px-10 xl:max-w-[1400px];
   }
 
   /* .btn {

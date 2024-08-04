@@ -87,10 +87,10 @@ export default function ContactForm() {
   // }
 
   return (
-    <Form {...form}>
+    <Form {...form} >
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="relative space-y-3 overflow-x-hidden"
+        className=""
       >
         <CustomFormField
           fieldType={FormFieldType.INPUT}

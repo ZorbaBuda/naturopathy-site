@@ -6,10 +6,10 @@ import { contactPage } from "@/lib/data";
 
 export default function page() {
   return (
-    <section className="w-full pt-[230px]">
+    <section className="w-full pt-[180px] lg:pt-[230px]">
       <div className="flex flex-col md:flex-row gap-8 subcontainerXl">
         <div className="">
-          <h2 className="h2">{contactPage.title}</h2>
+          <h2 className="h2 mb-16">{contactPage.title}</h2>
           <ContactForm />
         </div>
         <div className=" md:max-w-[300px] lg:max-w-[368px]">

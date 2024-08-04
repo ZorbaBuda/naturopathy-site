@@ -40,13 +40,13 @@ const RenderField = ({ field, props }: { field: any; props: CustomProps }) => {
   switch (fieldType) {
     case FormFieldType.INPUT:
       return (
-        <div className="flex rounded-md border border-dark-500 bg-dark-400">
+        <div className="items-center  ">
         
-          <FormControl>
+          <FormControl className="">
             <Input
               placeholder={placeholder}
               {...field}
-              className="shad-input border-0"
+              className="shad-input border-0 "
             />
           </FormControl>
         </div>
@@ -90,18 +90,18 @@ const RenderField = ({ field, props }: { field: any; props: CustomProps }) => {
 const CustomFormField = (props: CustomProps) => {
   const { control, fieldType, name, label } = props;
   return (
-    <FormField
+    <FormField 
       control={control}
       name={name}
       render={({ field }) => (
-        <FormItem className="flex-1">
+        <FormItem className="flex-1 border-0">
           {fieldType !== FormFieldType.CHECKBOX && label && (
             <FormLabel>{label}</FormLabel>
           )}
 
           <RenderField field={field} props={props} />
 
-          <FormMessage className="shad-error" />
+          <FormMessage className="shad-error text-red-500 py-2" />
         </FormItem>
       )}
     />
