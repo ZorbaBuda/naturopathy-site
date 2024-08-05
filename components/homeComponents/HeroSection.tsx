@@ -38,29 +38,31 @@ export default function HeroSection() {
     // </section>
         <section className="w-full      ">
 
-          <div className="pt-[100px] h-[565px] sm:h-[686px] lg:h-[700px] lg: bg-homeHeroD bg-cover flex">
+          <div className="pt-[100px] h-[565px] sm:h-[686px] bg-right lg:object-center lg:h-[700px] bg-homeHeroD bg-cover flex">
 
           <div className=" my-auto px-5 lg:px-10 2xl:px-20 text-white flex flex-col lg:max-w-[60%]  ">
 
-              <BlurMotion classname="">
-                <h1 className="h1 mb-7    ">{heroTitle}</h1>
-              </BlurMotion>
 
               <div className="">
-                <FadeIn delay={0.2}>
-                  <h3 className="  mb-10  text-xl lg:text-2xl ">
+               
+                  <h3 className="  mb-5  text-xl lg:text-2xl ">
                     {heroSubtitle}
                   </h3>
-                </FadeIn>
-                <FadeIn delay={0.4}>
-                  <GreenButton text={linkText} href={linkHref} />
-                </FadeIn>
+              <BlurMotion classname="">
+                <h1 className="h1 mb-10    ">{heroTitle}</h1>
+              </BlurMotion>
+
+            
+                 </div>
+               
+                  <HeroButton text={linkText} href={linkHref} />
+               
 
                 {/* <a href="#" className="group text-sky-600 transition duration-300">
                   Link
                   <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-sky-600"></span>
                 </a> */}
-            </div>
+          
           </div>
     </div>
 

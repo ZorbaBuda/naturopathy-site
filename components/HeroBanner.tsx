@@ -10,8 +10,8 @@ const HeroBanner = ({image, title}: {image: StaticImageData, title: string}) => 
   return (
     // <div className="mt-[80px] lg:mt-[145px] ">
     <div  className="mt-[80px] lg:mt-[145px]  ">
-       <div className=" lg:h-[500px] h-[297px] w-full">
-        <motion.div style={{scale: t}} className="overflow-hidden ">
+       <div className=" lg:h-[500px] h-[297px] overflow-hidden">
+        <motion.div style={{scale: t}} className=" ">
     <Image 
       src={image}
       alt={title}

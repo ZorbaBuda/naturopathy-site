@@ -21,6 +21,7 @@ const config = {
     extend: {
       colors: {
         primary: "#40961D",
+        secondary: "#590F03",
         grey_1: "#F9F9F9",
         grey2: "#ECECEC",
         footerText: "#5a5c5c",

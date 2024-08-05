@@ -14,7 +14,7 @@ export default function Intro2Section() {
          alt="monstera-deliciosa"
          className=""
         /> */}
-        <div className=" flex flex-col subcontainerXl ">
+        <div className=" flex flex-col  ">
             <h1 className="h2 text-[#292929]">{homeIntro2.title}</h1>
             <div className="prose-custom text-[#292929]">
             {homeIntro2.p.map((p, index) => (

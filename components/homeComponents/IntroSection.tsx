@@ -29,7 +29,7 @@ export default function IntroSection() {
         {/* </motion.div> */}
         </div>
         <div className=" flex flex-col basis-1/2 subcontainer ">
-           <h1 className="h2 mb-8">{homeIntro.title} </h1>
+           <h1 className="h2 text-[#590F03] mb-8">{homeIntro.title} </h1>
            <div className="flex flex-col  prose-custom">
             <div className="mb-6">{homeIntro.label}</div>
             <div className=" mb-6">{homeIntro.text1}</div>

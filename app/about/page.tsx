@@ -12,7 +12,7 @@ export default function page() {
   return (
     <main className="">
     <HeroBanner title="La meva història" image={picture} /> 
-     <AboutHeroSection />
+     {/* <AboutHeroSection /> */}
      <AboutHistorySection />
      <AboutCurriculumSection />
     </main>
