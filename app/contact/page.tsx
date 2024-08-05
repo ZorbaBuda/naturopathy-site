@@ -2,20 +2,16 @@
 // import { Contact  } from '@/components'
 import ContactForm from "@/components/ContactForm";
 import Link from "next/link";
-import { contactPage } from "@/lib/data";
+import DirectionSection from "@/components/contactComponents/DirectionSection";
+import ContactFormSection from "@/components/contactComponents/ContactFormSection";
 
 export default function page() {
   return (
-    <section className="w-full pt-[180px] lg:pt-[230px]">
-      <div className="flex flex-col md:flex-row gap-8 subcontainerXl">
-        <div className="">
-          <h2 className="h2 mb-16">{contactPage.title}</h2>
-          <ContactForm />
-        </div>
-        <div className=" md:max-w-[300px] lg:max-w-[368px]">
-          <p className="prose-custom">{contactPage.p}</p>
-        </div>
-      </div>
+    <section className="w-full pt-[100px] lg:pt-[170px] flex flex-col">
+     
+      <div className="h1  subcontainerXl">El centre</div>
+      <DirectionSection />
+      <ContactFormSection />
 
     </section>
     // <>

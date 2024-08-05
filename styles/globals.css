@@ -67,6 +67,11 @@
     @apply py-[55px] lg:py-[100px];
   }
 
+  
+  .section-xs {
+    @apply py-10 lg:py-14;
+  }
+
   .section-light {
     @apply py-[55px] lg:py-[70px];
   }
@@ -111,6 +116,7 @@
     @apply flex  mx-auto  px-5 lg:px-14 xl:max-w-7xl;
   }
 
+  
   .subcontainerXl {
     @apply flex  mx-auto  px-5 lg:px-14 xl:px-10 xl:max-w-[1400px] 2xl:px-0;
   }

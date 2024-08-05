@@ -61,10 +61,7 @@ export default function ImgListSection() {
                         "invert(100%) sepia(1%) saturate(2%) hue-rotate(306deg) brightness(107%) contrast(101%);",
                     }} >
                   <Image
-                    style={{
-                      filter:
-                        "invert(100%) sepia(1%) saturate(2%) hue-rotate(306deg) brightness(107%) contrast(101%);",
-                    }}
+                   
                     src={item.svg}
                     alt={item.label}
                     height={36}
