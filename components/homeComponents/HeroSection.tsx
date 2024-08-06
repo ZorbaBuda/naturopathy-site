@@ -1,11 +1,7 @@
 import { homeData } from "@/lib/data";
-import Image from "next/image";
-import TextReveal from "../tutorials/framer/TextReveal";
 import { BlurMotion } from "../framer/BlurMotion";
-import FadeUp from "../framer/FadeUp";
-import FadeIn from "../framer/FadeIn";
 import HeroButton from "../parts/HeroButton";
-import GreenButton from "../parts/GreenButton";
+
 
 export default function HeroSection() {
   const { heroTitle, heroSubtitle, linkText, linkHref } = homeData;

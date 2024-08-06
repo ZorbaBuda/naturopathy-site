@@ -16,7 +16,7 @@ const NavLinksMob = () => {
   return (
     <nav>
       <ul className="flex flex-col text-dark1  border-t border-gray-400   ">
-        {links.map((item: Link, index) => {
+        {links.map((item, index) => {
           return (
             <li key={index} className="flex ">
               <Link

@@ -58,3 +58,7 @@ export default function RootLayout({
     </html>
   );
 }
+
+// https://github.com/darkroomengineering/lenis/discussions/244
+//https://stackoverflow.com/questions/75274778/lenis-smooth-scroll-preventing-next-links-default-behaviour-of-scrolling-to-top?rq=2
+//https://devdreaming.com/blogs/nextjs-smooth-scrolling-with-lenis-gsap
