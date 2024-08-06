@@ -9,7 +9,7 @@ const HeroBanner = ({image, title}: {image: StaticImageData, title: string}) => 
   const t = useTransform(scrollYProgress, [0,1], [1, 2])
   return (
     // <div className="mt-[80px] lg:mt-[145px] ">
-    <div  className="mt-[80px] lg:mt-[145px]  ">
+    <div  className="  ">
        <div className=" lg:h-[500px] h-[297px] overflow-hidden">
         <motion.div style={{scale: t}} className=" ">
     <Image 

@@ -56,10 +56,7 @@ export default function ImgListSection() {
                   className="flex flex-row items-center gap-x-5 bg-primary py-5 px-3 rounded-xl "
                 >
                   {/* https://codepen.io/sosuke/pen/Pjoqqp */}
-                  <div    style={{
-                      filter:
-                        "invert(100%) sepia(1%) saturate(2%) hue-rotate(306deg) brightness(107%) contrast(101%);",
-                    }} >
+                  <div    >
                   <Image
                    
                     src={item.svg}

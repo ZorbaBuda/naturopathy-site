@@ -36,7 +36,7 @@ export default function HeroSection() {
        
     //   </div>
     // </section>
-        <section className="   pt-[100px] h-[565px] sm:h-[686px] bg-right lg:object-center lg:h-[700px] bg-homeHeroD bg-cover flex  ">
+        <section className="    h-[565px] sm:h-[686px] bg-right lg:object-center lg:h-[700px] bg-homeHeroD bg-cover flex  ">
 
           
 
