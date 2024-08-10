@@ -56,8 +56,8 @@ export default function Header() {
 
       <nav
         className={`${
-          isActive ? "sticky top-0" : "sticky top-0 lg:block"
-        }   bg-white left-0 right-0 z-20 min-w-max w-full mx-auto transition-all duration-300 flex  h-[80px] lg:h-[100px]`}
+          isActive ? "sticky top-0 shadow-xl backdrop-blur-md" : "sticky top-0 lg:block bg-white"
+        }    left-0 right-0 z-20 min-w-max w-full mx-auto transition-all duration-300 flex  h-[80px] lg:h-[100px]`}
       >
         <div className="  flex w-full mx-auto justify-between items-center subcontainerXl ">
           {/* logo */}

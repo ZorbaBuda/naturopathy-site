@@ -18,17 +18,7 @@ export const ContactFormSchema = z
       "Invalid name. Letters, numbers, spaces or underscores only"
     )
     .regex(/^[a-zA-Z][a-zA-Z0-9_\s]*$/, "Name must start with a letter"),
-    surname: z
-    .string()
-    .min(1, "Surname is required")
-    .min(3, "Surname must be at least 3 characters")
-    .max(30, "Surname must be at most 30 characters")
-    .regex(
-      /^[a-zA-Z0-9_\s]+$/,
-      "Invalid surname. Letters, numbers, spaces or underscores only"
-    )
-    .regex(/^[a-zA-Z][a-zA-Z0-9_\s]*$/, "Name must start with a letter"),
-    
+   
   phone: z
   .string()
   .regex(phoneRegex, "Invalid number!"),

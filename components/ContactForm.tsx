@@ -33,7 +33,6 @@ export default function ContactForm() {
     resolver: zodResolver(ContactFormSchema),
     defaultValues: {
       name: "",
-      surname: "",
       phone: "",
       email: "",
       message: "",
@@ -96,13 +95,7 @@ export default function ContactForm() {
           fieldType={FormFieldType.INPUT}
           control={form.control}
           name="name"
-          placeholder="Name*"
-        />
-        <CustomFormField
-          fieldType={FormFieldType.INPUT}
-          control={form.control}
-          name="surname"
-          placeholder="Surname*"
+          placeholder="Nom i cognoms*"
         />
         <CustomFormField
           fieldType={FormFieldType.INPUT}
