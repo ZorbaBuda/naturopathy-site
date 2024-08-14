@@ -3,7 +3,7 @@ import { ReactLenis} from "@studio-freight/react-lenis";
 
 function SmoothScrolling({ children }) {
   return (
-    <ReactLenis root options={{  duration: 1.5, smoothTouch: true, smooth:true  }}>
+    <ReactLenis root options={{  duration: 1.0, smoothTouch: true, smooth:true  }}>
     {children}
   </ReactLenis>
   );
