@@ -88,16 +88,16 @@
 
   .h2 {
     @apply text-[42px]  lg:text-[55px] xl:text-[70px] leading-none font-marcellus
-    tracking-tighter xl:tracking-tighter text-secondary ;
+    tracking-tighter xl:tracking-tighter  ;
   }
  
 
   .h3 {
-    @apply text-[38px] lg:text-[40px] xl:text-[57px] 2xl:text-[60px] text-secondary  font-marcellus ;
+    @apply text-[38px] lg:text-[40px] xl:text-[57px] 2xl:text-[60px]   font-marcellus ;
   }
 
   .h4 {
-    @apply text-[20px] lg:text-[23px]  2xl:text-[26px]  
+    @apply text-[25px] lg:text-[30px]  2xl:text-[35px] font-marcellus 
            tracking-normal  leading-relaxed;
   }
 
