@@ -63,6 +63,11 @@
   .prose-custom{
     @apply prose-lg xl:prose-xl text-[#292929];
   }
+
+  .prose-custom-xl{
+    @apply prose-lg lg:prose-xl xl:prose-2xl text-dark1;
+  }
+  
   .section {
     @apply py-[55px] lg:py-[100px];
   }
@@ -88,7 +93,7 @@
  
 
   .h3 {
-    @apply text-[20px] lg:text-[30px] xl:text-[40px] 2xl:text-[60px] text-secondary  font-marcellus ;
+    @apply text-[38px] lg:text-[40px] xl:text-[57px] 2xl:text-[60px] text-secondary  font-marcellus ;
   }
 
   .h4 {

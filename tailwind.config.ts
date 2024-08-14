@@ -45,6 +45,7 @@ const config = {
         dark1: "#262c2e",
         dark2: "#262c2eb3",
         green2: "#093F32",
+        green1: "#40961D"
         //another
        
       },
