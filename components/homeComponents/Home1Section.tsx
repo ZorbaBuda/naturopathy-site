@@ -8,7 +8,7 @@ export default function Home1Section() {
       <div className="subcontainer-md flex-col-reverse lg:flex-row">
       
         <div className=" flex flex-col  ">
-            <h1 className="h2 text-green2">{homeIntro1.title}</h1>
+            <h1 className="h3 text-green2">{homeIntro1.title}</h1>
             <div className="prose-custom-xl text-[#292929]">
           
                 <p >{homeIntro1.text1}</p>

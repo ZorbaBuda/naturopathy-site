@@ -5,9 +5,9 @@ import GreenButton from "../parts/GreenButton";
 
 export default function Home2Section() {
   return (
-    <section id="intro" className="section bg-green1  ">
+    <section id="intro" className=" bg-cream1  lg:section-light">
       <div className="flex-flex-col mx-auto ">
-        <div className="flex flex-col-reverse items-center lg:flex-row gap-y-10 ">
+        <div className="subcontainerXl flex flex-col-reverse items-center lg:flex-row gap-y-10 ">
           <div className="basis-1/2  ">
             {/* <motion.div style={{y}} className="relative"> */}
             <Image
@@ -19,8 +19,8 @@ export default function Home2Section() {
             />
             {/* </motion.div> */}
           </div>
-          <div className=" flex flex-col basis-1/2 subcontainer ">
-            <h1 className="h2 text-green3 mb-8">{homeIntro2.title} </h1>
+          <div className=" flex flex-col basis-1/2 subcontainer py-10 lg:py-0  ">
+            <h1 className="h3 text-green2 mb-8">{homeIntro2.title} </h1>
             <div className="flex flex-col  prose-custom">
               <div className=" mb-6">{homeIntro2.text1}</div>
               <div className=" mb-6">{homeIntro2.text2}</div>

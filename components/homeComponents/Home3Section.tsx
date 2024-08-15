@@ -37,36 +37,19 @@ const SvgComponent = (props) => (
 
 export default function Home3Section() {
   return (
-    <section className="section-light flex flex-col ">
-      <div className="subcontainerXl flex flex-col  w-full">
-        <div className="text-center mx-auto h2 mb-8 ">{homeIntro3.title}</div>
-        <div className=" w-full flex flex-col-reverse items-center lg:flex-row lg:gap-x-10 gap-y-10  mx-auto ">
-          <Image
-            className="   h-[600px] object-cover object-top basis-1/2   "
-            src="/assets/hero-pic.jpg"
-            alt="logo"
-            width={510}
-            height={809}
-          />
+    <section className="section-light  bg-white ">
+      <div className="subcontainer-md flex flex-col  w-full">
+        <div className="text-center text-green2 mx-auto h3 mb-8 ">{homeIntro3.title}</div>
+        <div className=" w-full flex flex-col items-center lg:flex-row lg:gap-x-10 gap-y-10  mx-auto ">
+        
           <div className="basis-1/2 px-5">
-            <ul className="h4  text-white flex flex-col justify-around gap-y-5  ">
+            <ul className="prose-custom  text-dark1 flex flex-col  gap-y-5  ">
               {homeIntro3.items.map((item) => (
                 <div
                   key={item.label}
-                  className="flex flex-row items-center gap-x-5 bg-primary py-5 px-3 rounded-xl "
+                  className="flex flex-row  bg-cream1 py-5 px-3  "
                 >
-                  {/* https://codepen.io/sosuke/pen/Pjoqqp */}
-                  <div    >
-                  <Image
-                   
-                    src={item.svg}
-                    alt={item.label}
-                    height={36}
-                    width={36}
-                    className="text-white "
-                  /></div>
-
-                  <div>{item.label}</div>
+                  <div className="flex justify-center">{item.label}</div>
                 </div>
               ))}
             </ul>
@@ -75,6 +58,14 @@ export default function Home3Section() {
               <GreenButton text={homeIntro3.linkText} href={homeIntro3.link} />
             </div>
           </div>
+
+            {/* <Image
+            className="   h-[600px] object-cover object-top basis-1/2   "
+            src="/assets/hero-pic.jpg"
+            alt="logo"
+            width={510}
+            height={809}
+          /> */}
         </div>
       </div>
     </section>

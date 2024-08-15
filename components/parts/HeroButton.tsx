@@ -19,7 +19,7 @@ export default function HeroButton({
     // >{text}</Link>
     <Link
     href={href}
-    className="text-white border border-orange2 hover:bg-orange1 rounded-xl
+    className="text-white border border-green1 hover:bg-green1 rounded-lg
      bg-transparent px-7 py-3  transition-all  duration-300 text-base uppercase font-semibold
      
         hover:text-dark1  max-w-fit no-underline tracking-widest

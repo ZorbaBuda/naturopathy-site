@@ -93,7 +93,7 @@
  
 
   .h3 {
-    @apply text-[38px] lg:text-[40px] xl:text-[57px] 2xl:text-[60px]   font-marcellus ;
+    @apply text-[38px] lg:text-[40px] xl:text-[57px] 2xl:text-[60px]  tracking-tighter xl:tracking-tighter font-marcellus ;
   }
 
   .h4 {
