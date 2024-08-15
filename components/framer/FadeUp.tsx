@@ -28,7 +28,7 @@ interface Props {
          
           // ease: [0.25, 0.25, 0.25, 0.75],
           ease: [0.25, 0.25, 0.25, 0.75],
-          delay: 0 + delay
+          delay: 0.5 + delay
         },
       }
     }

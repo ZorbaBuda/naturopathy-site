@@ -44,7 +44,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" className="">
-      <body className="font-satoshi">
+      <body className="font-jakarta">
        
         <TwSizeIndicator />
         <Navbar />

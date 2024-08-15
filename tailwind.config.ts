@@ -93,7 +93,8 @@ const config = {
         marcellus: ["marcellus"],
         dm_serif: ["dm serif"],
         satoshi: ["satoshi"],
-        satoshi_medium: ["satoshi-medium"]
+        satoshi_medium: ["satoshi-medium"],
+        manrope: ["manrope", 'sans-serif'],
       },
     },
   },

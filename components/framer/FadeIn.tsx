@@ -41,10 +41,10 @@ export default function FadeIn({delay, children, classname} : Props) {
     
     <motion.section
    
-    variants={variants(delay ? delay : 0.5)}
+    variants={variants(delay ? delay : 0.25)}
     initial='hidden'
     whileInView={'show'}
-    viewport={{ once: false, amount: 0.1 }}
+    viewport={{ once: true, amount: 0.1 }}
     className= {`${classname} `}
   >{children}
   </motion.section>

@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { homeIntro2 } from "@/lib/data";
 import GreenButton from "../parts/GreenButton";
+import { BlurMotion } from "../framer/BlurMotion";
+import FadeIn from "../framer/FadeIn";
 
 export default function Home2Section() {
   return (
@@ -20,12 +22,18 @@ export default function Home2Section() {
             {/* </motion.div> */}
           </div>
           <div className=" flex flex-col basis-1/2 subcontainer py-10 lg:py-0  ">
-            <h1 className="h3 text-green2 mb-8">{homeIntro2.title} </h1>
-            <div className="flex flex-col  prose-custom">
-              <div className=" mb-6">{homeIntro2.text1}</div>
-              <div className=" mb-6">{homeIntro2.text2}</div>
-              <div className=" mb-6">{homeIntro2.text3}</div>
-            </div>
+            <BlurMotion>
+              {" "}
+              <h1 className="h3 text-green2 mb-8">{homeIntro2.title} </h1>
+            </BlurMotion>
+            <FadeIn>
+              {" "}
+              <div className="flex flex-col  prose-custom">
+                <div className=" mb-6">{homeIntro2.text1}</div>
+                <div className=" mb-6">{homeIntro2.text2}</div>
+                <div className=" mb-6">{homeIntro2.text3}</div>
+              </div>
+            </FadeIn>
             <GreenButton text={homeIntro2.linkText} href={homeIntro2.link} />
           </div>
         </div>
