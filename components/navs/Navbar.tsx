@@ -42,7 +42,7 @@ export default function Header() {
     <>
       <nav
         //  className={` ${isActive ? "hidden" : "lg:flex "}  h-[45px] bg-primary text-white justify-end items-center transition-all duration-500`}>
-        className={` hidden lg:flex  h-[45px] bg-primary text-white  `}
+        className={` hidden lg:flex  h-[45px] bg-green2 text-white  `}
       >
         <div className="subcontainerXl justify-end w-full items-center flex mx-auto gap-10 ">
           <Link href="/" className=" ">

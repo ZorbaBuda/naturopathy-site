@@ -6,20 +6,20 @@ const LogoCustom = () => {
     <Link href="/" className=" ">
     <div className="flex items-center gap-x-3">
       <Image
-        className="h-16 w-16 lg:h-20 lg:w-20  "
-        src="/assets/newLogo.png"
+        className="h-12 w-12 lg:h-16 lg:w-16  "
+        src="/assets/icons/logopng.png"
         alt="logo"
-        width={250}
-        height={250}
+        width={200}
+        height={200}
       />
       <div
-        className= "text-black font-medium flex flex-col gap-0 lg:text-3xl text-2xl "
+        className= " font-medium flex flex-col gap-0 lg:text-3xl text-2xl "
       >
-        <div className="text-[#40961D] font-logo leading-5  ">
+        <div className="text-green2 font-logo leading-5  ">
           Christian Constanseu
         </div>
 
-        <div className="lg:text-sm text-sm font-semibold text-green2 font-jakarta  ">NATUROPATIA</div>
+        <div className="lg:text-sm text-sm font-semibold text-orange2  font-jakarta  ">NATUROPATA</div>
       </div>
     </div>
   </Link>

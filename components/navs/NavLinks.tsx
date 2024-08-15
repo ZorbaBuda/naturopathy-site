@@ -21,11 +21,11 @@ const NavLinks = () => {
           return (
             <li key={index}>
               <Link
-                className=  {`  ${item.hash === pathname ? "text-secondary" : "text-dark1"}  text-base hover:text-secondary  group capitalize   font-semibold tracking-widest `}
+                className=  {`  ${item.hash === pathname ? "text-green2" : "text-dark1"}  text-base hover:text-green2  group capitalize   font-semibold tracking-widest `}
                 href={item.hash}
               >
                 {item.name}
-                <span className={`  block  max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-secondary`}></span>
+                <span className={`  block  max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-green2`}></span>
               </Link>
             </li>
           );

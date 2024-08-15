@@ -1,24 +1,22 @@
-import { homeData } from "@/lib/data";
+import { homeHero } from "@/lib/data";
 import { BlurMotion } from "../framer/BlurMotion";
 import HeroButton from "../parts/HeroButton";
 
-
-export default function HeroSection() {
-  const { heroTitle, heroSubtitle, linkText, linkHref } = homeData;
+export default function HomeHeroSection() {
+  const { heroTitle, heroSubtitle, linkText, linkHref } = homeHero;
 
   return (
     // <section className="w-full h-screen bg-homeHeroD bg-cover flex items-center pt-[100px]  ">
     //   <div className="2xl:pl-[290px]   text-white flex  flex-col  px-5 lg:px-14 xl:px-10 xl:max-w-[1400px]   ">
-       
+
     //     <div className="">
-          
+
     //       <FadeIn delay={0.2}>
     //         <h3 className="  mb-5  text-xl lg:text-2xl md:max-w-[48ch] ">{heroSubtitle}</h3>
     //       </FadeIn>
     //        <BlurMotion classname="">
     //       <h1 className="h1c mb-16 md:max-w-[12ch] text-[#FDFFAB]   ">{heroTitle}</h1>
     //     </BlurMotion>
-
 
     //        </div>
     //       <FadeIn delay={0.4}>
@@ -29,40 +27,34 @@ export default function HeroSection() {
     //         Link
     //         <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-sky-600"></span>
     //       </a> */}
-       
+
     //   </div>
     // </section>
-        <section className="    h-[565px] sm:h-[686px] bg-right lg:object-center lg:h-[700px] bg-homeHeroD bg-cover flex  ">
-
+    <section className="    h-[565px] sm:h-[686px] bg-right lg:object-center lg:h-[700px] bg-homeHeroD bg-cover flex  ">
+      <div className=" w-full  my-auto subcontainerXl  text-white flex flex-col  ">
+        <div className="lg:max-w-[60%] ">
+          <BlurMotion classname="">
+          
+            
+            <h1 className="h1 mb-5 text-cream1   ">{heroTitle}</h1>
+            
+           
+          </BlurMotion>
+        
+          
+          <h3 className="italic font-semibold  mb-16 text-xl lg:text-2xl ">{heroSubtitle}</h3>
+         
+         
           
 
-          <div className=" w-full  my-auto subcontainerXl  text-white flex flex-col  ">
-
-
-              <div className="lg:max-w-[60%] ">
-               
-                  <h3 className="  mb-5  text-xl lg:text-2xl ">
-                    {heroSubtitle}
-                  </h3>
-              <BlurMotion classname="">
-                <h1 className="h1 mb-16    ">{heroTitle}</h1>
-              </BlurMotion>
-
-            
-                
-               
-                  <HeroButton text={linkText} href={linkHref} />
-               
- </div>
-                {/* <a href="#" className="group text-sky-600 transition duration-300">
+          <HeroButton text={linkText} href={linkHref} />
+        </div>
+        {/* <a href="#" className="group text-sky-600 transition duration-300">
                   Link
                   <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-sky-600"></span>
                 </a> */}
-          
-          </div>
-   
-
-        </section>
+      </div>
+    </section>
   );
 }
 

@@ -1,6 +1,6 @@
 import FadeIn from "../framer/FadeIn";
 import Image from "next/image";
-import { howCanHelp } from "@/lib/data";
+import { homeIntro3 } from "@/lib/data";
 import { TbPointFilled } from "react-icons/tb";
 import GreenButton from "../parts/GreenButton";
 
@@ -35,11 +35,11 @@ const SvgComponent = (props) => (
   </svg>
 );
 
-export default function ImgListSection() {
+export default function Home3Section() {
   return (
     <section className="section-light flex flex-col ">
       <div className="subcontainerXl flex flex-col  w-full">
-        <div className="text-center mx-auto h2 mb-8 ">{howCanHelp.title}</div>
+        <div className="text-center mx-auto h2 mb-8 ">{homeIntro3.title}</div>
         <div className=" w-full flex flex-col-reverse items-center lg:flex-row lg:gap-x-10 gap-y-10  mx-auto ">
           <Image
             className="   h-[600px] object-cover object-top basis-1/2   "
@@ -50,7 +50,7 @@ export default function ImgListSection() {
           />
           <div className="basis-1/2 px-5">
             <ul className="h4  text-white flex flex-col justify-around gap-y-5  ">
-              {howCanHelp.items.map((item) => (
+              {homeIntro3.items.map((item) => (
                 <div
                   key={item.label}
                   className="flex flex-row items-center gap-x-5 bg-primary py-5 px-3 rounded-xl "
@@ -72,7 +72,7 @@ export default function ImgListSection() {
             </ul>
 
             <div className="mt-10 flex justify-center">
-              <GreenButton text={howCanHelp.linkText} href={howCanHelp.link} />
+              <GreenButton text={homeIntro3.linkText} href={homeIntro3.link} />
             </div>
           </div>
         </div>

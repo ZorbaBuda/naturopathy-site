@@ -20,6 +20,12 @@ const config = {
     },
     extend: {
       colors: {
+        green1: "#DEF9C4",
+        green2: "#00712D",
+        green3: "#026670",
+        orange1: "#FFC96F",
+        orange2: "#FF9100",
+        cream1:"#FFFBE6",
         primary: "#40961D",
         secondary: "#590F03",
         grey_1: "#F9F9F9",
@@ -44,8 +50,8 @@ const config = {
         //new
         dark1: "#262c2e",
         dark2: "#262c2eb3",
-        green2: "#093F32",
-        green1: "#40961D"
+        
+       
         //another
        
       },
