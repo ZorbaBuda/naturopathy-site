@@ -1,4 +1,5 @@
 import { contactInfo } from "@/lib/data";
+import { EmailLink, PhoneLink, WhatsappLink } from "../parts/ContactLinks";
 
 const DirectionSection = () => {
   return (
@@ -14,6 +15,11 @@ const DirectionSection = () => {
           <div className="font-semibold">
             <div>{contactInfo.phone}</div>
             <div>{contactInfo.email}</div>
+          </div>
+          <div className="flex justify-center gap-5 text-white">
+            <EmailLink />
+            <PhoneLink />
+            <WhatsappLink />
           </div>
         </div>
        

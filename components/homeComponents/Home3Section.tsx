@@ -3,6 +3,7 @@ import Image from "next/image";
 import { homeIntro3 } from "@/lib/data";
 import { TbPointFilled } from "react-icons/tb";
 import GreenButton from "../parts/GreenButton";
+import Link from "next/link";
 
 const SvgComponent = (props) => (
   <svg
@@ -43,7 +44,7 @@ export default function Home3Section() {
         <div className=" w-full flex flex-col items-center  gap-y-10  mx-auto ">
         
 
-            <ul className="prose-custom-xl  text-dark1 flex flex-col  gap-y-5  ">
+            {/* <ul className="prose-custom-xl  text-dark1 flex flex-col  gap-y-5  ">
               {homeIntro3.items.map((item) => (
                 <div
                   key={item.label}
@@ -52,11 +53,25 @@ export default function Home3Section() {
                   <div className="flex justify-center w-full font-semibold">{item.label}</div>
                 </div>
               ))}
+            </ul> */}
+
+<ul className="prose-custom-xl  text-dark1 flex flex-col  gap-y-5  ">
+              {homeIntro3.items.map((item) => (
+                  <Link href={item.href} key={item.label} className="group inline-flex items-center  justify-between pl-5 pr-2 py-3 rounded-xl font-semibold  border-green2   hover:dark:text-white bg-orange1  hover:bg-orange2  transition-colors duration-300 ease-in-out">
+                 {item.label}
+                  <svg viewBox="0 0 24 24" className="size-5 stroke-[3px] fill-none stroke-current opacity-50 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                    <line x1="5" y1="12" x2="19" y2="12" className="scale-x-0 translate-x-[10px] group-hover:translate-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out"/>
+                    <polyline points="12 5 19 12 12 19" className="-translate-x-2 group-hover:translate-x-0 transition-transform duration-300 ease-in-out"/>
+                  </svg>
+                </Link>
+              ))}
             </ul>
 
-            <div className="mt-10 flex justify-center">
+
+
+            {/* <div className="mt-10 flex justify-center">
               <GreenButton text={homeIntro3.linkText} href={homeIntro3.link} />
-            </div>
+            </div> */}
           
 
             {/* <Image

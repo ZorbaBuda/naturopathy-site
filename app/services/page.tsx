@@ -15,7 +15,7 @@ export default function page() {
   return (
     <main>
         <HeroBanner title={servicesHero.title} image={picture}/>
-      <ServHeroSection />
+      {/* <ServHeroSection /> */}
       <ServOfferingsSection />
       <DirectionSection />
       <ContactFormSection />
