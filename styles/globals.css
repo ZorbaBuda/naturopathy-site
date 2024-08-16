@@ -88,7 +88,7 @@
   
   .h1 {
     @apply text-[42px] lg:text-[62px]  xl:text-[80px]  
-           tracking-tighter xl:tracking-tighter leading-none font-manrope;
+           tracking-tight xl:tracking-tight leading-none font-manrope;
   }
 
   .h2 {

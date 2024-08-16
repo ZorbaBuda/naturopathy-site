@@ -53,11 +53,10 @@ export default function MobileNav() {
     <div>
     <SheetHeader className="py-10">
       <LogoCustom />
-      {/* <SheetTitle>Are you absolutely sure?</SheetTitle>
+      <SheetTitle></SheetTitle>
       <SheetDescription>
-        This action cannot be undone. This will permanently delete your account
-        and remove your data from our servers.
-      </SheetDescription> */}
+       
+      </SheetDescription>
     </SheetHeader>
     
     <NavLinksMob />
@@ -73,7 +72,7 @@ export default function MobileNav() {
              <div className="flex items-center gap-x-[10px]">
                <div>{contact.phone.icon}</div>
                <div>{contact.phone.number}</div>
-                 <FaWhatsappSquare className="text-lg" />
+               
              </div>
            
              <div className="flex items-center gap-x-[10px]">
