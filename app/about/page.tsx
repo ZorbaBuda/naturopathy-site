@@ -5,6 +5,8 @@ import AboutCurriculumSection from "@/components/aboutComponents/AboutCurriculum
 import HeroBanner from "@/components/HeroBanner";
 import picture from "@/public/assets/about-hero.jpg"
 import AboutSection from "@/components/aboutComponents/AboutSection";
+import ContactFormSection from "@/components/contactComponents/ContactFormSection";
+import DirectionSection from "@/components/contactComponents/DirectionSection";
 
 // https://github.com/codebucks27/Next.js-Developer-Portfolio-Starter-Code
 
@@ -15,8 +17,10 @@ export default function page() {
     <HeroBanner title="Sobre mi" image={picture} /> 
      {/* <AboutHeroSection /> */}
      <AboutSection />
-     <AboutHistorySection />
-     <AboutCurriculumSection />
+     {/* <AboutHistorySection /> */}
+     {/* <AboutCurriculumSection /> */}
+     <DirectionSection />
+      <ContactFormSection />
     </main>
   );
 }

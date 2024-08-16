@@ -46,7 +46,7 @@ const RenderField = ({ field, props }: { field: any; props: CustomProps }) => {
             <Input
               placeholder={placeholder}
               {...field}
-              className="shad-input border-0 "
+              className=" border-0 "
             />
           </FormControl>
         </div>
@@ -91,17 +91,18 @@ const CustomFormField = (props: CustomProps) => {
   const { control, fieldType, name, label } = props;
   return (
     <FormField 
+     
       control={control}
       name={name}
       render={({ field }) => (
-        <FormItem className="flex-1 border-0">
+        <FormItem className="flex-1  ">
           {fieldType !== FormFieldType.CHECKBOX && label && (
             <FormLabel>{label}</FormLabel>
           )}
 
           <RenderField field={field} props={props} />
 
-          <FormMessage className="shad-error text-red-500 py-2" />
+          <FormMessage className=" text-red-500 py-2 " />
         </FormItem>
       )}
     />

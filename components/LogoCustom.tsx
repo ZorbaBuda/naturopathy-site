@@ -7,7 +7,7 @@ const LogoCustom = () => {
     <div className="flex items-center gap-x-3">
       <Image
         className="h-12 w-12 lg:h-16 lg:w-16  "
-        src="/assets/icons/logopng.png"
+        src="/assets/newLogo.png"
         alt="logo"
         width={200}
         height={200}

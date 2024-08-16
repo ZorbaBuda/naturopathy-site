@@ -26,7 +26,7 @@ export default function AboutSection() {
     {/* second block */}
      <div className="flex flex-col lg:flex-row items-center">
        <div className="basis-1/2 prose-custom-xl">
-        Tot això, em va portar a realitzar estudis complets de naturopatia i
+        Tot això, em va portar a realitzar estudis complets de naturopatia i
         diferents màsters que aborden teràpies integratives per a la cura de
         l'ésser i la salut. Vaig comprendre que la veritable sanació va més
         enllà de tractar símptomes aïllats; es tracta de veure a l'ésser humà
@@ -45,22 +45,22 @@ export default function AboutSection() {
         
         {/* third block */}
 
-        <div> Aquests
+        <div className="prose-custom"> Aquests
         estudis van ampliar la meva visió i em van permetre incorporar noves
         eines terapèutiques a la meva pràctica. Vaig aprendre sobre la
         importància de l'alimentació natural, l'equilibri emocional, i la
         influència de l'entorn en la salut. Em vaig formar en teràpies com
-        la ortomolecular, microimmunoteràpia, psiconeuroinmunoendocrinología,
+        la ortomolecular, microimmunoteràpia, PNIE,
         teràpia aplicada, entre altres, totes elles complementàries, ja que, en
         conjunt, em van oferir un enfocament holístic per a tractar als meus
         pacients.</div>
 
         {/* fourth block  */}
         
-       <div> Cada màster que vaig completar em va aportar un nou nivell de
+       <div className="prose-custom"> Cada màster que vaig completar em va aportar un nou nivell de
         comprensió i un profund respecte per la capacitat innata del cos per a
         curar-se quan se li brinda el suport adequat. Vaig descobrir que
-        la neuropatia no sols se centra en la prevenció i el tractament de
+        la neuropatia no sols se centra en la prevenció i el tractament de
         malalties, sinó també en la promoció d'un estil de vida saludable que
         fomenti el benestar integral. Aquesta filosofia ressonava profundament
         en mi, entenent que la veritable salut prové de viure en harmonia amb la
@@ -68,9 +68,9 @@ export default function AboutSection() {
 
         {/* fifth block  */}
         
-       <div> Avui dia, la meva pràctica es basa en una combinació
+       <div className="prose-custom"> Avui dia, la meva pràctica es basa en una combinació
         d'aquestes teràpies naturals, sempre adaptades a les necessitats
-        individuals de cada persona. Treball amb l'objectiu d’apoderar als meus
+        individuals de cada persona. Treball amb l'objectiu d'apoderar als meus
         pacients, educant-los sobre com poden prendre el control de la seva
         salut i benestar a través de decisions informades i conscients. El meu
         enfocament és oferir solucions personalitzades que promoguin l'equilibri

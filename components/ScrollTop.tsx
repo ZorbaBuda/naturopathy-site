@@ -33,7 +33,7 @@ const ScrollTop = () => {
 
       {/* scroll button */}
       <div
-        className={`fixed bottom-10 right-5 md:right-7 text-lg md:text-2xl text-white  ${
+        className={`z-30 fixed bottom-10 right-5 md:right-7 text-lg md:text-2xl text-white  ${
           show ? "md:flex" : "md:hidden"
         }`}
       >

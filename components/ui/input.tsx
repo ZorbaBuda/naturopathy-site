@@ -21,7 +21,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
       <input
       type={type}
       className=
-        {` flex h-[70px] w-full    bg-background  border-t border-x border-gray-400
+        {` flex h-[70px] w-full    bg-background  border-t  border-x border-gray-400
         px-3 py-3 file:border-0 file:bg-transparent file:text-sm file:font-medium 
         placeholder:text-muted-foreground focus-visible:outline-none 
          disabled:cursor-not-allowed disabled:opacity-50 `}

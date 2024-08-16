@@ -14,7 +14,7 @@ interface Props {
     return {
      
       hidden: {
-        y:  80 ,
+        y:  40 ,
         opacity: 0,
         x:  0,
       },
