@@ -1,6 +1,7 @@
 'use client'
 import { motion,useScroll, useTransform } from "framer-motion"
 import Image, { StaticImageData } from "next/image"
+import { BlurMotion } from "./framer/BlurMotion"
 
 const HeroBanner = ({image, title}: {image: StaticImageData, title: string}) => {
 
@@ -17,7 +18,7 @@ const HeroBanner = ({image, title}: {image: StaticImageData, title: string}) => 
       alt={title}
       className="  lg:h-[500px] h-[297px] w-full object-cover  object-right "
       /> </motion.div></div>
-      <div className=" h1  flex justify-center lg:justify-start subcontainerXl text-primary">{title}</div>
+     <BlurMotion> <div className=" h3  flex justify-center lg:justify-start subcontainerXl text-green2">{title}</div></BlurMotion>
     </div>
   )
 }

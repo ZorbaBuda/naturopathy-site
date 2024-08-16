@@ -23,11 +23,11 @@ const DirectionSection = () => {
           </div>
         </div>
        
-        <div className="basis-1/2 border-2 border-black">
+        <div className="basis-1/2 border-2 lg:border-orange1">
           <iframe
             src={contactInfo.addressGoogleMaps}
             width="100%"
-            height="250"
+            height="270"
             style={{ border: "0" }}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"

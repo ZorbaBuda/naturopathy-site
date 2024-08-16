@@ -12,7 +12,7 @@ import AboutSection from "@/components/aboutComponents/AboutSection";
 export default function page() {
   return (
     <main className="">
-    <HeroBanner title="La meva història" image={picture} /> 
+    <HeroBanner title="Sobre mi" image={picture} /> 
      {/* <AboutHeroSection /> */}
      <AboutSection />
      <AboutHistorySection />

@@ -1,34 +1,37 @@
 import { z } from "zod";
+import { contactFormData } from "@/lib/data";
+
+const {name, email, message, privacy} = contactFormData.formSchema
 
 //TODO i18n ?
 
-const phoneRegex = new RegExp(
-  /^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/
-);
+// const phoneRegex = new RegExp(
+//   /^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/
+// );
 
 export const ContactFormSchema = z
 .object({
     name: z
     .string()
-    .min(1, "Name is required")
-    .min(3, "Name must be at least 3 characters")
-    .max(30, "Name must be at most 30 characters")
+    .min(1, `${name.required}`)
+    .min(3, `${name.min}`)
+    .max(3000, `${name.max}`)
     .regex(
       /^[a-zA-Z0-9_\s]+$/,
-      "Invalid name. Letters, numbers, spaces or underscores only"
+      `${name.invalid}`
     )
-    .regex(/^[a-zA-Z][a-zA-Z0-9_\s]*$/, "Name must start with a letter"),
+    .regex(/^[a-zA-Z][a-zA-Z0-9_\s]*$/, `${name.start}`),
    
-  email: z.string().min(1, "Email is required").email("Invalid email"),
+  email: z.string().min(1, `${email.required}`).email(`${email.invalid}`),
   message: z
   .string()
-  .min(1, "Body is required")
-  .max(30, "at most 30 characters"),
+  .min(1, `${message.required}`)
+  .max(30, `${message.max}`),
   
   // date: z.string(),
   
   privacyConsent: z.boolean().default(false).refine((val) => val === true, {
-    message: "Please read and accept the terms and conditions",
+    message: `${privacy}`,
   })
   
 })

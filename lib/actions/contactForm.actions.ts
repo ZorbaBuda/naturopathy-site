@@ -26,7 +26,6 @@ export const sendMessage = async (message : ContactFormParams) => {
     const newRowData = {
       Date: new Date().toLocaleString(),
       Name: message.name,
-      Phone: message.phone,
       Email: message.email,
       Message: message.message,
       PrivacyConsent: message.privacyConsent
