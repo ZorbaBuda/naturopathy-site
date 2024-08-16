@@ -9,7 +9,7 @@ export default function Home2Section() {
   return (
     <section id="intro" className=" bg-cream1  lg:section-light">
       <div className="flex-flex-col mx-auto ">
-        <div className="subcontainerXl flex flex-col-reverse items-center lg:flex-row gap-y-10 ">
+        <div className="subcontainerXl flex flex-col-reverse items-center lg:flex-row gap-10 ">
           <div className="basis-1/2  ">
             {/* <motion.div style={{y}} className="relative"> */}
             <Image
@@ -21,7 +21,7 @@ export default function Home2Section() {
             />
             {/* </motion.div> */}
           </div>
-          <div className=" flex flex-col basis-1/2 subcontainer py-10 lg:py-0  ">
+          <div className=" flex flex-col basis-1/2  py-10 lg:py-0  ">
             <BlurMotion>
               {" "}
               <h1 className="h3 text-green2 mb-8">{homeIntro2.title} </h1>

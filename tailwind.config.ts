@@ -26,6 +26,7 @@ const config = {
         orange1: "#FFC96F",
         orange2: "#FF9100",
         cream1:"#FFFBE6",
+        bgGray1:"#F6F6F6",
         primary: "#40961D",
         secondary: "#590F03",
         grey_1: "#F9F9F9",

@@ -19,9 +19,6 @@ export const ContactFormSchema = z
     )
     .regex(/^[a-zA-Z][a-zA-Z0-9_\s]*$/, "Name must start with a letter"),
    
-  phone: z
-  .string()
-  .regex(phoneRegex, "Invalid number!"),
   email: z.string().min(1, "Email is required").email("Invalid email"),
   message: z
   .string()

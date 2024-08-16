@@ -7,13 +7,7 @@ import { z } from "zod";
 import { ContactFormSchema } from "@/schemas/contact-form-schema";
 // import { useToast } from "../ui/use-toast";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Textarea } from "./ui/textarea";
-import { Button } from "./ui/button";
-import { cn } from "@/lib/utils";
-import Link from "next/link";
-import { InputField } from "./form-fields/input-field";
-import { TextareaField } from "./form-fields/textarea-field";
-import { CheckboxField } from "./form-fields/checkbox-field";
+
 import { toast } from "sonner";
 import { Spinner } from "./spinner";
 import { FormFieldType } from "@/constants";
@@ -21,11 +15,14 @@ import CustomFormField from "./form-fields/CustomFormField";
 import SubmitButton from "./ui/SubmitButton";
 import { sendMessage } from "@/lib/actions/contactForm.actions";
 import { useRouter } from "next/navigation";
+import { contactFormData } from "@/lib/data";
+import Link from "next/link";
 
 export default function ContactForm() {
-  // const { toast } = useToast();
-  const router = useRouter()
+  const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
+
+  const {formFields} = contactFormData
 
   const currentDate = new Date().toISOString();
 
@@ -33,7 +30,6 @@ export default function ContactForm() {
     resolver: zodResolver(ContactFormSchema),
     defaultValues: {
       name: "",
-      phone: "",
       email: "",
       message: "",
       // date: new Date().toISOString(),
@@ -54,10 +50,10 @@ export default function ContactForm() {
       // @ts-ignore
       const result = await sendMessage(message);
       if (result === "ok") {
-        toast("Missatge enviat.")
-        router.push("/")
+        toast("Missatge enviat.");
+        router.push("/");
       }
-       setIsLoading(false);
+      setIsLoading(false);
     } catch (error) {
       console.log(error);
     }
@@ -86,55 +82,40 @@ export default function ContactForm() {
   // }
 
   return (
-    <Form {...form} >
-      <form
-        onSubmit={form.handleSubmit(onSubmit)}
-        className=""
-      >
+    <Form {...form}>
+      <form onSubmit={form.handleSubmit(onSubmit)} className="">
         <CustomFormField
           fieldType={FormFieldType.INPUT}
           control={form.control}
           name="name"
-          placeholder="Nom i cognoms*"
-        />
-        <CustomFormField
-          fieldType={FormFieldType.INPUT}
-          control={form.control}
-          name="phone"
-          placeholder="Phone*"
+          placeholder={formFields.name}
         />
         <CustomFormField
           fieldType={FormFieldType.INPUT}
           control={form.control}
           name="email"
-          placeholder="Email*"
+          placeholder={formFields.email}
         />
 
         <CustomFormField
           fieldType={FormFieldType.TEXTAREA}
           control={form.control}
           name="message"
-          placeholder="Message*"
+          placeholder={formFields.message}
         />
-
+       
+       <div className="mt-5">
         <CustomFormField
           fieldType={FormFieldType.CHECKBOX}
           control={form.control}
           name="privacyConsent"
-          label="He llegit i accepto la política de privacitat"
-        />
-
-        {/* <CheckboxField name="privacyCheck" label="He llegit i accepto la política de privacitat" />
+          label={formFields.privacitat}
           
-            <div>
-              You can read in{" "}
-              <Link href="/privacy-terms" target="_blank">
-                privacy terms
-              </Link>{" "}
-              page.
-            </div> */}
-
-        <SubmitButton isLoading={isLoading}>Get Started</SubmitButton>
+        /></div>
+        <Link href="/privacy" className="transition-all duration-300 underline font-semibold hover:text-orange2">{formFields.privacyLink}</Link>
+        <div className="mt-10">
+          <SubmitButton isLoading={isLoading}>Enviar</SubmitButton>
+        </div>
 
         {/* <Button 
               type="submit" 

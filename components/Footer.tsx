@@ -5,8 +5,6 @@ import Link from "next/link";
 import Image from "next/image";
 // import footer data
 import { footerData } from "@/lib/data";
-import { FaWhatsappSquare } from "react-icons/fa";
-import { SeparatorVertical } from "lucide-react";
 import { Separator } from "./ui/separator";
 
 // import motion
@@ -64,7 +62,7 @@ export default function Footer() {
               <div className="flex items-center gap-x-[10px]">
                 <div>{contact.phone.icon}</div>
                 <div>{contact.phone.number}</div>
-                  <FaWhatsappSquare className="text-lg" />
+                 
               </div>
             
               <div className="flex items-center gap-x-[10px]">

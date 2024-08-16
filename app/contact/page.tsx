@@ -7,13 +7,12 @@ import ContactFormSection from "@/components/contactComponents/ContactFormSectio
 
 export default function page() {
   return (
-    <section className="w-full pt-[100px] lg:pt-[170px] flex flex-col">
+    <main className="w-full ">
      
-      <div className="h1  subcontainerXl">El centre</div>
       <DirectionSection />
       <ContactFormSection />
 
-    </section>
+    </main>
     // <>
     //   <section className="section  bg-[#EEEDEB] ">
     //     <div className="container mx-auto   ">

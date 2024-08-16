@@ -40,16 +40,16 @@ export default function Home3Section() {
     <section className="section-light  bg-white ">
       <div className="subcontainer-md flex flex-col  w-full">
         <div className="text-center text-green2 mx-auto h3 mb-8 ">{homeIntro3.title}</div>
-        <div className=" w-full flex flex-col items-center lg:flex-row lg:gap-x-10 gap-y-10  mx-auto ">
+        <div className=" w-full flex flex-col items-center  gap-y-10  mx-auto ">
         
-          <div className="basis-1/2 px-5">
-            <ul className="prose-custom  text-dark1 flex flex-col  gap-y-5  ">
+
+            <ul className="prose-custom-xl  text-dark1 flex flex-col  gap-y-5  ">
               {homeIntro3.items.map((item) => (
                 <div
                   key={item.label}
-                  className="flex flex-row  bg-cream1 py-5 px-3  "
+                  className="flex flex-row  bg-bgGray1 py-5 px-3 border border-dark1  "
                 >
-                  <div className="flex justify-center">{item.label}</div>
+                  <div className="flex justify-center w-full font-semibold">{item.label}</div>
                 </div>
               ))}
             </ul>
@@ -57,7 +57,7 @@ export default function Home3Section() {
             <div className="mt-10 flex justify-center">
               <GreenButton text={homeIntro3.linkText} href={homeIntro3.link} />
             </div>
-          </div>
+          
 
             {/* <Image
             className="   h-[600px] object-cover object-top basis-1/2   "

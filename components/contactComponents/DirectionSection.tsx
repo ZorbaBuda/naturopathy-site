@@ -6,7 +6,7 @@ const DirectionSection = () => {
       <div className="subcontainerXl flex flex-col gap-10 lg:flex-row">
         <div className="text-xl flex flex-col gap-5  basis-1/2 text-center">
         
-          <div className="h4 text-green2">Ens trobaras a:</div>
+          <div className="h4 text-orange2">Contacte</div>
           <div className="font-semibold">
             <div>{contactInfo.address}</div>
             <div>{contactInfo.addressProvince}</div>
