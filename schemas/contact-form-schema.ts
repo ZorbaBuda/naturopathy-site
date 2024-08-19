@@ -15,7 +15,7 @@ export const ContactFormSchema = z
     .string()
     .min(1, `${name.required}`)
     .min(3, `${name.min}`)
-    .max(3000, `${name.max}`)
+    .max(300, `${name.max}`)
     .regex(
       /^[a-zA-Z0-9_\s]+$/,
       `${name.invalid}`
@@ -26,7 +26,7 @@ export const ContactFormSchema = z
   message: z
   .string()
   .min(1, `${message.required}`)
-  .max(30, `${message.max}`),
+  .max(3000, `${message.max}`),
   
   // date: z.string(),
   

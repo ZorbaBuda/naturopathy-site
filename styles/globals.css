@@ -8,17 +8,7 @@
     src: url("../public/font/Oval/Oval-Trial-Regular.ttf");
   }
   
-  @font-face {
-    font-family: "roboto-regular";
-    src: url("../public/font/roboto/Roboto-Regular.ttf");
-  }
 
-  @font-face {
-    font-family: "ibm-plex-sans";
-    src: url("../public/font/IBM_Plex_Sans/IBMPlexSans-Regular.ttf");
-  }
-
-  
 @font-face {
   font-family: "manrope";
   src: url("../public/font/Manrope/Manrope-SemiBold.ttf");
@@ -35,20 +25,8 @@
     src: url("../public/font/Marcellus/Marcellus-Regular.ttf");
   }
 
-  @font-face {
-    font-family: "dm serif";
-    src: url("../public/font/DM_Serif_Display/DMSerifDisplay-Regular.ttf");
-  }
-
-  @font-face {
-    font-family: "satoshi-medium";
-    src: url("../public/font/satoshi/Satoshi-Medium.woff");
-  }
   
-  @font-face {
-    font-family: "satoshi";
-    src: url("../public/font/satoshi/Satoshi-Regular.woff");
-  }
+
   
   
   /* html {
@@ -109,15 +87,15 @@
   
   /* clinique */
   .h1c {
-    @apply text-[71.5px] lg:text-[82.5px] xl:text-[110px] tracking-tight leading-none font-satoshi_medium
+    @apply text-[71.5px] lg:text-[82.5px] xl:text-[110px] tracking-tight leading-none 
   }
 
   .h2c {
-    @apply text-[52.5px] lg:text-[59.5px] xl:text-[70px] tracking-tight leading-none font-satoshi_medium
+    @apply text-[52.5px] lg:text-[59.5px] xl:text-[70px] tracking-tight leading-none 
   }
 
   .h3c {
-    @apply text-[30.4px] lg:text-[32.3px] xl:text-[38px] font-satoshi_medium
+    @apply text-[30.4px] lg:text-[32.3px] xl:text-[38px] 
   }
 
   

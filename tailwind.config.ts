@@ -88,13 +88,12 @@ const config = {
         // secondary: ["MANROPE_REGULAR", "sans-serif"],
         // tertiary: ["Rozha One", "sans-serif"],
         logo: ["logo"],
-        roboto_regular: ["roboto", "sans-serif"],
-        ibm_plex_sans: ["ibm-plex-sans"],
+       
+      
         jakarta: ["jakarta"],
         marcellus: ["marcellus"],
-        dm_serif: ["dm serif"],
-        satoshi: ["satoshi"],
-        satoshi_medium: ["satoshi-medium"],
+       
+      
         manrope: ["manrope", 'sans-serif'],
       },
     },
