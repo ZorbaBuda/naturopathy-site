@@ -32,22 +32,23 @@ const ScrollTop = () => {
     </div> */}
 
       {/* scroll button */}
-      <div
-        className={`z-30 fixed bottom-10 right-5 md:right-7 text-lg md:text-2xl text-white  ${
-          show ? "md:flex" : "md:hidden"
-        }`}
-      >
         <Link
           href={contactInfo.whatsappHref}
           legacyBehavior
           passHref
           className="cursor-pointer"
         >
+      <div
+        className={`z-30 fixed bottom-10 right-5 md:right-7 text-lg md:text-2xl text-white  ${
+          show ? "md:flex" : "md:hidden"
+        }`}
+      >
+      
           <div className="bg-[#25D366] rounded-full p-2 md:p-3 border-2 border-slate-600">
             {contactInfo.whatsappIcon}
           </div>
-        </Link>
-      </div>
+        
+      </div></Link>
     </>
   );
 };

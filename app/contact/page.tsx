@@ -4,6 +4,12 @@ import ContactForm from "@/components/ContactForm";
 import Link from "next/link";
 import DirectionSection from "@/components/contactComponents/DirectionSection";
 import ContactFormSection from "@/components/contactComponents/ContactFormSection";
+import { Metadata } from "next";
+
+export const metadata : Metadata = {
+  title: "Contacte",
+  description: "Informació de contacte, teràpia naturopatia, nutrició i dietètica, ortomolecular, PNIE, antiaging, microimmunoteràpia a Mataro (Barcelona)",
+};
 
 export default function page() {
   return (

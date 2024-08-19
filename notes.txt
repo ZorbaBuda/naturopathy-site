@@ -1,1 +1,13 @@
 npx depcheck 
+
+seo https://www.youtube.com/watch?v=wTGVHLyV09M&t=176s
+
+
+1) fav icon
+2) opengraph-image.png    preview from local docs.srv.us  socialsharepreview.com opengraph.xyz
+   gimp.org
+
+3) metadata
+
+
+site:naturopatamataro.com

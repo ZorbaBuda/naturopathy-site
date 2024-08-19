@@ -1,6 +1,16 @@
 
 import React from 'react'
 import Image from 'next/image'
+import { Metadata } from 'next';
+
+export const metadata : Metadata = {
+  title: "Privacitat",
+  description: "Política de privacitat,  teràpia naturopatia, nutrició i dietètica, ortomolecular, PNIE, antiaging, microimmunoteràpia a Mataro (Barcelona)",
+  // robots: {
+  //   index : false,
+  //   follow: true,
+  // }
+};
 
 export default function page() {
  

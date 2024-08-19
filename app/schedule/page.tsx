@@ -4,6 +4,12 @@
 import picture from "@/public/assets/calendar-appointment.jpg"
 import HeroBanner from "@/components/HeroBanner";
 import { schedule } from "@/lib/data";
+import { Metadata } from "next";
+
+export const metadata : Metadata = {
+  title: "Reserva",
+  description: "Reserva, agenda la teva cita: teràpia naturopatia, nutrició i dietètica, ortomolecular, PNIE, antiaging, microimmunoteràpia a Mataro (Barcelona)",
+};
 
 export default function page() {
   return (

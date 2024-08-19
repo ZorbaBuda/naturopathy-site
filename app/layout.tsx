@@ -8,6 +8,7 @@ import Navbar from "@/components/navs/Navbar";
 import ScrollTop from "@/components/ScrollTop";
 import SmoothScrolling from "@/components/helpers/SmoothScrolling";
 import { Toaster } from "@/components/ui/sonner";
+import { Metadata } from "next";
 
 // const oswald = Oswald({
 //   subsets: ['latin'],
@@ -27,15 +28,12 @@ import { Toaster } from "@/components/ui/sonner";
 //   variable: '--font-playfair-display',
 // });
 
-export const metadata = {
-  title: "Naturopatia Mataro",
-  description: "Estudio naturopatia en Mataro",
-  // keywords: 'yoga, yoga classes, botanica, chisinau, moldova, studio',
-  // author: '',
-  // creator: 'v',
-  // applicationName: 'Next.js',
-  // date: '2024-06-17',
-  // language: 'en-US',
+export const metadata : Metadata = {
+  title: {
+    default: "Naturopatia a Mataró",
+    template:"%s - Naturopatia a Mataró"
+  },
+  description: "Teràpia naturopatia, nutrició i dietètica, ortomolecular, PNIE, antiaging, microimmunoteràpia a Mataro (Barcelona)",
 };
 export default function RootLayout({
   children,
