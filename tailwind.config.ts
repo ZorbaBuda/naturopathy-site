@@ -27,6 +27,8 @@ const config = {
         orange2: "#FF9100",
         cream1:"#FFFBE6",
         bgGray1:"#F6F6F6",
+        telegram:"#3390EC",
+        whatsapp:"#25D366",
         primary: "#40961D",
         secondary: "#590F03",
         grey_1: "#F9F9F9",

@@ -34,3 +34,19 @@ export function WhatsappLink() {
     </Link>
   );
 }
+
+export function TelegramLink() {
+  return (
+    <Link
+    href={contactInfo.telegramHref}
+ 
+    className="cursor-pointer"
+  >
+   
+      <div className="bg-telegram rounded-full p-2 md:p-3 border-2 border-slate-600">
+        {contactInfo.telegramIcon}
+      </div>
+   
+  </Link>
+  )
+}

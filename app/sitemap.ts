@@ -3,7 +3,7 @@ import { MetadataRoute } from "next";
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     
 
-    const routes = ["", "/services","/contact", "/schedule", "/about", "/privacy"].map((route) => ({
+    const routes = ["", "/services","/contact",  "/about", "/privacy"].map((route) => ({
         url: `${process.env.NEXT_PUBLIC_BASE_URL}${route}`,
         lastModified: new Date().toISOString(),
     }));

@@ -32,23 +32,35 @@ const ScrollTop = () => {
     </div> */}
 
       {/* scroll button */}
-        <Link
-          href={contactInfo.whatsappHref}
-          legacyBehavior
-          passHref
-          className="cursor-pointer"
-        >
-      <div
-        className={`z-30 fixed bottom-10 right-5 md:right-7 text-lg md:text-2xl text-white  ${
-          show ? "md:flex" : "md:hidden"
-        }`}
+     <div className={`flex flex-col gap-5 z-30 fixed bottom-10 right-5 md:right-7 text-lg md:text-2xl text-white  ${
+            show ? "md:flex" : "md:hidden"
+          }`}>
+      {/* whatsapp */}
+      <Link
+        href={contactInfo.whatsappHref}
+        
+        className="cursor-pointer"
       >
-      
-          <div className="bg-[#25D366] rounded-full p-2 md:p-3 border-2 border-slate-600">
+     
+          <div className="bg-whatsapp rounded-full p-2 md:p-3 border-2 border-slate-600">
             {contactInfo.whatsappIcon}
           </div>
-        
-      </div></Link>
+       
+      </Link>
+
+       {/* telegram */}
+       <Link
+        href={contactInfo.telegramHref}
+     
+        className="cursor-pointer"
+      >
+       
+          <div className="bg-telegram rounded-full p-2 md:p-3 border-2 border-slate-600">
+            {contactInfo.telegramIcon}
+          </div>
+       
+      </Link>
+      </div>
     </>
   );
 };

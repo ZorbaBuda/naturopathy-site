@@ -1,5 +1,5 @@
 import { contactInfo } from "@/lib/data";
-import { EmailLink, PhoneLink, WhatsappLink } from "../parts/ContactLinks";
+import { EmailLink, PhoneLink, TelegramLink, WhatsappLink } from "../parts/ContactLinks";
 
 const DirectionSection = () => {
   return (
@@ -18,7 +18,7 @@ const DirectionSection = () => {
           </div>
           <div className="flex justify-center gap-5 text-white">
             <EmailLink />
-            <PhoneLink />
+           <TelegramLink />
             <WhatsappLink />
           </div>
         </div>
