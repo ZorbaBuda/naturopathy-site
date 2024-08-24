@@ -1,7 +1,7 @@
 import { z } from "zod";
 import { contactFormData } from "@/lib/data";
 
-const {name, email, message, privacy} = contactFormData.formSchema
+const {name, email, message, privacy, phone} = contactFormData.formSchema
 
 //TODO i18n ?
 
@@ -21,6 +21,9 @@ export const ContactFormSchema = z
       `${name.invalid}`
     )
     .regex(/^[a-zA-Z][a-zA-Z0-9_\s]*$/, `${name.start}`),
+
+    phone: z
+    .string(),
    
   email: z.string().min(1, `${email.required}`).email(`${email.invalid}`),
   message: z

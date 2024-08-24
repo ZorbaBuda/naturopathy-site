@@ -26,7 +26,7 @@ export default function page() {
      {/* <AboutHistorySection /> */}
      {/* <AboutCurriculumSection /> */}
      <DirectionSection />
-      <ContactFormSection />
+    
     </main>
   );
 }

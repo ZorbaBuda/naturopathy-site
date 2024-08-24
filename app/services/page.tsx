@@ -23,8 +23,6 @@ export default function page() {
       {/* <ServHeroSection /> */}
       <ServOfferingsSection />
       <DirectionSection />
-      <ContactFormSection />
-      
     </main>
   )
 }

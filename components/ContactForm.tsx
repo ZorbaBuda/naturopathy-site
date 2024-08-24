@@ -30,6 +30,7 @@ export default function ContactForm() {
     resolver: zodResolver(ContactFormSchema),
     defaultValues: {
       name: "",
+      phone: "",
       email: "",
       message: "",
       // date: new Date().toISOString(),
@@ -89,6 +90,12 @@ export default function ContactForm() {
           control={form.control}
           name="name"
           placeholder={formFields.name}
+        />
+           <CustomFormField
+          fieldType={FormFieldType.INPUT}
+          control={form.control}
+          name="phone"
+          placeholder={formFields.phone}
         />
         <CustomFormField
           fieldType={FormFieldType.INPUT}

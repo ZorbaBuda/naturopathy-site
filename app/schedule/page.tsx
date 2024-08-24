@@ -19,14 +19,14 @@ export default function page() {
     <div className="subcontainerXl flex flex-col gap-10">
         <p className="text-xl mt-10">{schedule.message}</p> 
        {/* Google Calendar Appointment Scheduling begin  */}
-            <iframe 
-            src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1Km2BJa2m2E3ew41r8PGNubTzMFwfgHPY5e90T427fbEmRcc0TaUK3uvtmqHKBVINEH62WEw0d?gv=true" 
+            {/* <iframe 
+            src="https://calendar.google.com/calendar/appointments/schedules/?gv=true" 
             // style="border: 0" 
             width="100%" 
             height="800" 
             frameBorder="0">
                 
-            </iframe>
+            </iframe> */}
         {/* end Google Calendar Appointment Scheduling */}
         </div>
         </div>
