@@ -101,7 +101,7 @@ export default function Footer() {
    
     <section className="flex space-x-3 justify-center mx-auto py-5">
         <p className="">
-        &copy; {currentYear}<span> Naturopatia Mataro</span>
+        &copy; {currentYear}<span> Christian Constanseu</span>
         </p>
         <Separator orientation="vertical" className="text-red-600"/>
         <Link href={termes.privacy.href} className="hover:underline">{termes.privacy.name}</Link>

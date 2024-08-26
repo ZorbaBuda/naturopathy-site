@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { contactInfo } from "@/lib/data";
 import { MdKeyboardArrowUp } from "react-icons/md";
+import { TelegramLink, WhatsappLink } from "./parts/ContactLinks";
 
 const ScrollTop = () => {
   const [show, setShow] = useState(false);
@@ -32,34 +33,14 @@ const ScrollTop = () => {
     </div> */}
 
       {/* scroll button */}
-     <div className={`flex flex-col gap-5 z-30 fixed bottom-10 right-5 md:right-7 text-lg md:text-2xl text-white  ${
-            show ? "md:flex" : "md:hidden"
-          }`}>
-      {/* whatsapp */}
-      <Link
-        href={contactInfo.whatsappHref}
-        
-        className="cursor-pointer"
+      <div
+        className={`flex flex-col gap-5 z-30 fixed bottom-10 right-5 md:right-7 text-lg md:text-2xl text-white  ${
+          show ? "md:flex" : "md:hidden"
+        }`}
       >
-     
-          <div className="bg-whatsapp rounded-full p-2 md:p-3 border-2 border-slate-600">
-            {contactInfo.whatsappIcon}
-          </div>
-       
-      </Link>
+        <WhatsappLink />
 
-       {/* telegram */}
-       <Link
-        href={contactInfo.telegramHref}
-     
-        className="cursor-pointer"
-      >
-       
-          <div className="bg-telegram rounded-full p-2 md:p-3 border-2 border-slate-600">
-            {contactInfo.telegramIcon}
-          </div>
-       
-      </Link>
+        <TelegramLink />
       </div>
     </>
   );

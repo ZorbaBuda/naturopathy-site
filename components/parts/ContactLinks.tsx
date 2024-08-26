@@ -3,50 +3,54 @@ import Link from "next/link";
 
 export function EmailLink() {
   return (
-    <Link
+    <a
+      rel="noreferrer"
+      target="_blank"
       href={contactInfo.emailHref}
       className="bg-red-500 rounded-full p-2 md:p-3 border-2 border-slate-600"
-      passHref
     >
       {contactInfo.emailIcon}
-    </Link>
+    </a>
   );
 }
 
 export function PhoneLink() {
   return (
-    <Link
+    <a
+      rel="noreferrer"
+      target="_blank"
       href={contactInfo.phoneHref}
       className="bg-blue-500 rounded-full p-2 md:p-3 border-2 border-slate-600"
     >
       {contactInfo.phoneIcon}
-    </Link>
+    </a>
   );
 }
 
 export function WhatsappLink() {
   return (
-    <Link
+    <a
+      rel="noreferrer"
+      target="_blank"
       href={contactInfo.whatsappHref}
       className="bg-[#25D366] rounded-full p-2 md:p-3 border-2 border-slate-600"
     >
       {contactInfo.whatsappIcon}
-    </Link>
+    </a>
   );
 }
 
 export function TelegramLink() {
   return (
-    <Link
-    href={contactInfo.telegramHref}
- 
-    className="cursor-pointer"
-  >
-   
+    <a
+      rel="noreferrer"
+      target="_blank"
+      href={contactInfo.telegramHref}
+      className="cursor-pointer"
+    >
       <div className="bg-telegram rounded-full p-2 md:p-3 border-2 border-slate-600">
         {contactInfo.telegramIcon}
       </div>
-   
-  </Link>
-  )
+    </a>
+  );
 }
