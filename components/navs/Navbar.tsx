@@ -7,6 +7,7 @@ import MobileNav from "./MobileNav";
 import LogoCustom from "../LogoCustom";
 import { contactInfo } from "@/lib/data";
 import Link from "next/link";
+import ExternalLink from "../parts/ExternalLink";
 
 export default function Header() {
   // header state
@@ -45,12 +46,10 @@ export default function Header() {
         className={` hidden lg:flex  h-[45px] bg-green2 text-white  `}
       >
         <div className="subcontainerXl justify-end w-full items-center flex mx-auto gap-10 ">
-          <Link href="/" className=" ">
+          <p className=" ">
             {contactInfo.phone}
-          </Link>
-          <Link href="/" className=" ">
-            {contactInfo.email}
-          </Link>
+          </p>
+          <ExternalLink href={contactInfo.emailHref} title={contactInfo.email}  />
         </div>
       </nav>
 
