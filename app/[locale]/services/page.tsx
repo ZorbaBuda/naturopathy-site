@@ -13,7 +13,7 @@ interface Params {
 
 export async function generateMetadata({ params }: Params) {
   const locale = params.locale;
-  const t = await getTranslations({ locale, namespace: "about" });
+  const t = await getTranslations({ locale, namespace: "therapies" });
 
   return {
     title: t("metadata.title"),

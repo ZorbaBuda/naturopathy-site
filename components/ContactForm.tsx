@@ -13,7 +13,7 @@ import { Spinner } from "./spinner";
 import { FormFieldType } from "@/constants";
 import CustomFormField from "./form-fields/CustomFormField";
 import SubmitButton from "./ui/SubmitButton";
-import { sendMessage } from "@/lib/actions/contactForm.actions";
+import { sendMessage } from "@/lib/actions/contactForm.actionsGSheets";
 import { useRouter } from "next/navigation";
 // import { contactFormData } from "@/lib/data";
 import Link from "next/link";
@@ -62,7 +62,8 @@ export default function ContactForm({contactFormParams} : { contactFormParams: C
       };
 
       // @ts-ignore
-      const result = await sendMessage(message);
+      // const result = await sendMessage(message);
+      const result = await sendMessage(message)
       if (result === "ok") {
         toast("Ok! 👌");
         router.push("/");

@@ -6,6 +6,7 @@ import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import { getPrivacyPolicyDocument } from '@/lib/actions/privacyPolicyDoc.actions';
 import parser from "html-react-parser"
 import { notFound } from 'next/navigation';
+import document from "@/lib/privacy.json"
 
 interface Params {
   params: {
@@ -20,15 +21,15 @@ export async function generateMetadata({params} : Params) {
   return {
     // title: t('metadata.title'),
     // description: t('metadata.description')
-    title: "title",
-    description: "description"
+    title: "Naturopata Mataro",
+    description: "Naturopata Mataro (BCN)"
   };
 }
 
 
 export  default async function PrivacyPolicyPage( {params: {locale}} :  {params: {locale: string}}) {
   unstable_setRequestLocale(locale);
-  const document = await getPrivacyPolicyDocument(locale)
+  // const document = await getPrivacyPolicyDocument(locale)
  
   if (!document) return notFound()
   return (

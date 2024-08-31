@@ -33,6 +33,6 @@ export const localePrefix: LocalePrefix<Locales> = "as-needed"
 
 
 export const port = process.env.PORT || 3001;
-export const host = process.env.VERCEL_URL
-  ? `https://${process.env.VERCEL_URL}`
+export const host = process.env.BASE_URL
+  ? `${process.env.BASE_URL}`
   : `http://localhost:${port}`;
