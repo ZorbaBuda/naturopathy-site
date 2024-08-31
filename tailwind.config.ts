@@ -80,7 +80,7 @@ const config = {
       backgroundImage: {
       
         // heroBg: "url('/assets/bg-hero2.jpg')",
-        homeHeroD: "url('/assets/home/home-hero-desktop-night.jpg')",
+        homeHeroD: "url('/assets/home/home-hero-desktop-night.webp')",
          homeHeroM: "url('/assets/home/home-hero-mobile-night.jpg')"
      
       },

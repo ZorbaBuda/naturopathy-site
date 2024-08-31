@@ -17,7 +17,7 @@ const HeroBanner = ({image, title}: {image: StaticImageData, title: string}) => 
       src={image}
       alt={title}
       loading="eager"
-      className="  lg:h-[500px] h-[297px] w-full object-cover  object-right "
+      className="  lg:h-[500px] h-[297px] w-full object-cover  object-right-top "
       /> </motion.div></div>
      <BlurMotion> <div className=" h3  flex justify-center lg:justify-start subcontainerXl text-green2">{title}</div></BlurMotion>
     </div>

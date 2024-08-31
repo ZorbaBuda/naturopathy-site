@@ -1,9 +1,10 @@
 import Image from "next/image"
-import Link from "next/link"
+
+import { NavigationLink } from "./NavigationLink"
 
 const LogoCustom = () => {
   return (
-    <Link href="/" className=" ">
+    <NavigationLink href="/" className=" ">
     <div className="flex items-center gap-x-3">
       <Image
         className="h-12 w-12 lg:h-16 lg:w-16  "
@@ -22,7 +23,7 @@ const LogoCustom = () => {
         <div className="lg:text-sm text-sm font-semibold text-orange2  font-jakarta  ">NATUROPATA</div>
       </div>
     </div>
-  </Link>
+  </NavigationLink>
   )
 }
 

@@ -8,6 +8,8 @@ import LogoCustom from "../LogoCustom";
 import { contactInfo } from "@/lib/data";
 import Link from "next/link";
 import ExternalLink from "../parts/ExternalLink";
+import LocaleSwitcher from "../LocaleSwitcher";
+import { ContactInfoNavbar } from "../parts/ContactInfo";
 
 export default function Header() {
   // header state
@@ -46,10 +48,12 @@ export default function Header() {
         className={` hidden lg:flex  h-[45px] bg-green2 text-white  `}
       >
         <div className="subcontainerXl justify-end w-full items-center flex mx-auto gap-10 ">
-          <p className=" ">
+          <ContactInfoNavbar />
+          {/* <p className=" ">
             {contactInfo.phone}
           </p>
-          <ExternalLink href={contactInfo.emailHref} title={contactInfo.email}  />
+          <ExternalLink href={contactInfo.emailHref} title={contactInfo.email}  /> */}
+          <LocaleSwitcher bg={"bg-green2"} text={"text-white"} />
         </div>
       </nav>
 

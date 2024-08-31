@@ -1,11 +1,12 @@
 import Image from "next/image";
-import Link from "next/link";
-import { homeIntro2 } from "@/lib/data";
 import GreenButton from "../parts/GreenButton";
 import { BlurMotion } from "../framer/BlurMotion";
 import FadeIn from "../framer/FadeIn";
+import { useTranslations } from "next-intl";
+import parser from "html-react-parser"
 
 export default function Home2Section() {
+  const t = useTranslations("home")
   return (
     <section id="intro" className=" bg-cream1  lg:section-light">
       <div className="flex-flex-col mx-auto ">
@@ -24,17 +25,16 @@ export default function Home2Section() {
           <div className=" flex flex-col basis-1/2  py-10 lg:py-0  ">
             <BlurMotion>
               {" "}
-              <h1 className="h3 text-green2 mb-8">{homeIntro2.title} </h1>
+              <h1 className="h3 text-green2 mb-8">{t("home2.title")} </h1>
             </BlurMotion>
             <FadeIn>
               {" "}
               <div className="flex flex-col  prose-custom">
-                <div className=" mb-6">{homeIntro2.text1}</div>
-                <div className=" mb-6">{homeIntro2.text2}</div>
-                <div className=" mb-6">{homeIntro2.text3}</div>
+                <div className="">{parser(t.raw("home2.text"))}</div>
+               
               </div>
             </FadeIn>
-            <GreenButton text={homeIntro2.linkText} href={homeIntro2.link} />
+            <GreenButton text={t("home2.linkText")} href={'/services'} />
           </div>
         </div>
       </div>

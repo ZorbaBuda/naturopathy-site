@@ -3,6 +3,8 @@ import { contactFormData } from "@/lib/data";
 
 const {name, email, message, privacy, phone} = contactFormData.formSchema
 
+// https://github.com/gcascio/next-intl-zod/tree/main/messages
+
 //TODO i18n ?
 
 // const phoneRegex = new RegExp(

@@ -1,9 +1,12 @@
 import Link from "next/link";
 import { links } from "@/lib/data";
 import { usePathname } from "next/navigation";
+import { NavigationLink } from "../NavigationLink";
+import { useTranslations } from "next-intl";
 
 const NavLinksMob = () => {
   const pathname = usePathname();
+  const t = useTranslations()
   // console.log(pathname)
 
   {
@@ -16,7 +19,27 @@ const NavLinksMob = () => {
   return (
     <nav>
       <ul className="flex flex-col text-dark1  border-t border-gray-400   ">
-        {links.map((item, index) => {
+        <NavigationLink className=" text-sm  uppercase   font-semibold tracking-wider 
+                      border-b border-b-gray-400   w-full  py-4" href="/">
+          {" "}
+          {t("Navbar.links.home")}{" "}
+        </NavigationLink>
+        <NavigationLink className=" text-sm  uppercase   font-semibold tracking-wider 
+                      border-b border-b-gray-400   w-full  py-4" href="/about">
+          {" "}
+          {t("Navbar.links.about")}{" "}
+        </NavigationLink>
+        <NavigationLink className=" text-sm  uppercase   font-semibold tracking-wider 
+                      border-b border-b-gray-400   w-full  py-4" href="/services">
+          {" "}
+          {t("Navbar.links.services")}
+        </NavigationLink>
+        <NavigationLink className=" text-sm  uppercase   font-semibold tracking-wider 
+                      border-b border-b-gray-400   w-full  py-4" href="/contact">
+          {" "}
+          {t("Navbar.links.contact")}
+        </NavigationLink>
+        {/* {links.map((item, index) => {
           return (
             <li key={index} className="flex ">
               <Link
@@ -29,7 +52,7 @@ const NavLinksMob = () => {
               </Link>
             </li>
           );
-        })}
+        })} */}
       </ul>
     </nav>
   );

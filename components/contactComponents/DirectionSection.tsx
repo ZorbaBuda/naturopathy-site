@@ -1,20 +1,22 @@
 import { contactInfo } from "@/lib/data";
-import { EmailLink, PhoneLink, TelegramLink, WhatsappLink } from "../parts/ContactLinks";
+import { EmailLink,  TelegramLink, WhatsappLink } from "../parts/ContactLinks";
+import { useTranslations } from "next-intl";
 
 const DirectionSection = () => {
+  const t= useTranslations("")
   return (
     <section className="section bg-[#E7F0DC]">
       <div className="subcontainerXl flex flex-col gap-10 lg:flex-row">
         <div className="text-xl flex flex-col gap-5  basis-1/2 text-center">
         
-          <div className="h4 text-orange2">Contacte</div>
+          <div className="h4 text-orange2">{t("common.contactHeader")}</div>
           <div className="font-semibold">
-            <div>{contactInfo.address}</div>
-            <div>{contactInfo.addressProvince}</div>
+            <div>{t("contactData.address")}</div>
+            <div>{t("contactData.addressProvince")}</div>
           </div>
           <div className="font-semibold">
-            <div>{contactInfo.phone}</div>
-            <div>{contactInfo.email}</div>
+            <div>{t("contactData.phoneTabuled")}</div>
+            <div>{t("contactData.email")}</div>
           </div>
           <div className="flex justify-center gap-5 text-white">
             <EmailLink />

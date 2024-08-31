@@ -6,23 +6,27 @@
   @font-face {
     font-family: "logo";
     src: url("../public/font/Oval/Oval-Trial-Regular.ttf");
+    font-display: swap;
   }
   
 
 @font-face {
   font-family: "manrope";
   src: url("../public/font/Manrope/Manrope-SemiBold.ttf");
+  font-display: swap;
 }
 
   @font-face {
     font-family: "jakarta";
     src: url("../public/font/Plus_Jakarta_Sans/PlusJakartaSans-Regular.ttf");
+    font-display: swap;
   }
 
 
   @font-face {
     font-family: "marcellus";
     src: url("../public/font/Marcellus/Marcellus-Regular.ttf");
+    font-display: swap;
   }
 
   
@@ -110,6 +114,10 @@
   
   .subcontainerXl {
     @apply flex  mx-auto  px-5 lg:px-14 xl:px-10 xl:max-w-[1400px] 2xl:px-0;
+  }
+
+  .underlineAnim {
+    @apply block  max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-green2;
   }
 
   /* .btn {

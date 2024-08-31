@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { NavigationLink } from "../NavigationLink";
 
 export default function GreenButton({
   text,
@@ -9,7 +10,7 @@ export default function GreenButton({
 }) {
   return (
    
-    <Link
+    <NavigationLink
     href={href}
     className="text-dark1  border bg-orange1 border-green2  hover:bg-orange2 rounded-xl
       px-5 py-2  transition-all  duration-300 text-lg font-semibold
@@ -18,7 +19,7 @@ export default function GreenButton({
       "
   >
   {text}
-  </Link>
+  </NavigationLink>
   
   );
 }

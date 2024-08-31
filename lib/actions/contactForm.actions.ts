@@ -1,5 +1,6 @@
 "use server";
 
+import { ContactFormParams } from "@/types";
 import { parseStringify } from "../utils";
 
 export const sendMessage = async (message: ContactFormParams) => {

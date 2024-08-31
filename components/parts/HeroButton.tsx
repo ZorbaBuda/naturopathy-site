@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import { NavigationLink } from "../NavigationLink";
 
 // EA5C2B before
 // FF7F3F after
@@ -17,7 +18,7 @@ export default function HeroButton({
     //   className="  text-base  uppercase px-8 py-3 transition-all duration-500 flex items-center max-w-fit
     // text-white font-semibold hover:bg-white bg-green2 hover:text-green2 rounded-3xl border border-green2"
     // >{text}</Link>
-    <Link
+    <NavigationLink
     href={href}
     className="text-white border border-green1 hover:bg-green1 rounded-lg
      bg-transparent px-7 py-3  transition-all  duration-300 text-base uppercase font-semibold
@@ -26,7 +27,7 @@ export default function HeroButton({
       "
   >
   {text}
-  </Link>
+  </NavigationLink>
     // <Link
     //   href={href}
     //   className="text-red hover:before:bg-redborder-red-500 relative h-[50px]  overflow-hidden

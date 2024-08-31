@@ -15,16 +15,29 @@ import CustomFormField from "./form-fields/CustomFormField";
 import SubmitButton from "./ui/SubmitButton";
 import { sendMessage } from "@/lib/actions/contactForm.actions";
 import { useRouter } from "next/navigation";
-import { contactFormData } from "@/lib/data";
+// import { contactFormData } from "@/lib/data";
 import Link from "next/link";
+import { NavigationLink } from "./NavigationLink";
 
-export default function ContactForm() {
+type ContactFormParams = {
+  name: string,
+  phone: string,
+  email: string,
+  message: string,
+  privacitat: string,
+  privacyLink: string,
+}
+
+export default function ContactForm({contactFormParams} : { contactFormParams: ContactFormParams}) {
+ 
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
 
-  const {formFields} = contactFormData
-
+  const {name, phone, email, message, privacitat, privacyLink} = contactFormParams
+  
   const currentDate = new Date().toISOString();
+
+  //TODO reset after submit https://react-hook-form.com/docs/useform/reset
 
   const form = useForm<z.infer<typeof ContactFormSchema>>({
     resolver: zodResolver(ContactFormSchema),
@@ -51,7 +64,7 @@ export default function ContactForm() {
       // @ts-ignore
       const result = await sendMessage(message);
       if (result === "ok") {
-        toast("Missatge enviat.");
+        toast("Ok! 👌");
         router.push("/");
       }
       setIsLoading(false);
@@ -89,26 +102,26 @@ export default function ContactForm() {
           fieldType={FormFieldType.INPUT}
           control={form.control}
           name="name"
-          placeholder={formFields.name}
+          placeholder={name}
         />
            <CustomFormField
           fieldType={FormFieldType.INPUT}
           control={form.control}
           name="phone"
-          placeholder={formFields.phone}
+          placeholder={phone}
         />
         <CustomFormField
           fieldType={FormFieldType.INPUT}
           control={form.control}
           name="email"
-          placeholder={formFields.email}
+          placeholder={email}
         />
 
         <CustomFormField
           fieldType={FormFieldType.TEXTAREA}
           control={form.control}
           name="message"
-          placeholder={formFields.message}
+          placeholder={message}
         />
        
        <div className="mt-5">
@@ -116,10 +129,10 @@ export default function ContactForm() {
           fieldType={FormFieldType.CHECKBOX}
           control={form.control}
           name="privacyConsent"
-          label={formFields.privacitat}
+          label={privacitat}
           
         /></div>
-        <Link href="/privacy" className="transition-all duration-300 underline font-semibold hover:text-orange2">{formFields.privacyLink}</Link>
+        <NavigationLink href="/privacy" className="transition-all duration-300 underline font-semibold hover:text-orange2">{privacyLink}</NavigationLink>
         <div className="mt-10">
           <SubmitButton isLoading={isLoading}>Enviar</SubmitButton>
         </div>

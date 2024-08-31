@@ -1,33 +1,46 @@
-import { MetadataRoute } from "next";
+import {MetadataRoute} from 'next';
+import {locales, defaultLocale, host} from '@/config';
+import {getPathname} from '@/navigation';
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-    
+// https://spacejelly.dev/posts/how-to-add-a-sitemap-rss-feed-in-next-js-app-router
 
-    const routes = ["", "/services","/contact",  "/about", "/privacy"].map((route) => ({
-        url: `${process.env.NEXT_PUBLIC_BASE_URL}${route}`,
-        lastModified: new Date().toISOString(),
-    }));
-
-    return [...routes];
+export default function sitemap(): MetadataRoute.Sitemap {
+  return [
+    getEntry('/', locales[0]), 
+    getEntry('/', locales[1]), 
+    getEntry('/about', locales[0]),
+    getEntry('/about', locales[1]),
+    getEntry('/services', locales[0]),
+    getEntry('/services', locales[1]),
+   getEntry('/contact', locales[0]),
+   getEntry('/contact', locales[1]),
+  ];
 }
 
-// https://alsiam.medium.com/generating-dynamic-sitemaps-for-next-js-14-app-router-c5009fd1552e
+type Href = Parameters<typeof getPathname>[0]['href'];
 
-// export default async function sitemap() {
-//     const blog = await sanityFetch({
-//         query: postsQuery,
-//         tags: ["post"],
-//     });
 
-//     const posts = blog.map(({ slug, _updatedAt }) => ({
-//         url: `${URL}/blog/${slug}`,
-//         lastModified: _updatedAt,
-//     }));
 
-//     const routes = ["", "/blog", "/about",].map((route) => ({
-//         url: `${URL}${route}`,
-//         lastModified: new Date().toISOString(),
-//     }));
+function getEntry(href: Href, locale:(typeof locales)[number]) {
+  // console.log(getUrl(href, locales[0]))
+  // console.log(getUrl(href, locales[1]))
+  return {
+    url: getUrl(href, locale),
+    // alternates: {
+    //   languages: Object.fromEntries(
+    //     locales.map((locale) => [locale, getUrl(href, locale)]),
+    //   )
+    // },
+    lastModified: new Date().toISOString(),
+  };
+}
 
-//     return [...routes, ...posts];
-// }
+function getUrl(href: Href, locale: (typeof locales)[number]) {
+  const pathname = getPathname({locale, href});
+  console.log(pathname)
+  // console.log(locale === defaultLocale)
+  if(locale === defaultLocale){
+    return `${host}${pathname === '/' ? '' : pathname}`;
+  }
+  return `${host}/${locale}${pathname === '/' ? '' : pathname}`;
+}

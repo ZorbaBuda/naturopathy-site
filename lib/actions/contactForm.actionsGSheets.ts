@@ -1,19 +1,19 @@
-'use server'
+"use server";
 import { GoogleSpreadsheet } from "google-spreadsheet";
 import { JWT } from "google-auth-library";
 import { parseStringify } from "../utils";
+import { ContactFormParams } from "@/types";
 
 const SCOPES = ["https://www.googleapis.com/auth/spreadsheets"];
 
-export const sendMessage = async (message : ContactFormParams) => {
+export const sendMessage = async (message: ContactFormParams) => {
+  const serviceAccountAuth = new JWT({
+    email: process.env.GOOGLE_CLIENT_EMAIL,
+    key: process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, "\n"),
+    scopes: SCOPES,
+  });
 
-    const serviceAccountAuth = new JWT({
-        email: process.env.GOOGLE_CLIENT_EMAIL,
-        key: process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, "\n"),
-        scopes: SCOPES,
-      });
-
-    try {
+  try {
     const doc = new GoogleSpreadsheet(
       process.env.GOOGLE_SHEET_ID,
       serviceAccountAuth
@@ -29,16 +29,14 @@ export const sendMessage = async (message : ContactFormParams) => {
       Phone: message.phone,
       Email: message.email,
       Message: message.message,
-      PrivacyConsent: message.privacyConsent
+      PrivacyConsent: message.privacyConsent,
     };
 
     const newRow = await sheet.addRow(newRowData);
-//  console.log(newRow)
-    return "ok"
-    return parseStringify(newRow)
-
-    } catch (error) {
-        console.log(error)
-    }
-}
-
+    //  console.log(newRow)
+    return "ok";
+    return parseStringify(newRow);
+  } catch (error) {
+    console.log(error);
+  }
+};
